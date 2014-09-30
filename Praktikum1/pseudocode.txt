@@ -1,5 +1,7 @@
 MessageADT = {Text,COut,HBQIn,DLQIn,CIn}
 ClientsADT = {ClientID,LastNumber,TimeStamp}
+HBQADT = [{{Text,COut,HBQIn,DLQIn,CIn},Nr}]
+DLQADT = [{{Text,COut,HBQIn,DLQIn,CIn},Nr}]
 
 startserver()
 	Pid = spawn timer(5)
@@ -27,15 +29,13 @@ dispatcher(Nr,HBQ,DLQ,Clients,Tid)
 			Clients' = sendMessages(TempClients,Pid,DLQ)
 		{shutdown} ->
 			terminateFunction
-		default ->
-			log("Unknown command")
 	endGetMessage
 	
 	informTimer(Tid)
-	Clients'' = deleteTimedOutClients(Clients', System.Time)
-	HBQ'' = sort(HBQ')
+	LivingClients = deleteTimedOutClients(Clients', System.Time)
+	SortedHBQ = sort(HBQ')
 	
-	{DLQ'',HBQ'''} = fillDLQ(DLQ',HBQ'')
+	{RefreshedDLQ,RefreshedHBQ} = fillDLQ(DLQ',SortedHBQ)
 	
-	dispatcher(Nr',HBQ''',DLQ'',Clients'',Tid)
+	dispatcher(Nr',RefreshedHBQ},RefreshedDLQ,LivingClients,Tid)
 end
