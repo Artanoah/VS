@@ -1,0 +1,41 @@
+MessageADT = {Text,COut,HBQIn,DLQIn,CIn}
+ClientsADT = {ClientID,LastNumber,TimeStamp}
+
+startserver()
+	Pid = spawn timer(5)
+	dispatcher(1,[],[{"dummy",0,0,0,0,0}],[],Pid)
+end
+
+dispatcher(Nr,HBQ,DLQ,Clients,Tid)
+	getMessage 
+		{getmsgid,Pid} ->
+			Nr' = sendMessageId(Nr,Pid)
+			HBQ' = HBQ
+			DLQ' = DLQ
+			Clients' = Clients
+		{dropmessage, {{Text,COut,HBQIn,DLQIn,CIn},Nr}} ->
+			Nr' = Nr
+			HBQ' = [{{Text,COut,System.Time,DLQIn,CIn},Nr} | HBQ]
+			DLQ' = DLQ
+			Clients' = Clients
+		{getmessages, Pid} ->
+			if (Clients.hasNoElementWith(Pid))
+				TempClients = addClient(Clients,{Pid,1,System.Time})
+			else
+				TempClients = refreshClientTimer(Clients,Pid)
+			fi
+			Clients' = sendMessages(TempClients,Pid,DLQ)
+		{shutdown} ->
+			terminateFunction
+		default ->
+			log("Unknown command")
+	endGetMessage
+	
+	informTimer(Tid)
+	Clients'' = deleteTimedOutClients(Clients', System.Time)
+	HBQ'' = sort(HBQ')
+	
+	{DLQ'',HBQ'''} = fillDLQ(DLQ',HBQ'')
+	
+	dispatcher(Nr',HBQ''',DLQ'',Clients'',Tid)
+end
