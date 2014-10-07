@@ -1,0 +1,41 @@
+	Datentypen
+
+Nachricht = {Text,ClientOut,HBQIn,DLQIn,ClientIn}
+
+HBQ = [{Nachricht, Nummer}]
+
+DLQ = [{Nachricht, Nummer}]
+
+ClientList = [{ClientID, LastNumber, TimeStamp}]
+
+
+	Einfache Datentypen
+
+Text = String
+ClientOut = TimeStamp
+HBQIn = TimeStamp
+DLQIn = TimeStamp
+ClientIn = TimeStamp
+Nummer = Integer
+
+	DLQ
+
+createNew() :: void -> DLQ
+Ein neues HBQ Objekt wird erstellt und zurückgegeben. Agiert wie ein Constructor.
+
+add(Msg, Nr, Queue) :: Nachricht x Nummer x DLQ -> DLQ
+Die Nachricht wird der Queue hinten hinzugefügt, sodass sie sortiert bleibt. Wenn 
+die Queue voll ist, dann wird die älteste Nachricht gelöscht.
+
+get(Nr, Queue) :: Nummer x DLQ -> (Nachricht, Nummer, flag)
+Gibt die Nachricht mit der angeforderten Nummer Nr zurück. Die Nummer ist die Nummer
+der erfolgreich angefragten Nachricht. Das Atom 'flag' gibt an ob noch weitere 
+Nachrichten existieren.
+Wenn keine Nachricht mit der angeforderten Nummer in der DLQ Queue existiert, dann 
+wird nur Atom 'false' zurückgegeben.
+
+
+	HBQ
+
+add(Msg, Nr, Queue) :: Nachricht x Nummer x HBQ -> HBQ
+Die Nachricht wird mit der dazugehörigen Nummer in die HBQ Queue geschrieben
