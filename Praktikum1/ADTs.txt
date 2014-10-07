@@ -21,7 +21,7 @@ Nummer = Integer
 	DLQ
 
 createNew() :: void -> DLQ
-Ein neues HBQ Objekt wird erstellt und zurückgegeben. Agiert wie ein Constructor.
+Ein neues DBQ Objekt wird erstellt und zurückgegeben. Agiert wie ein Constructor.
 
 add(Msg, Nr, Queue) :: Nachricht x Nummer x DLQ -> DLQ
 Die Nachricht wird der Queue hinten hinzugefügt, sodass sie sortiert bleibt. Wenn 
@@ -36,6 +36,9 @@ wird nur Atom 'false' zurückgegeben.
 
 
 	HBQ
+	
+createNew() :: void -> HBQ
+Ein neues HBQ Objekt wird erstellt und zurückgegeben. Agiert wie ein Constructor.
 
 add(Msg, Nr, Queue) :: Nachricht x Nummer x HBQ -> HBQ
 Die Nachricht wird mit der dazugehörigen Nummer in die HBQ Queue geschrieben
