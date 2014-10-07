@@ -1,4 +1,4 @@
-	Datentypen
+﻿	Datentypen
 
 Nachricht = {Text,ClientOut,HBQIn,DLQIn,ClientIn}
 
@@ -17,6 +17,7 @@ HBQIn = TimeStamp
 DLQIn = TimeStamp
 ClientIn = TimeStamp
 Nummer = Integer
+
 
 	DLQ
 
@@ -42,3 +43,37 @@ Ein neues HBQ Objekt wird erstellt und zurückgegeben. Agiert wie ein Constructo
 
 add(Msg, Nr, Queue) :: Nachricht x Nummer x HBQ -> HBQ
 Die Nachricht wird mit der dazugehörigen Nummer in die HBQ Queue geschrieben
+
+
+	Schnittstellen
+
+Abfragen einer neuen Nachrichten-ID. Wird benutzt damit jeder Redakteur einzigartige 
+IDs nutzen kann.
+
+Server ! {getmsgid, Pid}
+receive{nid, Number}
+
+
+Senden einer neuen Nachricht an den Server. Dabei muss die Nr eine Nummer sein, die der
+Server vorher an diesen Client verteilt hat um Dopplungen und Inkonsistenz zu vermeiden.
+
+Server ! {dropmessage, {Nachricht, Nr}}
+
+
+Empfangen einer Nachricht die der nachfragende Client noch nicht erhalten hat. Welche
+nachricht der Client benötigt wird vom Server gespeichert.
+
+Server ! {getmessages, Pid}
+receive ! {reply, Number, Nachricht, Terminated}
+
+
+Der Server sendet eine Nachricht an seinen Timer, damit dieser weis, dass der Server noch
+aktiv ist.
+
+Server ! {ping}
+
+
+Der Timer sendet eine Nachricht an den Server, damit dieser herunterfährt wenn kein Client
+mehr aktiv ist.
+
+Server ! {shutdown}
