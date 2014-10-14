@@ -4,10 +4,10 @@
 create_new() -> 
 	[{"Dummy Message",0}].
 	
-add({Text, COut, _, HBQIn, DLQIn, ClientIn}, Nr, Queue) ->
+add({Text, COut, HBQIn, _, ClientIn}, Nr, Queue) ->
 	case full(Queue) of
-		true	-> 	lists:keysort(2, [{{Text, COut, util:time_in_ms(), HBQIn, DLQIn, ClientIn}, Nr}] ++ delete_first(Queue));
-		false 	->	lists:keysort(2, [{{Text, COut, util:time_in_ms(), HBQIn, DLQIn, ClientIn}, Nr}] ++ Queue)
+		true	-> 	lists:keysort(2, [{{Text, COut, HBQIn, util:time_in_ms(), ClientIn}, Nr}] ++ delete_first(Queue));
+		false 	->	lists:keysort(2, [{{Text, COut, HBQIn, util:time_in_ms(), ClientIn}, Nr}] ++ Queue)
 	end.
 
 
