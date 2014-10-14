@@ -1,13 +1,13 @@
 -module(dlq).
--export([create_new/0, add/3, get/2]).
+-export([create_new/0, add/3, get/2, get_last_msg_nr/1]).
 
 create_new() -> 
-	[].
+	[{"Dummy Message",0}].
 	
-add(Msg, Nr, Queue) ->
+add({Text, COut, _, HBQIn, DLQIn, ClientIn}, Nr, Queue) ->
 	case full(Queue) of
-		true	-> 	lists:keysort(2, [{Msg, Nr}] ++ delete_first(Queue));
-		false 	->	lists:keysort(2, [{Msg, Nr}] ++ Queue)
+		true	-> 	lists:keysort(2, [{{Text, COut, util:time_in_ms(), HBQIn, DLQIn, ClientIn}, Nr}] ++ delete_first(Queue));
+		false 	->	lists:keysort(2, [{{Text, COut, util:time_in_ms(), HBQIn, DLQIn, ClientIn}, Nr}] ++ Queue)
 	end.
 
 
@@ -22,7 +22,13 @@ get(Nr, [{Nachricht, _} | XS]) when XS /= [] ->
 
 get(Nr, [{Nachricht, _} | _]) ->
 	{Nachricht, Nr, false}.
-	
+
+
+get_last_msg_nr([{_, NNr} | []]) ->
+	NNr;
+
+get_last_msg_nr([_|XS]) ->
+	get_last_msg_nr(XS).	
 		
 		
 full(Queue) ->
