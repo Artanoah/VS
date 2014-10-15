@@ -2,7 +2,7 @@
 -export([create_new/0, add/3, get/2, get_last_msg_nr/1]).
 
 create_new() -> 
-	[{"Dummy Message",0}].
+	[{{"Dummy Message", 0, 0, 0, 0},0}].
 	
 add({Text, COut, HBQIn, _, ClientIn}, Nr, Queue) ->
 	case full(Queue) of

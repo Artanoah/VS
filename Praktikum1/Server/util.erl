@@ -1,5 +1,5 @@
 -module(util).
--export([time_in_ms/0, head/1, tail/1]).
+-export([time_in_ms/0, head/1, tail/1, last/1]).
 
 
 time_in_ms() ->
@@ -17,5 +17,14 @@ head([X | _]) ->
 tail([]) ->
 	[];
 
-tails([_ | XS]) ->
+tail([_ | XS]) ->
 	XS.
+
+last([]) ->
+	[];
+
+last([X | []]) ->
+	X;
+
+last([_ | XS]) ->
+	last(XS).

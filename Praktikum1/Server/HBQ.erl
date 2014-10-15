@@ -1,4 +1,4 @@
--module(hlq).
+-module(hbq).
 -export([createNew/0, add/4]).
 
 createNew() ->
@@ -9,15 +9,16 @@ add({Text, COut, _, DLQIn, ClientIn}, Nr, HBQueue, DLQueue) ->
 	HBQueueFilled = lists:keysort(2, [{{Text, COut, util:time_in_ms(), DLQIn, ClientIn}, Nr} | HBQueue]),
 	
 	case hbqFollowsDlq(HBQueueFilled, DLQueue) or is_hbq_full(HBQueue) of
-		true	-> {HBQueueDone, DLQueueDone} = fill_until_error(util:tail(HBQueueFilled), dlq:add(util:head(HBQueueFilled), DLQueue);
+		true	-> {HBQueueDone, DLQueueDone} = fill_until_error(util:tail(HBQueueFilled), dlq:add(util:head(HBQueueFilled), DLQueue));
 		false 	-> {HBQueueDone, DLQueueDone} = {HBQueueFilled, DLQueue}
-	end
+	end,
+	{HBQueueDone, DLQueueDone}.
 
 
 is_consistent([]) ->
 	true;
 
-is_consistent([Head | []]) ->
+is_consistent([_ | []]) ->
 	true;
 
 is_consistent([{_, Nr}, {Msg, NNr} | HBQ]) when Nr + 1 == NNr ->
@@ -41,7 +42,7 @@ hbqFollowsDlq([], _) ->
 	true;
 
 hbqFollowsDlq(HBQ, DLQ) ->
-	get_num(util:head(HBQ)) - 1 == get_num(lists:last(DLQ)).
+	get_num(util:head(HBQ)) - 1 == get_num(util:last(DLQ)).
 
 
 get_num({_, Nr}) ->
@@ -49,4 +50,4 @@ get_num({_, Nr}) ->
 
 
 is_hbq_full(HBQ) ->
-	get_num(application:get_env(server, dlq_max_size / 2)) < length(HBQ).
+	get_num(application:get_env(server, dlq_max_size) / 2) =< length(HBQ).
