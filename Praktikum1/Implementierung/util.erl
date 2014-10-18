@@ -4,7 +4,7 @@
 		 timeMilliSecond/0,reset_timer/3,
 		 type_is/1,to_String/1,list2String/1,
 		 bestimme_mis/2,
-		 head/1, tail/1, last/1]).
+		 head/1, tail/1, last/1, time_in_ms/0]).
 -define(ZERO, integer_to_list(0)).
 
 %% -------------------------------------------
@@ -291,3 +291,9 @@ last([X | []]) ->
 
 last([_ | XS]) ->
 	last(XS).
+
+time_in_ms() ->
+	time_in_ms_helper(os:timestamp()).
+
+time_in_ms_helper({MegS, S, MS}) ->
+	((MegS * 1000000 + S) * 1000000 + MS) / 1000.

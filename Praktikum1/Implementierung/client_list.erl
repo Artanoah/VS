@@ -1,5 +1,5 @@
 -module(client_list).
--export([create_new/0, add/2, exists/2, update/2, set_time/3, get_last_message_id/2, set_last_message_id/3]).
+-export([create_new/0, add/2, exists/2, update/3, set_time/3, get_last_message_id/2, set_last_message_id/3]).
 
 
 create_new() ->
@@ -20,14 +20,14 @@ exists(ID, [_ | Queue]) ->
 	exists(ID, Queue).
 
 
-update(_, []) ->
+update(_, _, []) ->
 	[];
 
-update(CurrentTime, [{_Nr, _LastNumber, ClientTime} | Queue]) when ClientTime + 8000 =< CurrentTime ->
-	update(CurrentTime, Queue);
+update(CurrentTime, ClientLifetime, [{_Nr, _LastNumber, ClientTime} | Queue]) when ClientTime + ClientLifetime =< CurrentTime ->
+	update(CurrentTime, ClientLifetime, Queue);
 
-update(CurrentTime, [Client | Queue]) ->
-	[Client] ++ update(CurrentTime, Queue).
+update(CurrentTime, ClientLifetime, [Client | Queue]) ->
+	[Client] ++ update(CurrentTime, ClientLifetime, Queue).
 
 
 set_time(_, _, []) ->

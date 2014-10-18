@@ -7,10 +7,10 @@ createDLQ(MaxSize) ->
 	createDLQHelper(MaxSize, []).
 
 createDLQHelper(MaxSize, Queue) when length(Queue) < MaxSize - 1 ->
-	createDLQHelper(MaxSize, Queue ++ [{{0, 0, 0, 0, 0}, -1}]);
+	createDLQHelper(MaxSize, Queue ++ [{{0, 0, 0, 0, 0}, 0}]);
 
 createDLQHelper(MaxSize, Queue) when length(Queue) < MaxSize ->
-	Queue ++ [{{"Dummy Message", 0, 0, 0, 0}, 0}].
+	Queue ++ [{{"Dummy Message", 0, 0, 0, 0}, 1}].
 
 
 %Ermittelt die aktuelle Laenge der Queue
@@ -41,14 +41,18 @@ getMaxID([_ | DLQ]) ->
 
 %Gibt die naechstgroessere Nachrichtennummer nach NNr, die Nachricht zu NNr und ein Flag zurueck, was angibt ob 
 %die letzte Nachricht zurueckgegeben wurde (true, wenn die letzte Nachricht zurueckgegeben wurde, false wenn nicht).
-getNext(NNr, [{Msg, NNr} | []]) ->
+getNext(NNr, DLQ) ->
+	NewNNr = getFollower(NNr, DLQ),
+	getNextHelper(NewNNr, DLQ).
+
+getNextHelper(NNr, [{Msg, NNr} | []]) ->
 	{NNr, Msg, true};
 
-getNext(NNr, [{Msg, NNr}, {_, NNr2} | _]) ->
-	{NNr2, Msg, false};
+getNextHelper(NNr, [{Msg, NNr}, {_, _} | _]) ->
+	{NNr, Msg, false};
 
-getNext(NNr, [_ | DLQ]) ->
-	getNext(NNr, DLQ).
+getNextHelper(NNr, [_ | DLQ]) ->
+	getNextHelper(NNr, DLQ).
 
 
 %Fuegt die Nachricht (erster Tupeleintrag) an die DLQ an und loescht das erste Element aus der DLQ, wenn diese voll ist.
@@ -57,11 +61,15 @@ add(Queue, {{Text, COut, HBQIn, _, ClientIn}, Nr}) ->
 
 
 %Hilfsmethoden
-full(Queue) ->
-	dlq:maxSize(Queue) =< dlq:size(Queue).
-
 delete_first([]) ->
 	[];
 
 delete_first([_ | Queue]) ->
 	Queue.
+
+	
+getFollower(Nr, [{_, NNr} | _]) when NNr > Nr ->
+	NNr;
+	
+getFollower(Nr, [_ | DLQ]) ->
+	getFollower(Nr, DLQ).
