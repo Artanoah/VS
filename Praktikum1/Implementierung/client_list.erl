@@ -7,7 +7,7 @@ create_new() ->
 
 
 add(ClientID, Queue) ->
-	[{ClientID, 0, util:time_in_ms()}] ++ Queue.
+	[{ClientID, 1, util:time_in_ms()}] ++ Queue.
 
 
 exists(_, []) ->
@@ -23,7 +23,13 @@ exists(ID, [_ | Queue]) ->
 update(_, _, []) ->
 	[];
 
-update(CurrentTime, ClientLifetime, [{_Nr, _LastNumber, ClientTime} | Queue]) when ClientTime + ClientLifetime =< CurrentTime ->
+update(CurrentTime, ClientLifetime, [{Nr, _LastNumber, ClientTime} | Queue]) when ClientTime + ClientLifetime * 1000 =< CurrentTime ->
+	%Logging-Mist
+	{ok, ConfigListe} = file:consult("server.cfg"),
+	{ok, ServerName} = util:get_config_value(servername, ConfigListe),
+	LogFileName = "Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log",
+	util:logging(LogFileName, "Client " ++ pid_to_list(Nr) ++ " wird vergessen!..................\n"),
+	
 	update(CurrentTime, ClientLifetime, Queue);
 
 update(CurrentTime, ClientLifetime, [Client | Queue]) ->

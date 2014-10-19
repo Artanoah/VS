@@ -15,7 +15,7 @@ getMSG(DLQ, PID, ClientList, ClientLifetime) ->
 		true -> ClientListWithPID = client_list:set_time(PID, util:time_in_ms(), UpdatedClientList)
 	end,
 	
-	%MSGID wird auf die ID der letzten Nachricht die der Client bekommen hat
+	%MSGID wird auf die ID der letzten Nachricht die der Client bekommen hat gesetzt
 	MSGID = client_list:get_last_message_id(PID, ClientListWithPID),
 	
 	%Number wird zur naechsten MSGID die der Client geschickt bekommt,
@@ -29,4 +29,30 @@ getMSG(DLQ, PID, ClientList, ClientLifetime) ->
 	%Schicke die Nachricht an den Client
 	PID ! {reply, Number, Nachricht, Terminated},
 	
+	%Logging-Mist
+	{ok, ConfigListe} = file:consult("server.cfg"),
+	{ok, ServerName} = util:get_config_value(servername, ConfigListe),
+	LogFileName = "Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log",
+	
+	{Msg, COut, HBQIn, DLQIn, _} = Nachricht,
+	util:logging(LogFileName, Msg ++ 
+	" " ++ 
+	integer_to_list(Number) ++ 
+	"te_Nachricht. COut: " ++ 
+	COut ++ 
+	" HBQ In: " ++ 
+	HBQIn ++ 
+	"DLQ In: " ++ 
+	DLQIn ++ 
+	" -getmessages von " ++ 
+	pid_to_list(PID) ++ 
+	"-" ++ 
+	boolean_to_list(Terminated) ++ "\n"),
+	
 	FinalClientList.
+	
+boolean_to_list(Flag) ->
+	case Flag of 
+		true -> "true";
+		false -> "false"
+	end.
