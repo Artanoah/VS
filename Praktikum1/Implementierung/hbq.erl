@@ -71,4 +71,4 @@ get_num({_, Nr}) ->
 
 
 is_hbq_full(Queue, MaxDLQSize) ->
-	MaxDLQSize div 2 =< length(Queue).
+	MaxDLQSize div 2 < length(Queue).

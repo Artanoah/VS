@@ -10,7 +10,7 @@ createDLQHelper(MaxSize, Queue) when length(Queue) < MaxSize - 1 ->
 	createDLQHelper(MaxSize, Queue ++ [{{0, "", "", "", ""}, 0}]);
 
 createDLQHelper(MaxSize, Queue) when length(Queue) < MaxSize ->
-	Queue ++ [{{"Dummy Message", "", "", "", ""}, 1}].
+	Queue ++ [{{"Dummy Message", "", "", "", ""}, 0}].
 
 
 %Ermittelt die aktuelle Laenge der Queue
@@ -56,18 +56,18 @@ getNextHelper(NNr, [_ | DLQ]) ->
 
 
 %Fuegt die Nachricht (erster Tupeleintrag) an die DLQ an und loescht das erste Element aus der DLQ, wenn diese voll ist.
-add(Queue, {{Text, COut, HBQIn, _, ClientIn}, Nr}) when Nr == 0 ->
-	lists:keysort(2, [{{Text, COut, HBQIn, util:timeMilliSecond(), ClientIn}, Nr}] ++ delete_first(Queue));
+add([{_, NNr}|Queue], {{Text, COut, HBQIn, _, ClientIn}, Nr}) when NNr == 0 ->
+	lists:keysort(2, [{{Text, COut, HBQIn, util:timeMilliSecond(), ClientIn}, Nr}] ++ Queue);
 
-add(Queue, {{Text, COut, HBQIn, _, ClientIn}, Nr}) ->
+add([{_, NNr}|Queue], {{Text, COut, HBQIn, _, ClientIn}, Nr}) ->
 	%Logging-Mist
 	{ok, ConfigListe} = file:consult("server.cfg"),
 	{ok, ServerName} = util:get_config_value(servername, ConfigListe),
 	LogFileName = "Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log",
 	
-	util:logging(LogFileName, "QVerwaltung>>> Nachricht " ++ integer_to_list(Nr) ++ " wurde geloescht\n"),
+	util:logging(LogFileName, "QVerwaltung>>> Nachricht " ++ integer_to_list(NNr) ++ " wurde geloescht\n"),
 	
-	lists:keysort(2, [{{Text, COut, HBQIn, util:timeMilliSecond(), ClientIn}, Nr}] ++ delete_first(Queue)).
+	lists:keysort(2, [{{Text, COut, HBQIn, util:timeMilliSecond(), ClientIn}, Nr}] ++ Queue).
 
 
 %Hilfsmethoden

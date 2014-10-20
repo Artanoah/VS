@@ -20,7 +20,7 @@ startServer() ->
 	LogFileName = "Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log\n",
 	
 	%Logging
-	util:logging(LogFileName, "Server Startzeit: " ++ util:timeMilliSecond() ++ " mit PID " ++ pid_to_list(self())),
+	util:logging(LogFileName, "Server Startzeit: " ++ util:timeMilliSecond() ++ " mit PID " ++ pid_to_list(self()) ++ "\n"),
 	
 	%Starte Dispatcher-Loop
 	dispatcher_loop(HBQ, DLQ, ClientList, ConfigListe, Latency, ClientLifetime, ServerName, DlqLimit, 1, LogFileName).
@@ -46,5 +46,6 @@ dispatcher_loop(HBQ, DLQ, ClientList, ConfigListe, Latency, ClientLifetime, Serv
 
 	after
 		Latency ->
-			util:logging(LogFileName, "Downtime: " ++ util:timeMilliSecond() ++ " vom Nachrichtenserver " ++ pid_to_list(self()) ++ "; Anzahl Restnachrichten in der HBQ:" ++ integer_to_list(length(HBQ)))
+			util:logging(LogFileName, "Downtime: " ++ util:timeMilliSecond() ++ " vom Nachrichtenserver " ++ pid_to_list(self()) ++ "; Anzahl Restnachrichten in der HBQ:" ++ integer_to_list(length(HBQ)) ++ "\n"),
+			util:logstop()
 	end.
