@@ -12,14 +12,15 @@ sending(Lifetime, SendeIntervall, ClientName, ServerName, LogFileName) ->
 	MSGIDList = clientEditor:startSend(SendeIntervall, ClientName, ServerName),
 	clientReader:startRead(ServerName, MSGIDList),
 	NewSendeIntervall = calcTimer(SendeIntervall),
+	util:logging(LogFileName, "Neuer Sendeintervall: " ++ integer_to_list(NewSendeIntervall) ++ " Sekunden (" ++ integer_to_list(SendeIntervall) ++ ")\n"),
 	sending(Lifetime, NewSendeIntervall, ClientName, ServerName, LogFileName).
 
 
 calcTimer(SendeIntervall) ->
-	case random:uniform(2) of
-		1 ->
+	case random() of
+		true ->
 			NewIntervall = SendeIntervall - 1;
-		2 ->
+		false ->
 			NewIntervall = SendeIntervall + 1
 	end,
 	
@@ -28,4 +29,11 @@ calcTimer(SendeIntervall) ->
 			2;
 		false ->
 			NewIntervall
+	end.
+
+random()	->
+	{_, _, MS} = os:timestamp(),
+	case (MS div 1000) rem 2 of
+		0 -> true;
+		1 -> false
 	end.

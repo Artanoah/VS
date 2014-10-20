@@ -297,7 +297,7 @@ time_in_ms() ->
 	time_in_ms_helper(os:timestamp()).
 
 time_in_ms_helper({MegS, S, MS}) ->
-	((MegS * 1000000 + S) * 1000000 + MS) / 1000.
+	((MegS * 1000000 + S) * 1000000 + MS) div 1000.
 
 get_client_log_file(Rechnername) ->
 	"client_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(Rechnername) ++ ".log".

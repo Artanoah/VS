@@ -23,16 +23,16 @@ dropmessage(HBQueue, DLQueue, {{Text, COut, _, DLQIn, ClientIn}, Nr}) ->
 			case is_hbq_full(HBQueueFilled, dlq:maxSize(DLQueue)) of
 				true -> 
 					{_, LastMessageNumber} = util:head(HBQueueFilled),
-					ErrorText = "***Fehlernachricht fuer Nachrichten " ++ integer_to_list(dlq:getMaxID(DLQueue)) ++ " bis " ++ integer_to_list(LastMessageNumber) ++ " um " ++ util:timeMilliSecond() ++ "\n",
+					ErrorText = "***Fehlernachricht fuer Nachrichten " ++ integer_to_list(dlq:getMaxID(DLQueue) + 1) ++ " bis " ++ integer_to_list(LastMessageNumber - 1) ++ " um " ++ util:timeMilliSecond(),
 					ErrorMessage = {{ErrorText, "", "", "", ""}, LastMessageNumber - 1},
 					DLQueueFilled = dlq:add(DLQueue, ErrorMessage),
-					util:logging(LogFileName, ErrorText);
+					util:logging(LogFileName, ErrorText  ++ "\n");
 				false ->
 					DLQueueFilled = DLQueue
 			end,
 					
 			
-			case hbqFollowsDlq(HBQueueFilled, DLQueueFilled) of
+			case hbqFollowsDlq(HBQueueFilled, DLQueueFilled) or is_hbq_full(HBQueueFilled, dlq:maxSize(DLQueueFilled)) of
 				true	-> 
 					{_, HeadNum} = util:head(HBQueueFilled),
 					{HBQueueDone, DLQueueDone, Log} = fill_until_error(dlq:maxSize(DLQueueFilled), [HeadNum], util:tail(HBQueueFilled), dlq:add(DLQueueFilled, util:head(HBQueueFilled))),
