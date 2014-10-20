@@ -45,7 +45,7 @@ dispatcher_loop(HBQ, DLQ, ClientList, ConfigListe, Latency, ClientLifetime, Serv
 			dispatcher_loop(HBQ, DLQ, NewClientList, ConfigListe, Latency, ClientLifetime, ServerName, DlqLimit, FreeMSGID, LogFileName)
 
 	after
-		Latency ->
+		Latency * 1000 ->
 			util:logging(LogFileName, "Downtime: " ++ util:timeMilliSecond() ++ " vom Nachrichtenserver " ++ pid_to_list(self()) ++ "; Anzahl Restnachrichten in der HBQ:" ++ integer_to_list(length(HBQ)) ++ "\n"),
 			util:logstop(),
 			erlang:unregister(ServerName)

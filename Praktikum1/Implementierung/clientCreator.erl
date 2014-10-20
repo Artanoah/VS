@@ -9,9 +9,10 @@ start() ->
 	{ok, SendeIntervall} = util:get_config_value(sendeintervall, ConfigListe),
 	{ok, PraktikumsGruppe} = util:get_config_value(praktikumsgruppe, ConfigListe),
 	{ok, Rechnername} = util:get_config_value(rechnername, ConfigListe),
+	{ok, NodeName} = util:get_config_value(nodename, ConfigListe),
 	{ok, Teamnummer} = util:get_config_value(teamnummer, ConfigListe),
 	
-	ServerName = {ServerTemp,list_to_atom(lists:concat(["googleUltron@",Rechnername]))},
+	ServerName = {ServerTemp,list_to_atom(lists:concat([NodeName,"@",Rechnername]))},
 	%Warte darauf, dass der Server gestartet und registriert wurde.
 	%waitForServer(ServerName),
 	

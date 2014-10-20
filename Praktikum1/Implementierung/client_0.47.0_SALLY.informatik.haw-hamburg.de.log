@@ -1,271 +1,270 @@
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 Start: 20.10 15:47:03,893|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 7te_Nachricht. C Out: 20.10 15:47:08,963| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 12te_Nachricht. C Out: 20.10 15:47:13,971| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 27te_Nachricht. C Out: 20.10 15:47:18,978| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 32te_Nachricht. C Out: 20.10 15:47:23,986| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 47te_Nachricht. C Out: 20.10 15:47:28,994| gesendet
-52te Nachricht um 20.10 15:47:29,009| vergessen zu senden
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 2te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,994|DLQ In: 20.10 15:47:08,994|C In:20.10 15:47:29,087|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 3te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,994|DLQ In: 20.10 15:47:08,994|C In:20.10 15:47:29,134|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 4te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,979|DLQ In: 20.10 15:47:08,994|C In:20.10 15:47:29,228|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 5te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,979|DLQ In: 20.10 15:47:08,994|C In:20.10 15:47:29,321|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 6te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,979|DLQ In: 20.10 15:47:08,994|C In:20.10 15:47:29,399|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 7te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,963|DLQ In: 20.10 15:47:08,994|*******C In:20.10 15:47:29,477|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 8te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,963|DLQ In: 20.10 15:47:08,994|C In:20.10 15:47:29,540|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 9te_Nachricht. COut: 20.10 15:47:08,979| HBQ In: 20.10 15:47:09,010|DLQ In: 20.10 15:47:09,010|C In:20.10 15:47:29,618|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 10te_Nachricht. COut: 20.10 15:47:08,979| HBQ In: 20.10 15:47:09,010|DLQ In: 20.10 15:47:09,010|C In:20.10 15:47:29,696|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 11te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:14,016|DLQ In: 20.10 15:47:14,017|C In:20.10 15:47:29,774|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 12te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:14,002|DLQ In: 20.10 15:47:14,017|*******C In:20.10 15:47:29,852|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 13te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:14,002|DLQ In: 20.10 15:47:14,017|C In:20.10 15:47:30,086|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 14te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:14,002|DLQ In: 20.10 15:47:14,017|C In:20.10 15:47:30,242|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 15te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:13,986|DLQ In: 20.10 15:47:14,017|C In:20.10 15:47:30,429|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 16te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:13,986|DLQ In: 20.10 15:47:14,017|C In:20.10 15:47:30,507|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 17te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:13,971|DLQ In: 20.10 15:47:14,017|C In:20.10 15:47:30,569|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 18te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:13,971|DLQ In: 20.10 15:47:14,017|C In:20.10 15:47:30,647|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 19te_Nachricht. COut: 20.10 15:47:13,986| HBQ In: 20.10 15:47:14,032|DLQ In: 20.10 15:47:14,033|C In:20.10 15:47:30,725|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 20te_Nachricht. COut: 20.10 15:47:13,986| HBQ In: 20.10 15:47:14,017|DLQ In: 20.10 15:47:14,033|C In:20.10 15:47:30,803|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 21te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,072|DLQ In: 20.10 15:47:19,072|C In:20.10 15:47:30,881|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 22te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,056|DLQ In: 20.10 15:47:19,072|C In:20.10 15:47:30,944|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 23te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,041|DLQ In: 20.10 15:47:19,072|C In:20.10 15:47:31,022|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 24te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,040|DLQ In: 20.10 15:47:19,072|C In:20.10 15:47:31,084|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 25te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,024|DLQ In: 20.10 15:47:19,072|C In:20.10 15:47:31,162|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 26te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,010|DLQ In: 20.10 15:47:19,072|C In:20.10 15:47:31,240|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 27te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:18,994|DLQ In: 20.10 15:47:19,072|*******C In:20.10 15:47:31,302|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 28te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:18,978|DLQ In: 20.10 15:47:19,072|C In:20.10 15:47:31,380|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 29te_Nachricht. COut: 20.10 15:47:18,994| HBQ In: 20.10 15:47:19,088|DLQ In: 20.10 15:47:19,088|C In:20.10 15:47:31,490|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 30te_Nachricht. COut: 20.10 15:47:18,994| HBQ In: 20.10 15:47:19,072|DLQ In: 20.10 15:47:19,088|C In:20.10 15:47:31,568|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 31te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,033|DLQ In: 20.10 15:47:24,033|C In:20.10 15:47:31,646|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 32te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,033|DLQ In: 20.10 15:47:24,033|*******C In:20.10 15:47:31,724|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 33te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,032|DLQ In: 20.10 15:47:24,033|C In:20.10 15:47:31,786|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 34te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,016|DLQ In: 20.10 15:47:24,033|C In:20.10 15:47:31,864|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 35te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,002|DLQ In: 20.10 15:47:24,033|C In:20.10 15:47:31,942|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 36te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,002|DLQ In: 20.10 15:47:24,033|C In:20.10 15:47:32,020|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 37te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:23,986|DLQ In: 20.10 15:47:24,033|C In:20.10 15:47:32,082|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 38te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:23,986|DLQ In: 20.10 15:47:24,033|C In:20.10 15:47:32,160|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 39te_Nachricht. COut: 20.10 15:47:24,002| HBQ In: 20.10 15:47:24,048|DLQ In: 20.10 15:47:24,048|C In:20.10 15:47:32,223|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 40te_Nachricht. COut: 20.10 15:47:24,002| HBQ In: 20.10 15:47:24,048|DLQ In: 20.10 15:47:24,048|C In:20.10 15:47:32,301|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 41te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,040|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:32,379|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 42te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,040|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:32,457|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 43te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,040|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:32,519|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 44te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,024|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:32,597|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 45te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,009|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:32,660|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 46te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,009|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:32,738|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 47te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,008|DLQ In: 20.10 15:47:29,056|*******C In:20.10 15:47:32,816|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 48te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:28,994|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:32,894|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 49te_Nachricht. COut: 20.10 15:47:29,009| HBQ In: 20.10 15:47:29,056|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:32,956|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 50te_Nachricht. COut: 20.10 15:47:29,008| HBQ In: 20.10 15:47:29,056|DLQ In: 20.10 15:47:29,056|C In:20.10 15:47:33,050|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 Start: 20.10 16:00:52,800|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 7te_Nachricht. C Out: 20.10 16:00:57,870| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 16te_Nachricht. C Out: 20.10 16:01:02,878| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 27te_Nachricht. C Out: 20.10 16:01:07,886| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 36te_Nachricht. C Out: 20.10 16:01:12,893| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 47te_Nachricht. C Out: 20.10 16:01:17,901| gesendet
+56te Nachricht um 20.10 16:01:17,916| vergessen zu senden
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 2te_Nachricht. COut: 20.10 16:00:57,855| HBQ In: 20.10 16:00:57,860|DLQ In: 20.10 16:00:57,860|C In:20.10 16:01:17,979|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 3te_Nachricht. COut: 20.10 16:00:57,855| HBQ In: 20.10 16:00:57,859|DLQ In: 20.10 16:00:57,860|C In:20.10 16:01:18,057|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 4te_Nachricht. COut: 20.10 16:00:57,855| HBQ In: 20.10 16:00:57,845|DLQ In: 20.10 16:00:57,860|C In:20.10 16:01:18,135|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 5te_Nachricht. COut: 20.10 16:00:57,855| HBQ In: 20.10 16:00:57,845|DLQ In: 20.10 16:00:57,860|C In:20.10 16:01:18,197|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 6te_Nachricht. COut: 20.10 16:00:57,870| HBQ In: 20.10 16:00:57,876|DLQ In: 20.10 16:00:57,876|C In:20.10 16:01:18,291|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 7te_Nachricht. COut: 20.10 16:00:57,870| HBQ In: 20.10 16:00:57,875|DLQ In: 20.10 16:00:57,876|*******C In:20.10 16:01:18,384|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 8te_Nachricht. COut: 20.10 16:00:57,886| HBQ In: 20.10 16:00:57,892|DLQ In: 20.10 16:00:57,892|C In:20.10 16:01:18,447|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 9te_Nachricht. COut: 20.10 16:00:57,886| HBQ In: 20.10 16:00:57,891|DLQ In: 20.10 16:00:57,892|C In:20.10 16:01:18,540|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 10te_Nachricht. COut: 20.10 16:00:57,886| HBQ In: 20.10 16:00:57,876|DLQ In: 20.10 16:00:57,892|C In:20.10 16:01:18,603|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 11te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,883|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:18,665|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 12te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,868|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:18,743|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 13te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,867|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:18,852|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 14te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,852|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:18,930|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 15te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,851|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:19,024|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 16te_Nachricht. COut: 20.10 16:01:02,878| HBQ In: 20.10 16:01:02,899|DLQ In: 20.10 16:01:02,899|*******C In:20.10 16:01:19,102|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 17te_Nachricht. COut: 20.10 16:01:02,878| HBQ In: 20.10 16:01:02,884|DLQ In: 20.10 16:01:02,899|C In:20.10 16:01:19,242|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 18te_Nachricht. COut: 20.10 16:01:02,894| HBQ In: 20.10 16:01:02,915|DLQ In: 20.10 16:01:02,915|C In:20.10 16:01:19,336|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 19te_Nachricht. COut: 20.10 16:01:02,894| HBQ In: 20.10 16:01:02,899|DLQ In: 20.10 16:01:02,915|C In:20.10 16:01:19,398|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 20te_Nachricht. COut: 20.10 16:01:02,894| HBQ In: 20.10 16:01:02,899|DLQ In: 20.10 16:01:02,915|C In:20.10 16:01:19,523|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 21te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,891|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:19,601|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 22te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,876|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:19,679|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 23te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,875|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:19,742|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 24te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,860|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:19,820|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 25te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,859|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:19,882|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 26te_Nachricht. COut: 20.10 16:01:07,886| HBQ In: 20.10 16:01:07,907|DLQ In: 20.10 16:01:07,907|C In:20.10 16:01:19,960|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 27te_Nachricht. COut: 20.10 16:01:07,886| HBQ In: 20.10 16:01:07,907|DLQ In: 20.10 16:01:07,907|*******C In:20.10 16:01:20,054|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 28te_Nachricht. COut: 20.10 16:01:07,901| HBQ In: 20.10 16:01:07,922|DLQ In: 20.10 16:01:07,922|C In:20.10 16:01:20,116|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 29te_Nachricht. COut: 20.10 16:01:07,901| HBQ In: 20.10 16:01:07,922|DLQ In: 20.10 16:01:07,922|C In:20.10 16:01:20,194|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 30te_Nachricht. COut: 20.10 16:01:07,901| HBQ In: 20.10 16:01:07,922|DLQ In: 20.10 16:01:07,922|C In:20.10 16:01:20,272|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 31te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,915|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:20,366|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 32te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,899|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:20,459|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 33te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,899|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:20,568|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 34te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,884|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:20,646|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 35te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,883|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:20,756|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 36te_Nachricht. COut: 20.10 16:01:12,893| HBQ In: 20.10 16:01:12,930|DLQ In: 20.10 16:01:12,930|*******C In:20.10 16:01:20,834|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 37te_Nachricht. COut: 20.10 16:01:12,893| HBQ In: 20.10 16:01:12,915|DLQ In: 20.10 16:01:12,930|C In:20.10 16:01:20,927|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 38te_Nachricht. COut: 20.10 16:01:12,909| HBQ In: 20.10 16:01:12,946|DLQ In: 20.10 16:01:12,946|C In:20.10 16:01:21,005|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 39te_Nachricht. COut: 20.10 16:01:12,909| HBQ In: 20.10 16:01:12,946|DLQ In: 20.10 16:01:12,946|C In:20.10 16:01:21,083|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 40te_Nachricht. COut: 20.10 16:01:12,909| HBQ In: 20.10 16:01:12,930|DLQ In: 20.10 16:01:12,946|C In:20.10 16:01:21,161|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 41te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,922|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:21,224|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 42te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,907|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:21,302|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 43te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,907|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:21,364|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 44te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,891|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:21,442|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 45te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,891|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:21,520|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 46te_Nachricht. COut: 20.10 16:01:17,901| HBQ In: 20.10 16:01:17,937|DLQ In: 20.10 16:01:17,938|C In:20.10 16:01:21,583|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 47te_Nachricht. COut: 20.10 16:01:17,901| HBQ In: 20.10 16:01:17,922|DLQ In: 20.10 16:01:17,938|*******C In:20.10 16:01:21,661|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 48te_Nachricht. COut: 20.10 16:01:17,916| HBQ In: 20.10 16:01:17,954|DLQ In: 20.10 16:01:17,954|C In:20.10 16:01:21,723|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 49te_Nachricht. COut: 20.10 16:01:17,916| HBQ In: 20.10 16:01:17,938|DLQ In: 20.10 16:01:17,954|C In:20.10 16:01:21,801|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 50te_Nachricht. COut: 20.10 16:01:17,915| HBQ In: 20.10 16:01:17,938|DLQ In: 20.10 16:01:17,954|C In:20.10 16:01:21,879|
 ..getmessages..Done..
 Neuer Sendeintervall: 6 Sekunden (5)
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 62te_Nachricht. C Out: 20.10 15:47:39,056| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 75te_Nachricht. C Out: 20.10 15:47:45,062| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 86te_Nachricht. C Out: 20.10 15:47:51,068| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 99te_Nachricht. C Out: 20.10 15:47:57,074| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 113te_Nachricht. C Out: 20.10 15:48:03,080| gesendet
-127te Nachricht um 20.10 15:48:03,080| vergessen zu senden
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 2te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,994|DLQ In: 20.10 15:47:08,994|C In:20.10 15:48:03,111|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 3te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,994|DLQ In: 20.10 15:47:08,994|C In:20.10 15:48:03,127|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 4te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,979|DLQ In: 20.10 15:47:08,994|C In:20.10 15:48:03,127|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 5te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,979|DLQ In: 20.10 15:47:08,994|C In:20.10 15:48:03,142|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 6te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,979|DLQ In: 20.10 15:47:08,994|C In:20.10 15:48:03,158|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 7te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,963|DLQ In: 20.10 15:47:08,994|C In:20.10 15:48:03,189|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 8te_Nachricht. COut: 20.10 15:47:08,963| HBQ In: 20.10 15:47:08,963|DLQ In: 20.10 15:47:08,994|C In:20.10 15:48:03,236|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 9te_Nachricht. COut: 20.10 15:47:08,979| HBQ In: 20.10 15:47:09,010|DLQ In: 20.10 15:47:09,010|C In:20.10 15:48:03,283|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 10te_Nachricht. COut: 20.10 15:47:08,979| HBQ In: 20.10 15:47:09,010|DLQ In: 20.10 15:47:09,010|C In:20.10 15:48:03,314|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 11te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:14,016|DLQ In: 20.10 15:47:14,017|C In:20.10 15:48:03,361|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 12te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:14,002|DLQ In: 20.10 15:47:14,017|C In:20.10 15:48:03,392|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 13te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:14,002|DLQ In: 20.10 15:47:14,017|C In:20.10 15:48:03,439|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 14te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:14,002|DLQ In: 20.10 15:47:14,017|C In:20.10 15:48:03,485|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 15te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:13,986|DLQ In: 20.10 15:47:14,017|C In:20.10 15:48:03,532|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 16te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:13,986|DLQ In: 20.10 15:47:14,017|C In:20.10 15:48:03,579|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 17te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:13,971|DLQ In: 20.10 15:47:14,017|C In:20.10 15:48:03,641|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 18te_Nachricht. COut: 20.10 15:47:13,971| HBQ In: 20.10 15:47:13,971|DLQ In: 20.10 15:47:14,017|C In:20.10 15:48:03,688|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 19te_Nachricht. COut: 20.10 15:47:13,986| HBQ In: 20.10 15:47:14,032|DLQ In: 20.10 15:47:14,033|C In:20.10 15:48:03,719|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 20te_Nachricht. COut: 20.10 15:47:13,986| HBQ In: 20.10 15:47:14,017|DLQ In: 20.10 15:47:14,033|C In:20.10 15:48:03,766|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 21te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,072|DLQ In: 20.10 15:47:19,072|C In:20.10 15:48:03,813|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 22te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,056|DLQ In: 20.10 15:47:19,072|C In:20.10 15:48:03,860|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 23te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,041|DLQ In: 20.10 15:47:19,072|C In:20.10 15:48:03,907|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 24te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,040|DLQ In: 20.10 15:47:19,072|C In:20.10 15:48:03,938|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 25te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,024|DLQ In: 20.10 15:47:19,072|C In:20.10 15:48:03,985|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 26te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:19,010|DLQ In: 20.10 15:47:19,072|C In:20.10 15:48:04,031|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 27te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:18,994|DLQ In: 20.10 15:47:19,072|C In:20.10 15:48:04,063|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 28te_Nachricht. COut: 20.10 15:47:18,978| HBQ In: 20.10 15:47:18,978|DLQ In: 20.10 15:47:19,072|C In:20.10 15:48:04,109|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 29te_Nachricht. COut: 20.10 15:47:18,994| HBQ In: 20.10 15:47:19,088|DLQ In: 20.10 15:47:19,088|C In:20.10 15:48:04,156|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 30te_Nachricht. COut: 20.10 15:47:18,994| HBQ In: 20.10 15:47:19,072|DLQ In: 20.10 15:47:19,088|C In:20.10 15:48:04,187|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 31te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,033|DLQ In: 20.10 15:47:24,033|C In:20.10 15:48:04,234|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 32te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,033|DLQ In: 20.10 15:47:24,033|C In:20.10 15:48:04,281|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 33te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,032|DLQ In: 20.10 15:47:24,033|C In:20.10 15:48:04,312|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 34te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,016|DLQ In: 20.10 15:47:24,033|C In:20.10 15:48:04,359|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 35te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,002|DLQ In: 20.10 15:47:24,033|C In:20.10 15:48:04,406|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 36te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:24,002|DLQ In: 20.10 15:47:24,033|C In:20.10 15:48:04,437|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 37te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:23,986|DLQ In: 20.10 15:47:24,033|C In:20.10 15:48:04,484|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 38te_Nachricht. COut: 20.10 15:47:23,986| HBQ In: 20.10 15:47:23,986|DLQ In: 20.10 15:47:24,033|C In:20.10 15:48:04,531|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 39te_Nachricht. COut: 20.10 15:47:24,002| HBQ In: 20.10 15:47:24,048|DLQ In: 20.10 15:47:24,048|C In:20.10 15:48:04,577|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 40te_Nachricht. COut: 20.10 15:47:24,002| HBQ In: 20.10 15:47:24,048|DLQ In: 20.10 15:47:24,048|C In:20.10 15:48:04,609|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 41te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,040|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,655|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 42te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,040|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,702|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 43te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,040|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,733|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 44te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,024|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,780|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 45te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,009|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,827|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 46te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,009|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,874|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 47te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:29,008|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,905|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 48te_Nachricht. COut: 20.10 15:47:28,994| HBQ In: 20.10 15:47:28,994|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,952|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 49te_Nachricht. COut: 20.10 15:47:29,009| HBQ In: 20.10 15:47:29,056|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:04,999|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 50te_Nachricht. COut: 20.10 15:47:29,008| HBQ In: 20.10 15:47:29,056|DLQ In: 20.10 15:47:29,056|C In:20.10 15:48:05,030|
-***Fehlernachricht fuer Nachrichten 51 bis 60 um 20.10 15:48:00,568| 60te_Nachricht. COut:  HBQ In: DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,077|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 61te_Nachricht. COut: 20.10 15:47:37,042| HBQ In: 20.10 15:47:37,042|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,123|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 62te_Nachricht. COut: 20.10 15:47:39,056| HBQ In: 20.10 15:47:39,056|DLQ In: 20.10 15:48:00,568|*******C In:20.10 15:48:05,170|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 63te_Nachricht. COut: 20.10 15:47:39,071| HBQ In: 20.10 15:47:39,071|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,201|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 64te_Nachricht. COut: 20.10 15:47:37,090| HBQ In: 20.10 15:47:37,090|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,248|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 65te_Nachricht. COut: 20.10 15:47:37,106| HBQ In: 20.10 15:47:37,106|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,295|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 66te_Nachricht. COut: 20.10 15:47:37,121| HBQ In: 20.10 15:47:37,121|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,326|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 67te_Nachricht. COut: 20.10 15:47:39,133| HBQ In: 20.10 15:47:39,133|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,373|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 68te_Nachricht. COut: 20.10 15:47:39,149| HBQ In: 20.10 15:47:39,149|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,420|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 69te_Nachricht. COut: 20.10 15:47:39,149| HBQ In: 20.10 15:47:39,149|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,467|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 70te_Nachricht. COut: 20.10 15:47:39,165| HBQ In: 20.10 15:47:39,165|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,512|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 71te_Nachricht. COut: 20.10 15:47:41,052| HBQ In: 20.10 15:47:41,052|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,545|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 72te_Nachricht. COut: 20.10 15:47:41,099| HBQ In: 20.10 15:47:41,099|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,591|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 73te_Nachricht. COut: 20.10 15:47:41,115| HBQ In: 20.10 15:47:41,115|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,638|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 74te_Nachricht. COut: 20.10 15:47:41,129| HBQ In: 20.10 15:47:41,129|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,685|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 75te_Nachricht. COut: 20.10 15:47:45,062| HBQ In: 20.10 15:47:45,062|DLQ In: 20.10 15:48:00,568|*******C In:20.10 15:48:05,716|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 76te_Nachricht. COut: 20.10 15:47:45,077| HBQ In: 20.10 15:47:45,077|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,779|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 77te_Nachricht. COut: 20.10 15:47:45,140| HBQ In: 20.10 15:47:45,140|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,810|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 78te_Nachricht. COut: 20.10 15:47:45,155| HBQ In: 20.10 15:47:45,171|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,857|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 79te_Nachricht. COut: 20.10 15:47:45,155| HBQ In: 20.10 15:47:45,155|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,903|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 80te_Nachricht. COut: 20.10 15:47:45,171| HBQ In: 20.10 15:47:45,171|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,935|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 81te_Nachricht. COut: 20.10 15:47:45,062| HBQ In: 20.10 15:47:45,062|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:05,981|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 82te_Nachricht. COut: 20.10 15:47:45,108| HBQ In: 20.10 15:47:45,108|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,028|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 83te_Nachricht. COut: 20.10 15:47:45,124| HBQ In: 20.10 15:47:45,124|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,075|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 84te_Nachricht. COut: 20.10 15:47:45,140| HBQ In: 20.10 15:47:45,140|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,106|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 85te_Nachricht. COut: 20.10 15:47:49,071| HBQ In: 20.10 15:47:49,071|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,153|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 86te_Nachricht. COut: 20.10 15:47:51,068| HBQ In: 20.10 15:47:51,068|DLQ In: 20.10 15:48:00,568|*******C In:20.10 15:48:06,200|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 87te_Nachricht. COut: 20.10 15:47:51,083| HBQ In: 20.10 15:47:51,083|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,231|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 88te_Nachricht. COut: 20.10 15:47:49,117| HBQ In: 20.10 15:47:49,117|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,278|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 89te_Nachricht. COut: 20.10 15:47:49,133| HBQ In: 20.10 15:47:49,133|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,325|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 90te_Nachricht. COut: 20.10 15:47:49,149| HBQ In: 20.10 15:47:49,149|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,356|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 91te_Nachricht. COut: 20.10 15:47:51,145| HBQ In: 20.10 15:47:51,145|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,403|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 92te_Nachricht. COut: 20.10 15:47:51,161| HBQ In: 20.10 15:47:51,161|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,449|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 93te_Nachricht. COut: 20.10 15:47:51,161| HBQ In: 20.10 15:47:51,161|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,481|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 94te_Nachricht. COut: 20.10 15:47:51,177| HBQ In: 20.10 15:47:51,177|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,527|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 95te_Nachricht. COut: 20.10 15:47:53,080| HBQ In: 20.10 15:47:53,080|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,574|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 96te_Nachricht. COut: 20.10 15:47:53,127| HBQ In: 20.10 15:47:53,157|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,637|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 97te_Nachricht. COut: 20.10 15:47:53,143| HBQ In: 20.10 15:47:53,173|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,683|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 98te_Nachricht. COut: 20.10 15:47:53,157| HBQ In: 20.10 15:47:53,189|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,730|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 99te_Nachricht. COut: 20.10 15:47:57,074| HBQ In: 20.10 15:47:57,074|DLQ In: 20.10 15:48:00,568|*******C In:20.10 15:48:06,808|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 100te_Nachricht. COut: 20.10 15:47:57,089| HBQ In: 20.10 15:47:57,089|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,855|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 101te_Nachricht. COut: 20.10 15:47:57,151| HBQ In: 20.10 15:47:57,151|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,917|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 102te_Nachricht. COut: 20.10 15:47:57,167| HBQ In: 20.10 15:47:57,167|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:06,964|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 103te_Nachricht. COut: 20.10 15:47:57,167| HBQ In: 20.10 15:47:57,167|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:07,027|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 104te_Nachricht. COut: 20.10 15:47:57,183| HBQ In: 20.10 15:47:57,183|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:07,058|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 66te_Nachricht. C Out: 20.10 16:01:27,885| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 77te_Nachricht. C Out: 20.10 16:01:33,891| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 90te_Nachricht. C Out: 20.10 16:01:39,897| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 101te_Nachricht. C Out: 20.10 16:01:45,903| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 115te_Nachricht. C Out: 20.10 16:01:51,909| gesendet
+127te Nachricht um 20.10 16:01:51,925| vergessen zu senden
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 2te_Nachricht. COut: 20.10 16:00:57,855| HBQ In: 20.10 16:00:57,860|DLQ In: 20.10 16:00:57,860|C In:20.10 16:01:51,971|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 3te_Nachricht. COut: 20.10 16:00:57,855| HBQ In: 20.10 16:00:57,859|DLQ In: 20.10 16:00:57,860|C In:20.10 16:01:52,018|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 4te_Nachricht. COut: 20.10 16:00:57,855| HBQ In: 20.10 16:00:57,845|DLQ In: 20.10 16:00:57,860|C In:20.10 16:01:52,065|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 5te_Nachricht. COut: 20.10 16:00:57,855| HBQ In: 20.10 16:00:57,845|DLQ In: 20.10 16:00:57,860|C In:20.10 16:01:52,096|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 6te_Nachricht. COut: 20.10 16:00:57,870| HBQ In: 20.10 16:00:57,876|DLQ In: 20.10 16:00:57,876|C In:20.10 16:01:52,143|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 7te_Nachricht. COut: 20.10 16:00:57,870| HBQ In: 20.10 16:00:57,875|DLQ In: 20.10 16:00:57,876|C In:20.10 16:01:52,190|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 8te_Nachricht. COut: 20.10 16:00:57,886| HBQ In: 20.10 16:00:57,892|DLQ In: 20.10 16:00:57,892|C In:20.10 16:01:52,237|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 9te_Nachricht. COut: 20.10 16:00:57,886| HBQ In: 20.10 16:00:57,891|DLQ In: 20.10 16:00:57,892|C In:20.10 16:01:52,268|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 10te_Nachricht. COut: 20.10 16:00:57,886| HBQ In: 20.10 16:00:57,876|DLQ In: 20.10 16:00:57,892|C In:20.10 16:01:52,315|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 11te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,883|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:52,361|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 12te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,868|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:52,393|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 13te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,867|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:52,440|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 14te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,852|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:52,486|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 15te_Nachricht. COut: 20.10 16:01:02,862| HBQ In: 20.10 16:01:02,851|DLQ In: 20.10 16:01:02,884|C In:20.10 16:01:52,549|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 16te_Nachricht. COut: 20.10 16:01:02,878| HBQ In: 20.10 16:01:02,899|DLQ In: 20.10 16:01:02,899|C In:20.10 16:01:52,580|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 17te_Nachricht. COut: 20.10 16:01:02,878| HBQ In: 20.10 16:01:02,884|DLQ In: 20.10 16:01:02,899|C In:20.10 16:01:52,642|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 18te_Nachricht. COut: 20.10 16:01:02,894| HBQ In: 20.10 16:01:02,915|DLQ In: 20.10 16:01:02,915|C In:20.10 16:01:52,689|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 19te_Nachricht. COut: 20.10 16:01:02,894| HBQ In: 20.10 16:01:02,899|DLQ In: 20.10 16:01:02,915|C In:20.10 16:01:52,752|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 20te_Nachricht. COut: 20.10 16:01:02,894| HBQ In: 20.10 16:01:02,899|DLQ In: 20.10 16:01:02,915|C In:20.10 16:01:52,798|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 21te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,891|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:52,845|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 22te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,876|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:52,892|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 23te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,875|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:52,923|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 24te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,860|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:52,970|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 25te_Nachricht. COut: 20.10 16:01:07,870| HBQ In: 20.10 16:01:07,859|DLQ In: 20.10 16:01:07,891|C In:20.10 16:01:53,017|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 26te_Nachricht. COut: 20.10 16:01:07,886| HBQ In: 20.10 16:01:07,907|DLQ In: 20.10 16:01:07,907|C In:20.10 16:01:53,064|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 27te_Nachricht. COut: 20.10 16:01:07,886| HBQ In: 20.10 16:01:07,907|DLQ In: 20.10 16:01:07,907|C In:20.10 16:01:53,110|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 28te_Nachricht. COut: 20.10 16:01:07,901| HBQ In: 20.10 16:01:07,922|DLQ In: 20.10 16:01:07,922|C In:20.10 16:01:53,142|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 29te_Nachricht. COut: 20.10 16:01:07,901| HBQ In: 20.10 16:01:07,922|DLQ In: 20.10 16:01:07,922|C In:20.10 16:01:53,188|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 30te_Nachricht. COut: 20.10 16:01:07,901| HBQ In: 20.10 16:01:07,922|DLQ In: 20.10 16:01:07,922|C In:20.10 16:01:53,235|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 31te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,915|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:53,266|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 32te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,899|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:53,313|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 33te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,899|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:53,360|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 34te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,884|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:53,391|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 35te_Nachricht. COut: 20.10 16:01:12,878| HBQ In: 20.10 16:01:12,883|DLQ In: 20.10 16:01:12,915|C In:20.10 16:01:53,438|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 36te_Nachricht. COut: 20.10 16:01:12,893| HBQ In: 20.10 16:01:12,930|DLQ In: 20.10 16:01:12,930|C In:20.10 16:01:53,485|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 37te_Nachricht. COut: 20.10 16:01:12,893| HBQ In: 20.10 16:01:12,915|DLQ In: 20.10 16:01:12,930|C In:20.10 16:01:53,532|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 38te_Nachricht. COut: 20.10 16:01:12,909| HBQ In: 20.10 16:01:12,946|DLQ In: 20.10 16:01:12,946|C In:20.10 16:01:53,578|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 39te_Nachricht. COut: 20.10 16:01:12,909| HBQ In: 20.10 16:01:12,946|DLQ In: 20.10 16:01:12,946|C In:20.10 16:01:53,610|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 40te_Nachricht. COut: 20.10 16:01:12,909| HBQ In: 20.10 16:01:12,930|DLQ In: 20.10 16:01:12,946|C In:20.10 16:01:53,672|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 41te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,922|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:53,703|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 42te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,907|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:53,766|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 43te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,907|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:53,812|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 44te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,891|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:53,844|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 45te_Nachricht. COut: 20.10 16:01:17,885| HBQ In: 20.10 16:01:17,891|DLQ In: 20.10 16:01:17,922|C In:20.10 16:01:53,890|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 46te_Nachricht. COut: 20.10 16:01:17,901| HBQ In: 20.10 16:01:17,937|DLQ In: 20.10 16:01:17,938|C In:20.10 16:01:53,937|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 47te_Nachricht. COut: 20.10 16:01:17,901| HBQ In: 20.10 16:01:17,922|DLQ In: 20.10 16:01:17,938|C In:20.10 16:01:53,968|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 48te_Nachricht. COut: 20.10 16:01:17,916| HBQ In: 20.10 16:01:17,954|DLQ In: 20.10 16:01:17,954|C In:20.10 16:01:54,015|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 49te_Nachricht. COut: 20.10 16:01:17,916| HBQ In: 20.10 16:01:17,938|DLQ In: 20.10 16:01:17,954|C In:20.10 16:01:54,062|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 50te_Nachricht. COut: 20.10 16:01:17,915| HBQ In: 20.10 16:01:17,938|DLQ In: 20.10 16:01:17,954|C In:20.10 16:01:54,109|
+***Fehlernachricht fuer Nachrichten 51 bis 60 um 20.10 16:01:51,853| 60te_Nachricht. COut:  HBQ In: DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,140|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 61te_Nachricht. COut: 20.10 16:01:25,810| HBQ In: 20.10 16:01:25,815|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,187|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 62te_Nachricht. COut: 20.10 16:01:27,823| HBQ In: 20.10 16:01:27,829|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,234|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 63te_Nachricht. COut: 20.10 16:01:27,838| HBQ In: 20.10 16:01:27,843|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,265|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 64te_Nachricht. COut: 20.10 16:01:25,857| HBQ In: 20.10 16:01:25,863|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,312|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 65te_Nachricht. COut: 20.10 16:01:25,873| HBQ In: 20.10 16:01:25,879|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,358|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 66te_Nachricht. COut: 20.10 16:01:27,885| HBQ In: 20.10 16:01:27,891|DLQ In: 20.10 16:01:51,853|*******C In:20.10 16:01:54,483|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 67te_Nachricht. COut: 20.10 16:01:27,901| HBQ In: 20.10 16:01:27,907|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,514|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 68te_Nachricht. COut: 20.10 16:01:27,901| HBQ In: 20.10 16:01:27,907|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,561|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 69te_Nachricht. COut: 20.10 16:01:27,915| HBQ In: 20.10 16:01:27,922|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,608|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 70te_Nachricht. COut: 20.10 16:01:25,919| HBQ In: 20.10 16:01:25,925|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,639|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 71te_Nachricht. COut: 20.10 16:01:29,819| HBQ In: 20.10 16:01:29,825|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,702|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 72te_Nachricht. COut: 20.10 16:01:29,866| HBQ In: 20.10 16:01:29,871|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,748|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 73te_Nachricht. COut: 20.10 16:01:29,882| HBQ In: 20.10 16:01:29,887|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,795|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 74te_Nachricht. COut: 20.10 16:01:29,929| HBQ In: 20.10 16:01:29,935|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,842|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 75te_Nachricht. COut: 20.10 16:01:33,829| HBQ In: 20.10 16:01:33,835|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,873|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 76te_Nachricht. COut: 20.10 16:01:33,843| HBQ In: 20.10 16:01:33,850|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:54,920|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 77te_Nachricht. COut: 20.10 16:01:33,891| HBQ In: 20.10 16:01:33,897|DLQ In: 20.10 16:01:51,853|*******C In:20.10 16:01:54,967|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 78te_Nachricht. COut: 20.10 16:01:33,907| HBQ In: 20.10 16:01:33,913|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,998|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 79te_Nachricht. COut: 20.10 16:01:33,907| HBQ In: 20.10 16:01:33,913|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,045|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 80te_Nachricht. COut: 20.10 16:01:33,922| HBQ In: 20.10 16:01:33,927|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,092|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 81te_Nachricht. COut: 20.10 16:01:33,829| HBQ In: 20.10 16:01:33,835|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,123|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 82te_Nachricht. COut: 20.10 16:01:33,875| HBQ In: 20.10 16:01:33,881|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,170|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 83te_Nachricht. COut: 20.10 16:01:33,891| HBQ In: 20.10 16:01:33,897|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,216|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 84te_Nachricht. COut: 20.10 16:01:33,937| HBQ In: 20.10 16:01:33,944|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,263|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 85te_Nachricht. COut: 20.10 16:01:37,838| HBQ In: 20.10 16:01:37,843|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,310|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 86te_Nachricht. COut: 20.10 16:01:39,835| HBQ In: 20.10 16:01:39,841|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,357|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 87te_Nachricht. COut: 20.10 16:01:39,850| HBQ In: 20.10 16:01:39,855|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,388|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 88te_Nachricht. COut: 20.10 16:01:37,885| HBQ In: 20.10 16:01:37,891|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,435|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 89te_Nachricht. COut: 20.10 16:01:37,899| HBQ In: 20.10 16:01:37,906|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,482|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 90te_Nachricht. COut: 20.10 16:01:39,897| HBQ In: 20.10 16:01:39,950|DLQ In: 20.10 16:01:51,853|*******C In:20.10 16:01:55,528|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 91te_Nachricht. COut: 20.10 16:01:39,913| HBQ In: 20.10 16:01:39,980|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,575|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 92te_Nachricht. COut: 20.10 16:01:39,913| HBQ In: 20.10 16:01:39,964|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,622|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 93te_Nachricht. COut: 20.10 16:01:39,927| HBQ In: 20.10 16:01:39,981|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,684|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 94te_Nachricht. COut: 20.10 16:01:37,947| HBQ In: 20.10 16:01:37,952|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,716|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 95te_Nachricht. COut: 20.10 16:01:41,847| HBQ In: 20.10 16:01:41,853|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,762|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 96te_Nachricht. COut: 20.10 16:01:41,894| HBQ In: 20.10 16:01:41,931|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,809|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 97te_Nachricht. COut: 20.10 16:01:41,909| HBQ In: 20.10 16:01:41,931|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,856|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 98te_Nachricht. COut: 20.10 16:01:41,956| HBQ In: 20.10 16:01:41,992|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,903|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 99te_Nachricht. COut: 20.10 16:01:45,841| HBQ In: 20.10 16:01:45,847|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,934|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 100te_Nachricht. COut: 20.10 16:01:45,855| HBQ In: 20.10 16:01:45,862|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:55,981|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 101te_Nachricht. COut: 20.10 16:01:45,903| HBQ In: 20.10 16:01:45,909|DLQ In: 20.10 16:01:51,853|*******C In:20.10 16:01:56,028|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 102te_Nachricht. COut: 20.10 16:01:45,919| HBQ In: 20.10 16:01:45,925|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:56,059|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 103te_Nachricht. COut: 20.10 16:01:45,919| HBQ In: 20.10 16:01:45,925|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:56,090|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 104te_Nachricht. COut: 20.10 16:01:45,934| HBQ In: 20.10 16:01:45,939|DLQ In: 20.10 16:01:51,853|C In:20.10 16:01:56,121|
 ..getmessages..Done..
 Neuer Sendeintervall: 7 Sekunden (6)
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 141te_Nachricht. C Out: 20.10 15:48:14,078| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 158te_Nachricht. C Out: 20.10 15:48:21,082| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 178te_Nachricht. C Out: 20.10 15:48:28,087| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 197te_Nachricht. C Out: 20.10 15:48:35,091| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 217te_Nachricht. C Out: 20.10 15:48:42,096| gesendet
-230te Nachricht um 20.10 15:48:42,096| vergessen zu senden
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 73te_Nachricht. COut: 20.10 15:47:41,115| HBQ In: 20.10 15:47:41,115|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,111|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 74te_Nachricht. COut: 20.10 15:47:41,129| HBQ In: 20.10 15:47:41,129|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,111|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 75te_Nachricht. COut: 20.10 15:47:45,062| HBQ In: 20.10 15:47:45,062|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,127|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 76te_Nachricht. COut: 20.10 15:47:45,077| HBQ In: 20.10 15:47:45,077|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,127|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 77te_Nachricht. COut: 20.10 15:47:45,140| HBQ In: 20.10 15:47:45,140|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,142|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 78te_Nachricht. COut: 20.10 15:47:45,155| HBQ In: 20.10 15:47:45,171|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,142|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 79te_Nachricht. COut: 20.10 15:47:45,155| HBQ In: 20.10 15:47:45,155|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,142|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 80te_Nachricht. COut: 20.10 15:47:45,171| HBQ In: 20.10 15:47:45,171|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,158|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 81te_Nachricht. COut: 20.10 15:47:45,062| HBQ In: 20.10 15:47:45,062|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,158|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 82te_Nachricht. COut: 20.10 15:47:45,108| HBQ In: 20.10 15:47:45,108|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,174|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 83te_Nachricht. COut: 20.10 15:47:45,124| HBQ In: 20.10 15:47:45,124|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,189|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 84te_Nachricht. COut: 20.10 15:47:45,140| HBQ In: 20.10 15:47:45,140|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,189|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 85te_Nachricht. COut: 20.10 15:47:49,071| HBQ In: 20.10 15:47:49,071|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,205|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 86te_Nachricht. COut: 20.10 15:47:51,068| HBQ In: 20.10 15:47:51,068|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,220|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 87te_Nachricht. COut: 20.10 15:47:51,083| HBQ In: 20.10 15:47:51,083|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,236|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 88te_Nachricht. COut: 20.10 15:47:49,117| HBQ In: 20.10 15:47:49,117|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,252|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 89te_Nachricht. COut: 20.10 15:47:49,133| HBQ In: 20.10 15:47:49,133|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,267|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 90te_Nachricht. COut: 20.10 15:47:49,149| HBQ In: 20.10 15:47:49,149|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,283|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 91te_Nachricht. COut: 20.10 15:47:51,145| HBQ In: 20.10 15:47:51,145|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,298|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 92te_Nachricht. COut: 20.10 15:47:51,161| HBQ In: 20.10 15:47:51,161|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,314|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 93te_Nachricht. COut: 20.10 15:47:51,161| HBQ In: 20.10 15:47:51,161|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,330|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 94te_Nachricht. COut: 20.10 15:47:51,177| HBQ In: 20.10 15:47:51,177|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,345|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 95te_Nachricht. COut: 20.10 15:47:53,080| HBQ In: 20.10 15:47:53,080|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,361|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 96te_Nachricht. COut: 20.10 15:47:53,127| HBQ In: 20.10 15:47:53,157|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,392|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 97te_Nachricht. COut: 20.10 15:47:53,143| HBQ In: 20.10 15:47:53,173|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,408|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 98te_Nachricht. COut: 20.10 15:47:53,157| HBQ In: 20.10 15:47:53,189|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,439|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 99te_Nachricht. COut: 20.10 15:47:57,074| HBQ In: 20.10 15:47:57,074|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,454|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 100te_Nachricht. COut: 20.10 15:47:57,089| HBQ In: 20.10 15:47:57,089|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,470|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 101te_Nachricht. COut: 20.10 15:47:57,151| HBQ In: 20.10 15:47:57,151|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,501|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 102te_Nachricht. COut: 20.10 15:47:57,167| HBQ In: 20.10 15:47:57,167|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,532|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 103te_Nachricht. COut: 20.10 15:47:57,167| HBQ In: 20.10 15:47:57,167|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,548|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 104te_Nachricht. COut: 20.10 15:47:57,183| HBQ In: 20.10 15:47:57,183|DLQ In: 20.10 15:48:00,568|C In:20.10 15:48:42,579|
-***Fehlernachricht fuer Nachrichten 105 bis 108 um 20.10 15:48:21,160| 108te_Nachricht. COut:  HBQ In: DLQ In: 20.10 15:48:21,160|C In:20.10 15:48:42,595|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 109te_Nachricht. COut: 20.10 15:47:57,511| HBQ In: 20.10 15:47:57,511|DLQ In: 20.10 15:48:21,160|C In:20.10 15:48:42,610|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 110te_Nachricht. COut: 20.10 15:47:57,542| HBQ In: 20.10 15:47:57,542|DLQ In: 20.10 15:48:21,160|C In:20.10 15:48:42,642|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 111te_Nachricht. COut: 20.10 15:47:57,556| HBQ In: 20.10 15:47:57,556|DLQ In: 20.10 15:48:21,160|C In:20.10 15:48:42,657|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 112te_Nachricht. COut: 20.10 15:47:57,573| HBQ In: 20.10 15:47:57,573|DLQ In: 20.10 15:48:21,160|C In:20.10 15:48:42,673|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 113te_Nachricht. COut: 20.10 15:48:03,080| HBQ In: 20.10 15:48:03,080|DLQ In: 20.10 15:48:21,160|C In:20.10 15:48:42,704|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 114te_Nachricht. COut: 20.10 15:48:03,095| HBQ In: 20.10 15:48:03,127|DLQ In: 20.10 15:48:21,175|C In:20.10 15:48:42,720|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 115te_Nachricht. COut: 20.10 15:48:03,157| HBQ In: 20.10 15:48:03,173|DLQ In: 20.10 15:48:21,176|C In:20.10 15:48:42,735|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 116te_Nachricht. COut: 20.10 15:48:03,173| HBQ In: 20.10 15:48:03,205|DLQ In: 20.10 15:48:21,176|C In:20.10 15:48:42,766|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 117te_Nachricht. COut: 20.10 15:48:03,173| HBQ In: 20.10 15:48:03,205|DLQ In: 20.10 15:48:21,191|C In:20.10 15:48:42,798|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 118te_Nachricht. COut: 20.10 15:48:03,189| HBQ In: 20.10 15:48:03,220|DLQ In: 20.10 15:48:21,192|C In:20.10 15:48:42,813|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 119te_Nachricht. COut: 20.10 15:48:00,520| HBQ In: 20.10 15:48:00,520|DLQ In: 20.10 15:48:21,192|C In:20.10 15:48:42,844|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 120te_Nachricht. COut: 20.10 15:48:00,552| HBQ In: 20.10 15:48:00,552|DLQ In: 20.10 15:48:21,207|C In:20.10 15:48:42,860|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 121te_Nachricht. COut: 20.10 15:48:00,568| HBQ In: 20.10 15:48:00,568|DLQ In: 20.10 15:48:21,207|C In:20.10 15:48:42,891|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 122te_Nachricht. COut: 20.10 15:48:00,584| HBQ In: 20.10 15:48:00,584|DLQ In: 20.10 15:48:21,207|C In:20.10 15:48:42,907|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 123te_Nachricht. COut: 20.10 15:48:03,532| HBQ In: 20.10 15:48:03,579|DLQ In: 20.10 15:48:21,223|C In:20.10 15:48:42,938|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 124te_Nachricht. COut: 20.10 15:48:03,562| HBQ In: 20.10 15:48:03,625|DLQ In: 20.10 15:48:21,223|C In:20.10 15:48:42,954|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 125te_Nachricht. COut: 20.10 15:48:03,579| HBQ In: 20.10 15:48:03,641|DLQ In: 20.10 15:48:21,238|C In:20.10 15:48:42,969|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 126te_Nachricht. COut: 20.10 15:48:03,595| HBQ In: 20.10 15:48:03,657|DLQ In: 20.10 15:48:21,238|C In:20.10 15:48:43,000|
-***Fehlernachricht fuer Nachrichten 127 bis 132 um 20.10 15:48:28,305| 132te_Nachricht. COut:  HBQ In: DLQ In: 20.10 15:48:28,305|C In:20.10 15:48:43,016|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 133te_Nachricht. COut: 20.10 15:48:06,543| HBQ In: 20.10 15:48:06,589|DLQ In: 20.10 15:48:28,305|C In:20.10 15:48:43,047|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 134te_Nachricht. COut: 20.10 15:48:06,573| HBQ In: 20.10 15:48:06,637|DLQ In: 20.10 15:48:28,321|C In:20.10 15:48:43,063|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 135te_Nachricht. COut: 20.10 15:48:06,589| HBQ In: 20.10 15:48:06,652|DLQ In: 20.10 15:48:28,321|C In:20.10 15:48:43,078|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 136te_Nachricht. COut: 20.10 15:48:06,605| HBQ In: 20.10 15:48:06,668|DLQ In: 20.10 15:48:28,336|C In:20.10 15:48:43,110|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 137te_Nachricht. COut: 20.10 15:48:09,554| HBQ In: 20.10 15:48:09,554|DLQ In: 20.10 15:48:28,336|C In:20.10 15:48:43,141|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 138te_Nachricht. COut: 20.10 15:48:09,585| HBQ In: 20.10 15:48:09,585|DLQ In: 20.10 15:48:28,336|C In:20.10 15:48:43,156|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 139te_Nachricht. COut: 20.10 15:48:09,601| HBQ In: 20.10 15:48:09,616|DLQ In: 20.10 15:48:28,351|C In:20.10 15:48:43,188|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 140te_Nachricht. COut: 20.10 15:48:09,616| HBQ In: 20.10 15:48:09,632|DLQ In: 20.10 15:48:28,352|C In:20.10 15:48:43,203|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 141te_Nachricht. COut: 20.10 15:48:14,078| HBQ In: 20.10 15:48:14,078|DLQ In: 20.10 15:48:28,352|*******C In:20.10 15:48:43,234|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 142te_Nachricht. COut: 20.10 15:48:14,155| HBQ In: 20.10 15:48:14,155|DLQ In: 20.10 15:48:28,367|C In:20.10 15:48:43,250|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 143te_Nachricht. COut: 20.10 15:48:12,268| HBQ In: 20.10 15:48:12,314|DLQ In: 20.10 15:48:28,368|C In:20.10 15:48:43,266|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 144te_Nachricht. COut: 20.10 15:48:12,284| HBQ In: 20.10 15:48:12,315|DLQ In: 20.10 15:48:28,368|C In:20.10 15:48:43,297|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 145te_Nachricht. COut: 20.10 15:48:12,284| HBQ In: 20.10 15:48:12,315|DLQ In: 20.10 15:48:28,383|C In:20.10 15:48:43,312|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 146te_Nachricht. COut: 20.10 15:48:14,296| HBQ In: 20.10 15:48:14,296|DLQ In: 20.10 15:48:28,383|C In:20.10 15:48:43,344|
-***Fehlernachricht fuer Nachrichten 147 bis 150 um 20.10 15:48:34,530| 150te_Nachricht. COut:  HBQ In: DLQ In: 20.10 15:48:34,544|C In:20.10 15:48:43,359|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 151te_Nachricht. COut: 20.10 15:48:16,153| HBQ In: 20.10 15:48:16,153|DLQ In: 20.10 15:48:34,545|C In:20.10 15:48:43,375|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 152te_Nachricht. COut: 20.10 15:48:17,276| HBQ In: 20.10 15:48:17,276|DLQ In: 20.10 15:48:34,545|C In:20.10 15:48:43,406|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 153te_Nachricht. COut: 20.10 15:48:14,281| HBQ In: 20.10 15:48:14,281|DLQ In: 20.10 15:48:34,560|C In:20.10 15:48:43,422|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 154te_Nachricht. COut: 20.10 15:48:17,291| HBQ In: 20.10 15:48:17,291|DLQ In: 20.10 15:48:34,561|C In:20.10 15:48:43,453|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 155te_Nachricht. COut: 20.10 15:48:17,290| HBQ In: 20.10 15:48:17,290|DLQ In: 20.10 15:48:34,561|C In:20.10 15:48:43,484|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 156te_Nachricht. COut: 20.10 15:48:14,359| HBQ In: 20.10 15:48:14,359|DLQ In: 20.10 15:48:34,576|C In:20.10 15:48:43,515|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 157te_Nachricht. COut: 20.10 15:48:14,359| HBQ In: 20.10 15:48:14,359|DLQ In: 20.10 15:48:34,576|C In:20.10 15:48:43,531|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 158te_Nachricht. COut: 20.10 15:48:21,082| HBQ In: 20.10 15:48:21,082|DLQ In: 20.10 15:48:34,576|*******C In:20.10 15:48:43,546|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 159te_Nachricht. COut: 20.10 15:48:21,159| HBQ In: 20.10 15:48:21,159|DLQ In: 20.10 15:48:34,592|C In:20.10 15:48:43,578|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 160te_Nachricht. COut: 20.10 15:48:16,292| HBQ In: 20.10 15:48:16,292|DLQ In: 20.10 15:48:34,592|C In:20.10 15:48:43,593|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 161te_Nachricht. COut: 20.10 15:48:21,300| HBQ In: 20.10 15:48:21,300|DLQ In: 20.10 15:48:34,608|C In:20.10 15:48:43,609|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 162te_Nachricht. COut: 20.10 15:48:16,371| HBQ In: 20.10 15:48:16,371|DLQ In: 20.10 15:48:34,608|C In:20.10 15:48:43,640|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 163te_Nachricht. COut: 20.10 15:48:16,371| HBQ In: 20.10 15:48:16,371|DLQ In: 20.10 15:48:34,608|C In:20.10 15:48:43,656|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 164te_Nachricht. COut: 20.10 15:48:20,161| HBQ In: 20.10 15:48:20,161|DLQ In: 20.10 15:48:34,623|C In:20.10 15:48:43,687|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 165te_Nachricht. COut: 20.10 15:48:18,304| HBQ In: 20.10 15:48:18,304|DLQ In: 20.10 15:48:34,623|C In:20.10 15:48:43,718|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 166te_Nachricht. COut: 20.10 15:48:18,383| HBQ In: 20.10 15:48:18,383|DLQ In: 20.10 15:48:34,623|C In:20.10 15:48:43,734|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 167te_Nachricht. COut: 20.10 15:48:18,383| HBQ In: 20.10 15:48:18,383|DLQ In: 20.10 15:48:34,639|C In:20.10 15:48:43,749|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 168te_Nachricht. COut: 20.10 15:48:22,284| HBQ In: 20.10 15:48:22,284|DLQ In: 20.10 15:48:34,639|C In:20.10 15:48:43,780|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 169te_Nachricht. COut: 20.10 15:48:22,299| HBQ In: 20.10 15:48:22,299|DLQ In: 20.10 15:48:34,653|C In:20.10 15:48:43,812|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 170te_Nachricht. COut: 20.10 15:48:22,298| HBQ In: 20.10 15:48:22,298|DLQ In: 20.10 15:48:34,654|C In:20.10 15:48:43,843|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 171te_Nachricht. COut: 20.10 15:48:20,318| HBQ In: 20.10 15:48:20,318|DLQ In: 20.10 15:48:34,654|C In:20.10 15:48:43,874|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 172te_Nachricht. COut: 20.10 15:48:20,396| HBQ In: 20.10 15:48:20,396|DLQ In: 20.10 15:48:34,669|C In:20.10 15:48:43,890|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 173te_Nachricht. COut: 20.10 15:48:20,395| HBQ In: 20.10 15:48:20,395|DLQ In: 20.10 15:48:34,670|C In:20.10 15:48:43,921|
-3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 174te_Nachricht. COut: 20.10 15:48:24,171| HBQ In: 20.10 15:48:24,202|DLQ In: 20.10 15:48:34,670|C In:20.10 15:48:43,952|
-6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 175te_Nachricht. COut: 20.10 15:48:22,330| HBQ In: 20.10 15:48:22,330|DLQ In: 20.10 15:48:34,685|C In:20.10 15:48:43,968|
-7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 176te_Nachricht. COut: 20.10 15:48:22,408| HBQ In: 20.10 15:48:22,424|DLQ In: 20.10 15:48:34,686|C In:20.10 15:48:43,999|
-8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 177te_Nachricht. COut: 20.10 15:48:22,407| HBQ In: 20.10 15:48:22,423|DLQ In: 20.10 15:48:34,686|C In:20.10 15:48:44,030|
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 178te_Nachricht. COut: 20.10 15:48:28,087| HBQ In: 20.10 15:48:28,087|DLQ In: 20.10 15:48:34,701|*******C In:20.10 15:48:44,046|
-5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 179te_Nachricht. COut: 20.10 15:48:28,165| HBQ In: 20.10 15:48:28,165|DLQ In: 20.10 15:48:34,701|C In:20.10 15:48:44,077|
-2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 180te_Nachricht. COut: 20.10 15:48:28,304| HBQ In: 20.10 15:48:28,304|DLQ In: 20.10 15:48:34,717|C In:20.10 15:48:44,108|
-9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 181te_Nachricht. COut: 20.10 15:48:27,290| HBQ In: 20.10 15:48:27,290|DLQ In: 20.10 15:48:34,717|C In:20.10 15:48:44,124|
-10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 182te_Nachricht. COut: 20.10 15:48:27,307| HBQ In: 20.10 15:48:27,307|DLQ In: 20.10 15:48:34,717|C In:20.10 15:48:44,155|
-1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 183te_Nachricht. COut: 20.10 15:48:27,306| HBQ In: 20.10 15:48:27,306|DLQ In: 20.10 15:48:34,732|C In:20.10 15:48:44,170|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 139te_Nachricht. C Out: 20.10 16:02:03,141| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 153te_Nachricht. C Out: 20.10 16:02:10,145| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 171te_Nachricht. C Out: 20.10 16:02:17,149| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 186te_Nachricht. C Out: 20.10 16:02:24,155| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 202te_Nachricht. C Out: 20.10 16:02:31,159| gesendet
+216te Nachricht um 20.10 16:02:31,190| vergessen zu senden
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 46te_Nachricht. COut: 20.10 16:01:17,901| HBQ In: 20.10 16:01:17,937|DLQ In: 20.10 16:01:17,938|C In:20.10 16:02:31,237|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 47te_Nachricht. COut: 20.10 16:01:17,901| HBQ In: 20.10 16:01:17,922|DLQ In: 20.10 16:01:17,938|C In:20.10 16:02:31,284|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 48te_Nachricht. COut: 20.10 16:01:17,916| HBQ In: 20.10 16:01:17,954|DLQ In: 20.10 16:01:17,954|C In:20.10 16:02:31,331|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 49te_Nachricht. COut: 20.10 16:01:17,916| HBQ In: 20.10 16:01:17,938|DLQ In: 20.10 16:01:17,954|C In:20.10 16:02:31,377|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 50te_Nachricht. COut: 20.10 16:01:17,915| HBQ In: 20.10 16:01:17,938|DLQ In: 20.10 16:01:17,954|C In:20.10 16:02:31,424|
+***Fehlernachricht fuer Nachrichten 51 bis 60 um 20.10 16:01:51,853| 60te_Nachricht. COut:  HBQ In: DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,455|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 61te_Nachricht. COut: 20.10 16:01:25,810| HBQ In: 20.10 16:01:25,815|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,502|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 62te_Nachricht. COut: 20.10 16:01:27,823| HBQ In: 20.10 16:01:27,829|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,549|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 63te_Nachricht. COut: 20.10 16:01:27,838| HBQ In: 20.10 16:01:27,843|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,596|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 64te_Nachricht. COut: 20.10 16:01:25,857| HBQ In: 20.10 16:01:25,863|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,627|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 65te_Nachricht. COut: 20.10 16:01:25,873| HBQ In: 20.10 16:01:25,879|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,674|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 66te_Nachricht. COut: 20.10 16:01:27,885| HBQ In: 20.10 16:01:27,891|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,721|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 67te_Nachricht. COut: 20.10 16:01:27,901| HBQ In: 20.10 16:01:27,907|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,767|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 68te_Nachricht. COut: 20.10 16:01:27,901| HBQ In: 20.10 16:01:27,907|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,814|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 69te_Nachricht. COut: 20.10 16:01:27,915| HBQ In: 20.10 16:01:27,922|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,861|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 70te_Nachricht. COut: 20.10 16:01:25,919| HBQ In: 20.10 16:01:25,925|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,892|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 71te_Nachricht. COut: 20.10 16:01:29,819| HBQ In: 20.10 16:01:29,825|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,923|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 72te_Nachricht. COut: 20.10 16:01:29,866| HBQ In: 20.10 16:01:29,871|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:31,970|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 73te_Nachricht. COut: 20.10 16:01:29,882| HBQ In: 20.10 16:01:29,887|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,001|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 74te_Nachricht. COut: 20.10 16:01:29,929| HBQ In: 20.10 16:01:29,935|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,033|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 75te_Nachricht. COut: 20.10 16:01:33,829| HBQ In: 20.10 16:01:33,835|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,079|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 76te_Nachricht. COut: 20.10 16:01:33,843| HBQ In: 20.10 16:01:33,850|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,111|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 77te_Nachricht. COut: 20.10 16:01:33,891| HBQ In: 20.10 16:01:33,897|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,142|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 78te_Nachricht. COut: 20.10 16:01:33,907| HBQ In: 20.10 16:01:33,913|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,189|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 79te_Nachricht. COut: 20.10 16:01:33,907| HBQ In: 20.10 16:01:33,913|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,220|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 80te_Nachricht. COut: 20.10 16:01:33,922| HBQ In: 20.10 16:01:33,927|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,251|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 81te_Nachricht. COut: 20.10 16:01:33,829| HBQ In: 20.10 16:01:33,835|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,298|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 82te_Nachricht. COut: 20.10 16:01:33,875| HBQ In: 20.10 16:01:33,881|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,329|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 83te_Nachricht. COut: 20.10 16:01:33,891| HBQ In: 20.10 16:01:33,897|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,360|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 84te_Nachricht. COut: 20.10 16:01:33,937| HBQ In: 20.10 16:01:33,944|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,407|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 85te_Nachricht. COut: 20.10 16:01:37,838| HBQ In: 20.10 16:01:37,843|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,438|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 86te_Nachricht. COut: 20.10 16:01:39,835| HBQ In: 20.10 16:01:39,841|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,469|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 87te_Nachricht. COut: 20.10 16:01:39,850| HBQ In: 20.10 16:01:39,855|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,516|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 88te_Nachricht. COut: 20.10 16:01:37,885| HBQ In: 20.10 16:01:37,891|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,547|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 89te_Nachricht. COut: 20.10 16:01:37,899| HBQ In: 20.10 16:01:37,906|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,594|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 90te_Nachricht. COut: 20.10 16:01:39,897| HBQ In: 20.10 16:01:39,950|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,641|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 91te_Nachricht. COut: 20.10 16:01:39,913| HBQ In: 20.10 16:01:39,980|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,688|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 92te_Nachricht. COut: 20.10 16:01:39,913| HBQ In: 20.10 16:01:39,964|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,719|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 93te_Nachricht. COut: 20.10 16:01:39,927| HBQ In: 20.10 16:01:39,981|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,750|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 94te_Nachricht. COut: 20.10 16:01:37,947| HBQ In: 20.10 16:01:37,952|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,797|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 95te_Nachricht. COut: 20.10 16:01:41,847| HBQ In: 20.10 16:01:41,853|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,828|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 96te_Nachricht. COut: 20.10 16:01:41,894| HBQ In: 20.10 16:01:41,931|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,859|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 97te_Nachricht. COut: 20.10 16:01:41,909| HBQ In: 20.10 16:01:41,931|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,891|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 98te_Nachricht. COut: 20.10 16:01:41,956| HBQ In: 20.10 16:01:41,992|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,937|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 99te_Nachricht. COut: 20.10 16:01:45,841| HBQ In: 20.10 16:01:45,847|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:32,984|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 100te_Nachricht. COut: 20.10 16:01:45,855| HBQ In: 20.10 16:01:45,862|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:33,015|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 101te_Nachricht. COut: 20.10 16:01:45,903| HBQ In: 20.10 16:01:45,909|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:33,062|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 102te_Nachricht. COut: 20.10 16:01:45,919| HBQ In: 20.10 16:01:45,925|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:33,093|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 103te_Nachricht. COut: 20.10 16:01:45,919| HBQ In: 20.10 16:01:45,925|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:33,125|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 104te_Nachricht. COut: 20.10 16:01:45,934| HBQ In: 20.10 16:01:45,939|DLQ In: 20.10 16:01:51,853|C In:20.10 16:02:33,156|
+***Fehlernachricht fuer Nachrichten 105 bis 108 um 20.10 16:02:15,003| 108te_Nachricht. COut:  HBQ In: DLQ In: 20.10 16:02:15,003|C In:20.10 16:02:33,203|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 109te_Nachricht. COut: 20.10 16:01:48,508| HBQ In: 20.10 16:01:48,514|DLQ In: 20.10 16:02:15,003|C In:20.10 16:02:33,234|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 110te_Nachricht. COut: 20.10 16:01:46,543| HBQ In: 20.10 16:01:46,548|DLQ In: 20.10 16:02:15,003|C In:20.10 16:02:33,265|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 111te_Nachricht. COut: 20.10 16:01:46,558| HBQ In: 20.10 16:01:46,564|DLQ In: 20.10 16:02:15,003|C In:20.10 16:02:33,296|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 112te_Nachricht. COut: 20.10 16:01:48,585| HBQ In: 20.10 16:01:48,592|DLQ In: 20.10 16:02:15,003|C In:20.10 16:02:33,343|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 113te_Nachricht. COut: 20.10 16:01:51,847| HBQ In: 20.10 16:01:51,853|DLQ In: 20.10 16:02:15,003|C In:20.10 16:02:33,374|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 114te_Nachricht. COut: 20.10 16:01:51,862| HBQ In: 20.10 16:01:51,867|DLQ In: 20.10 16:02:15,018|C In:20.10 16:02:33,405|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 115te_Nachricht. COut: 20.10 16:01:51,909| HBQ In: 20.10 16:01:51,931|DLQ In: 20.10 16:02:15,034|C In:20.10 16:02:33,437|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 116te_Nachricht. COut: 20.10 16:01:51,925| HBQ In: 20.10 16:01:51,962|DLQ In: 20.10 16:02:15,050|C In:20.10 16:02:33,483|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 117te_Nachricht. COut: 20.10 16:01:51,925| HBQ In: 20.10 16:01:51,962|DLQ In: 20.10 16:02:15,050|C In:20.10 16:02:33,515|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 118te_Nachricht. COut: 20.10 16:01:51,939| HBQ In: 20.10 16:01:51,976|DLQ In: 20.10 16:02:15,066|C In:20.10 16:02:33,546|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 119te_Nachricht. COut: 20.10 16:01:49,552| HBQ In: 20.10 16:01:49,559|DLQ In: 20.10 16:02:15,066|C In:20.10 16:02:33,593|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 120te_Nachricht. COut: 20.10 16:01:49,569| HBQ In: 20.10 16:01:49,575|DLQ In: 20.10 16:02:15,081|C In:20.10 16:02:33,624|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 121te_Nachricht. COut: 20.10 16:01:53,516| HBQ In: 20.10 16:01:53,569|DLQ In: 20.10 16:02:15,081|C In:20.10 16:02:33,655|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 122te_Nachricht. COut: 20.10 16:01:53,593| HBQ In: 20.10 16:01:53,647|DLQ In: 20.10 16:02:15,081|C In:20.10 16:02:33,702|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 123te_Nachricht. COut: 20.10 16:01:52,564| HBQ In: 20.10 16:01:52,617|DLQ In: 20.10 16:02:15,097|C In:20.10 16:02:33,733|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 124te_Nachricht. COut: 20.10 16:01:52,580| HBQ In: 20.10 16:01:52,633|DLQ In: 20.10 16:02:15,097|C In:20.10 16:02:33,764|
+***Fehlernachricht fuer Nachrichten 125 bis 130 um 20.10 16:02:21,976| 130te_Nachricht. COut:  HBQ In: DLQ In: 20.10 16:02:21,976|C In:20.10 16:02:33,811|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 131te_Nachricht. COut: 20.10 16:01:55,575| HBQ In: 20.10 16:01:55,628|DLQ In: 20.10 16:02:21,976|C In:20.10 16:02:33,842|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 132te_Nachricht. COut: 20.10 16:01:55,591| HBQ In: 20.10 16:01:55,644|DLQ In: 20.10 16:02:21,992|C In:20.10 16:02:33,873|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 133te_Nachricht. COut: 20.10 16:01:58,524| HBQ In: 20.10 16:01:58,530|DLQ In: 20.10 16:02:21,992|C In:20.10 16:02:33,920|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 134te_Nachricht. COut: 20.10 16:01:58,602| HBQ In: 20.10 16:01:58,639|DLQ In: 20.10 16:02:22,008|C In:20.10 16:02:33,951|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 135te_Nachricht. COut: 20.10 16:01:58,585| HBQ In: 20.10 16:01:58,592|DLQ In: 20.10 16:02:22,008|C In:20.10 16:02:33,983|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 136te_Nachricht. COut: 20.10 16:01:58,601| HBQ In: 20.10 16:01:58,623|DLQ In: 20.10 16:02:22,008|C In:20.10 16:02:34,029|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 137te_Nachricht. COut: 20.10 16:02:03,016| HBQ In: 20.10 16:02:03,022|DLQ In: 20.10 16:02:22,022|C In:20.10 16:02:34,076|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 138te_Nachricht. COut: 20.10 16:02:01,034| HBQ In: 20.10 16:02:01,040|DLQ In: 20.10 16:02:22,023|C In:20.10 16:02:34,107|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 139te_Nachricht. COut: 20.10 16:02:03,141| HBQ In: 20.10 16:02:03,147|DLQ In: 20.10 16:02:22,023|*******C In:20.10 16:02:34,139|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 140te_Nachricht. COut: 20.10 16:02:03,157| HBQ In: 20.10 16:02:03,163|DLQ In: 20.10 16:02:22,038|C In:20.10 16:02:34,170|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 141te_Nachricht. COut: 20.10 16:02:03,157| HBQ In: 20.10 16:02:03,163|DLQ In: 20.10 16:02:22,039|C In:20.10 16:02:34,217|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 142te_Nachricht. COut: 20.10 16:02:03,171| HBQ In: 20.10 16:02:03,177|DLQ In: 20.10 16:02:22,054|C In:20.10 16:02:34,248|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 143te_Nachricht. COut: 20.10 16:02:03,531| HBQ In: 20.10 16:02:03,536|DLQ In: 20.10 16:02:22,054|C In:20.10 16:02:34,279|
+***Fehlernachricht fuer Nachrichten 144 bis 145 um 20.10 16:02:29,855| 145te_Nachricht. COut:  HBQ In: DLQ In: 20.10 16:02:29,855|C In:20.10 16:02:34,310|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 146te_Nachricht. COut: 20.10 16:02:03,609| HBQ In: 20.10 16:02:03,615|DLQ In: 20.10 16:02:29,870|C In:20.10 16:02:34,357|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 147te_Nachricht. COut: 20.10 16:02:02,548| HBQ In: 20.10 16:02:02,569|DLQ In: 20.10 16:02:29,870|C In:20.10 16:02:34,388|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 148te_Nachricht. COut: 20.10 16:02:02,595| HBQ In: 20.10 16:02:02,601|DLQ In: 20.10 16:02:29,870|C In:20.10 16:02:34,419|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 149te_Nachricht. COut: 20.10 16:02:06,042| HBQ In: 20.10 16:02:06,048|DLQ In: 20.10 16:02:29,886|C In:20.10 16:02:34,451|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 150te_Nachricht. COut: 20.10 16:02:04,560| HBQ In: 20.10 16:02:04,566|DLQ In: 20.10 16:02:29,886|C In:20.10 16:02:34,482|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 151te_Nachricht. COut: 20.10 16:02:04,608| HBQ In: 20.10 16:02:04,613|DLQ In: 20.10 16:02:29,886|C In:20.10 16:02:34,529|
+7-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 152te_Nachricht. COut: 20.10 16:02:10,020| HBQ In: 20.10 16:02:10,026|DLQ In: 20.10 16:02:29,901|C In:20.10 16:02:34,560|
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 153te_Nachricht. COut: 20.10 16:02:10,145| HBQ In: 20.10 16:02:10,167|DLQ In: 20.10 16:02:29,901|*******C In:20.10 16:02:34,591|
+5-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 154te_Nachricht. COut: 20.10 16:02:10,161| HBQ In: 20.10 16:02:10,183|DLQ In: 20.10 16:02:29,901|C In:20.10 16:02:34,622|
+1-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 155te_Nachricht. COut: 20.10 16:02:10,161| HBQ In: 20.10 16:02:10,167|DLQ In: 20.10 16:02:29,917|C In:20.10 16:02:34,653|
+2-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 156te_Nachricht. COut: 20.10 16:02:10,177| HBQ In: 20.10 16:02:10,183|DLQ In: 20.10 16:02:29,917|C In:20.10 16:02:34,700|
+6-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 157te_Nachricht. COut: 20.10 16:02:08,539| HBQ In: 20.10 16:02:08,544|DLQ In: 20.10 16:02:29,933|C In:20.10 16:02:34,731|
+3-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 158te_Nachricht. COut: 20.10 16:02:08,617| HBQ In: 20.10 16:02:08,637|DLQ In: 20.10 16:02:29,933|C In:20.10 16:02:34,778|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 159te_Nachricht. COut: 20.10 16:02:06,573| HBQ In: 20.10 16:02:06,579|DLQ In: 20.10 16:02:29,933|C In:20.10 16:02:34,809|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 160te_Nachricht. COut: 20.10 16:02:06,620| HBQ In: 20.10 16:02:06,625|DLQ In: 20.10 16:02:29,948|C In:20.10 16:02:34,872|
+8-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 161te_Nachricht. COut: 20.10 16:02:11,050| HBQ In: 20.10 16:02:11,072|DLQ In: 20.10 16:02:29,948|C In:20.10 16:02:34,903|
+9-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 162te_Nachricht. COut: 20.10 16:02:08,585| HBQ In: 20.10 16:02:08,607|DLQ In: 20.10 16:02:29,948|C In:20.10 16:02:34,934|
+10-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 163te_Nachricht. COut: 20.10 16:02:08,632| HBQ In: 20.10 16:02:08,653|DLQ In: 20.10 16:02:29,964|C In:20.10 16:02:34,965|
 ..getmessages..Done..
-Neuer Sendeintervall: 6 Sekunden (7)
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 238te_Nachricht. C Out: 20.10 15:48:50,191| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 253te_Nachricht. C Out: 20.10 15:48:56,198| gesendet
-4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 269te_Nachricht. C Out: 20.10 15:49:02,204| gesendet
+Neuer Sendeintervall: 8 Sekunden (7)
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 227te_Nachricht. C Out: 20.10 16:02:42,984| gesendet
+4-client@SALLY.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 244te_Nachricht. C Out: 20.10 16:02:50,987| gesendet
