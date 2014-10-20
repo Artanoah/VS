@@ -11,6 +11,7 @@ start() ->
 	{ok, Rechnername} = util:get_config_value(rechnername, ConfigListe),
 	{ok, Teamnummer} = util:get_config_value(teamnummer, ConfigListe),
 	
+	
 	%Warte darauf, dass der Server gestartet und registriert wurde.
 	waitForServer(ServerName),
 	
@@ -32,7 +33,7 @@ createClients(Clients, _, _, _, _, _, _) when Clients == 0 ->
 
 createClients(Clients, Lifetime, SendeIntervall, ServerName, Rechnername, PraktikumsGruppe, Teamnummer) ->
 	ClientName = createClientName(Clients, Rechnername, PraktikumsGruppe, Teamnummer),
-	spawn(client, startClient, [Lifetime, SendeIntervall, ClientName, ServerName]),
+	spawn(client, startClient, [Lifetime, SendeIntervall, ClientName, ServerName, Rechnername]),
 	createClients(Clients - 1, Lifetime, SendeIntervall, ServerName, Rechnername, PraktikumsGruppe, Teamnummer).
 
 

@@ -4,7 +4,8 @@
 		 timeMilliSecond/0,reset_timer/3,
 		 type_is/1,to_String/1,list2String/1,
 		 bestimme_mis/2,
-		 head/1, tail/1, last/1, time_in_ms/0]).
+		 head/1, tail/1, last/1, time_in_ms/0,
+		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0]).
 -define(ZERO, integer_to_list(0)).
 
 %% -------------------------------------------
@@ -297,3 +298,19 @@ time_in_ms() ->
 
 time_in_ms_helper({MegS, S, MS}) ->
 	((MegS * 1000000 + S) * 1000000 + MS) / 1000.
+
+get_client_log_file(Rechnername) ->
+	"client_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(Rechnername) ++ ".log".
+
+get_client_log_file() ->
+	{ok, ConfigListe} = file:consult("client.cfg"),
+    {ok, Rechnername} = util:get_config_value(rechnername, ConfigListe),
+	"client_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(Rechnername) ++ ".log".
+
+get_server_log_file(ServerName) ->
+	"Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log".
+
+get_server_log_file() ->
+	{ok, ConfigListe} = file:consult("server.cfg"),
+	{ok, ServerName} = util:get_config_value(servername, ConfigListe),
+	"Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log".

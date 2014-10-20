@@ -9,7 +9,7 @@ createHBQ() ->
 dropmessage(HBQueue, DLQueue, {{Text, COut, _, DLQIn, ClientIn}, Nr}) ->
 	{ok, ConfigListe} = file:consult("server.cfg"),
 	{ok, ServerName} = util:get_config_value(servername, ConfigListe),
-	LogFileName = "Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log",
+	LogFileName = util:get_server_log_file(ServerName),
 
 	case Nr < dlq:getMaxID(DLQueue) of
 		%Wenn die neue Nachricht zu alt ist um noch in die DLQ eingereiht zu werden lasse sie einfach aus

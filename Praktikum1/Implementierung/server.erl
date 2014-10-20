@@ -11,13 +11,13 @@ startServer() ->
 	{ok, DlqLimit} = util:get_config_value(dlqlimit, ConfigListe),
 	
 	%Registriere ServerThread
-	erlang:register(messageServer,self()),
+	erlang:register(ServerName,self()),
 	
 	%Erstelle HBQ, DLQ und ClientList
 	HBQ = hbq:createHBQ(),
 	DLQ = dlq:createDLQ(DlqLimit),
 	ClientList = nachrichtendienst:createClientList(),
-	LogFileName = "Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log\n",
+	LogFileName = util:get_server_log_file(),
 	
 	%Logging
 	util:logging(LogFileName, "Server Startzeit: " ++ util:timeMilliSecond() ++ " mit PID " ++ pid_to_list(self()) ++ "\n"),

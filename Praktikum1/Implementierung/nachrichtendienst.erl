@@ -30,9 +30,7 @@ getMSG(DLQ, PID, ClientList, ClientLifetime) ->
 	PID ! {reply, Number, Nachricht, Terminated},
 	
 	%Logging-Mist
-	{ok, ConfigListe} = file:consult("server.cfg"),
-	{ok, ServerName} = util:get_config_value(servername, ConfigListe),
-	LogFileName = "Server_" ++ lists:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log",
+	LogFileName = util:get_server_log_file(),
 	
 	{Msg, COut, HBQIn, DLQIn, _} = Nachricht,
 	util:logging(LogFileName, Msg ++ 

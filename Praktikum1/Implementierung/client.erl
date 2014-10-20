@@ -1,15 +1,18 @@
 -module(client).
--export([startClient/4]).
+-export([startClient/5]).
 
-startClient(Lifetime, SendeIntervall, ClientName, ServerName) ->
+startClient(Lifetime, SendeIntervall, ClientName, ServerName, Rechnername) ->
+	LogFileName = util:get_client_log_file(Rechnername),
+	util:logging(LogFileName, ClientName ++ " Start: " ++ util:timeMilliSecond() ++ "\n"),
+
 	timer:kill_after(1000*Lifetime),
-	sending(Lifetime, SendeIntervall, ClientName, ServerName).
+	sending(Lifetime, SendeIntervall, ClientName, ServerName, LogFileName).
 	
-sending(Lifetime, SendeIntervall, ClientName, ServerName) ->
+sending(Lifetime, SendeIntervall, ClientName, ServerName, LogFileName) ->
 	MSGIDList = clientEditor:startSend(SendeIntervall, ClientName, ServerName),
 	clientReader:startRead(ServerName, MSGIDList),
 	NewSendeIntervall = calcTimer(SendeIntervall),
-	sending(Lifetime, NewSendeIntervall, ClientName, ServerName).
+	sending(Lifetime, NewSendeIntervall, ClientName, ServerName, LogFileName).
 
 
 calcTimer(SendeIntervall) ->
