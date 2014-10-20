@@ -33,3 +33,6 @@ Wobei <ServerNodeName> der Selbe wie der nodename aus der client.cfg sein muss u
 	server:serverStart().
 4. Fuehre in der ClientNode (innerhalb von <latency> Sekunden nach dem Starten des Servers) den folgenden Befehl aus
 	clientCreator:start().
+	
+	Logs:
+Die Logs werden in dem Ordner erstellt, in dem die jeweilige Erlang-Node gestartet wurde.
