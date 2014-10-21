@@ -1,0 +1,156 @@
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 Start: 21.10 11:13:35,014|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 6te_Nachricht. C Out: 21.10 11:13:40,032| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 20te_Nachricht. C Out: 21.10 11:13:45,035| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 26te_Nachricht. C Out: 21.10 11:13:50,039| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 42te_Nachricht. C Out: 21.10 11:13:55,040| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 49te_Nachricht. C Out: 21.10 11:14:00,043| gesendet
+61te Nachricht um 21.10 11:14:00,050| vergessen zu senden
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 15te_Nachricht. COut: 21.10 11:13:45,035| HBQ In: 21.10 11:13:45,040|DLQ In: 21.10 11:13:45,040|C In:21.10 11:14:00,063|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 16te_Nachricht. COut: 21.10 11:13:45,035| HBQ In: 21.10 11:13:45,039|DLQ In: 21.10 11:13:45,040|C In:21.10 11:14:00,068|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 17te_Nachricht. COut: 21.10 11:13:45,035| HBQ In: 21.10 11:13:45,038|DLQ In: 21.10 11:13:45,040|C In:21.10 11:14:00,073|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 18te_Nachricht. COut: 21.10 11:13:45,035| HBQ In: 21.10 11:13:45,037|DLQ In: 21.10 11:13:45,040|C In:21.10 11:14:00,077|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 19te_Nachricht. COut: 21.10 11:13:45,035| HBQ In: 21.10 11:13:45,036|DLQ In: 21.10 11:13:45,040|C In:21.10 11:14:00,082|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 20te_Nachricht. COut: 21.10 11:13:45,035| HBQ In: 21.10 11:13:45,034|DLQ In: 21.10 11:13:45,040|*******C In:21.10 11:14:00,088|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 21te_Nachricht. COut: 21.10 11:13:45,035| HBQ In: 21.10 11:13:45,035|DLQ In: 21.10 11:13:45,040|C In:21.10 11:14:00,093|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 22te_Nachricht. COut: 21.10 11:13:45,035| HBQ In: 21.10 11:13:45,033|DLQ In: 21.10 11:13:45,040|C In:21.10 11:14:00,099|
+Nr.23: lab0-5000-'client1@lab28.cpt.haw-hamburg.de' 23te_Nachricht. COut: "21.10 11:13:41,183|" HBQ In: 21.10 11:13:41,181|DLQ In: 21.10 11:13:45,040|C In:21.10 11:14:00,104|
+***Fehlernachricht fuer Nachrichten 24 bis 24 um 21.10 11:13:56,199| 24te_Nachricht. COut:  HBQ In: DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,109|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 25te_Nachricht. COut: 21.10 11:13:50,039| HBQ In: 21.10 11:13:50,043|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,114|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 26te_Nachricht. COut: 21.10 11:13:50,039| HBQ In: 21.10 11:13:50,042|DLQ In: 21.10 11:13:56,199|*******C In:21.10 11:14:00,120|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 27te_Nachricht. COut: 21.10 11:13:50,039| HBQ In: 21.10 11:13:50,041|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,124|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 28te_Nachricht. COut: 21.10 11:13:50,039| HBQ In: 21.10 11:13:50,041|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,130|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 29te_Nachricht. COut: 21.10 11:13:50,039| HBQ In: 21.10 11:13:50,040|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,134|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 30te_Nachricht. COut: 21.10 11:13:50,038| HBQ In: 21.10 11:13:50,039|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,139|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 31te_Nachricht. COut: 21.10 11:13:50,038| HBQ In: 21.10 11:13:50,038|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,144|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 32te_Nachricht. COut: 21.10 11:13:50,038| HBQ In: 21.10 11:13:50,037|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,149|
+1-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 33te_Nachricht. COut: 21.10 11:13:50,038| HBQ In: 21.10 11:13:50,036|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,154|
+Nr.34: lab0-5000-'client1@lab28.cpt.haw-hamburg.de' 34te_Nachricht. COut: "21.10 11:13:46,197|" HBQ In: 21.10 11:13:46,195|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,159|
+1-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 35te_Nachricht. COut: 21.10 11:13:55,039| HBQ In: 21.10 11:13:55,038|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,163|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 36te_Nachricht. COut: 21.10 11:13:55,039| HBQ In: 21.10 11:13:55,038|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,169|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 37te_Nachricht. COut: 21.10 11:13:55,039| HBQ In: 21.10 11:13:55,036|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,175|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 38te_Nachricht. COut: 21.10 11:13:55,040| HBQ In: 21.10 11:13:55,043|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,181|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 39te_Nachricht. COut: 21.10 11:13:55,040| HBQ In: 21.10 11:13:55,043|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,186|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 40te_Nachricht. COut: 21.10 11:13:55,040| HBQ In: 21.10 11:13:55,042|DLQ In: 21.10 11:13:56,199|C In:21.10 11:14:00,191|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 41te_Nachricht. COut: 21.10 11:13:55,040| HBQ In: 21.10 11:13:55,041|DLQ In: 21.10 11:13:56,200|C In:21.10 11:14:00,196|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 42te_Nachricht. COut: 21.10 11:13:55,040| HBQ In: 21.10 11:13:55,040|DLQ In: 21.10 11:13:56,201|*******C In:21.10 11:14:00,201|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 43te_Nachricht. COut: 21.10 11:13:55,040| HBQ In: 21.10 11:13:55,039|DLQ In: 21.10 11:13:56,202|C In:21.10 11:14:00,206|
+Nr.44: lab0-5000-'client1@lab28.cpt.haw-hamburg.de' 44te_Nachricht. COut: "21.10 11:13:51,200|" HBQ In: 21.10 11:13:51,198|DLQ In: 21.10 11:13:56,203|C In:21.10 11:14:00,211|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 45te_Nachricht. COut: 21.10 11:14:00,043| HBQ In: 21.10 11:14:00,042|DLQ In: 21.10 11:14:00,042|C In:21.10 11:14:00,216|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 46te_Nachricht. COut: 21.10 11:14:00,042| HBQ In: 21.10 11:14:00,041|DLQ In: 21.10 11:14:00,043|C In:21.10 11:14:00,221|
+1-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 47te_Nachricht. COut: 21.10 11:14:00,042| HBQ In: 21.10 11:14:00,040|DLQ In: 21.10 11:14:00,043|C In:21.10 11:14:00,226|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 48te_Nachricht. COut: 21.10 11:14:00,043| HBQ In: 21.10 11:14:00,050|DLQ In: 21.10 11:14:00,050|C In:21.10 11:14:00,231|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 49te_Nachricht. COut: 21.10 11:14:00,043| HBQ In: 21.10 11:14:00,046|DLQ In: 21.10 11:14:00,051|*******C In:21.10 11:14:00,236|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 50te_Nachricht. COut: 21.10 11:14:00,043| HBQ In: 21.10 11:14:00,047|DLQ In: 21.10 11:14:00,051|C In:21.10 11:14:00,240|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 51te_Nachricht. COut: 21.10 11:14:00,043| HBQ In: 21.10 11:14:00,045|DLQ In: 21.10 11:14:00,052|C In:21.10 11:14:00,245|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 52te_Nachricht. COut: 21.10 11:14:00,043| HBQ In: 21.10 11:14:00,045|DLQ In: 21.10 11:14:00,053|C In:21.10 11:14:00,249|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 53te_Nachricht. COut: 21.10 11:14:00,043| HBQ In: 21.10 11:14:00,044|DLQ In: 21.10 11:14:00,053|C In:21.10 11:14:00,254|
+Nr.54: lab0-5000-'client1@lab28.cpt.haw-hamburg.de' 54te_Nachricht. COut: "21.10 11:13:56,201|" HBQ In: 21.10 11:13:56,199|DLQ In: 21.10 11:14:00,054|C In:21.10 11:14:00,259|
+..getmessages..Done..
+Neuer Sendeintervall: 6 Sekunden (5)
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 71te_Nachricht. C Out: 21.10 11:14:06,262| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 83te_Nachricht. C Out: 21.10 11:14:12,263| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 95te_Nachricht. C Out: 21.10 11:14:18,266| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 106te_Nachricht. C Out: 21.10 11:14:24,267| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 125te_Nachricht. C Out: 21.10 11:14:30,268| gesendet
+142te Nachricht um 21.10 11:14:30,274| vergessen zu senden
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 86te_Nachricht. COut: 21.10 11:14:12,261| HBQ In: 21.10 11:14:12,258|DLQ In: 21.10 11:14:19,375|C In:21.10 11:14:30,289|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 87te_Nachricht. COut: 21.10 11:14:12,262| HBQ In: 21.10 11:14:12,261|DLQ In: 21.10 11:14:19,376|C In:21.10 11:14:30,292|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 88te_Nachricht. COut: 21.10 11:14:12,264| HBQ In: 21.10 11:14:12,273|DLQ In: 21.10 11:14:19,376|C In:21.10 11:14:30,295|
+1-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 89te_Nachricht. COut: 21.10 11:14:18,261| HBQ In: 21.10 11:14:18,258|DLQ In: 21.10 11:14:19,377|C In:21.10 11:14:30,298|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 90te_Nachricht. COut: 21.10 11:14:16,263| HBQ In: 21.10 11:14:16,262|DLQ In: 21.10 11:14:19,378|C In:21.10 11:14:30,302|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 91te_Nachricht. COut: 21.10 11:14:16,263| HBQ In: 21.10 11:14:16,261|DLQ In: 21.10 11:14:19,378|C In:21.10 11:14:30,305|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 92te_Nachricht. COut: 21.10 11:14:18,266| HBQ In: 21.10 11:14:18,264|DLQ In: 21.10 11:14:19,379|C In:21.10 11:14:30,308|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 93te_Nachricht. COut: 21.10 11:14:18,266| HBQ In: 21.10 11:14:18,263|DLQ In: 21.10 11:14:19,380|C In:21.10 11:14:30,311|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 94te_Nachricht. COut: 21.10 11:14:16,263| HBQ In: 21.10 11:14:16,262|DLQ In: 21.10 11:14:19,380|C In:21.10 11:14:30,314|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 95te_Nachricht. COut: 21.10 11:14:18,266| HBQ In: 21.10 11:14:18,264|DLQ In: 21.10 11:14:19,381|*******C In:21.10 11:14:30,317|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 96te_Nachricht. COut: 21.10 11:14:18,266| HBQ In: 21.10 11:14:18,265|DLQ In: 21.10 11:14:19,381|C In:21.10 11:14:30,320|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 97te_Nachricht. COut: 21.10 11:14:16,265| HBQ In: 21.10 11:14:16,264|DLQ In: 21.10 11:14:19,382|C In:21.10 11:14:30,323|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 98te_Nachricht. COut: 21.10 11:14:20,264| HBQ In: 21.10 11:14:20,263|DLQ In: 21.10 11:14:20,264|C In:21.10 11:14:30,326|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 99te_Nachricht. COut: 21.10 11:14:20,264| HBQ In: 21.10 11:14:20,262|DLQ In: 21.10 11:14:20,265|C In:21.10 11:14:30,329|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 100te_Nachricht. COut: 21.10 11:14:20,264| HBQ In: 21.10 11:14:20,262|DLQ In: 21.10 11:14:20,265|C In:21.10 11:14:30,332|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 101te_Nachricht. COut: 21.10 11:14:20,266| HBQ In: 21.10 11:14:20,266|DLQ In: 21.10 11:14:20,267|C In:21.10 11:14:30,335|
+0-'server@lab22.cpt.haw-hamburg.de'-<0.337.0>-3-9: 102te_Nachricht. 102te_Nachricht. COut: 21.10 11:14:17,371| HBQ In: 21.10 11:14:17,368|DLQ In: 21.10 11:14:20,268|C In:21.10 11:14:30,338|
+1-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 103te_Nachricht. COut: 21.10 11:14:24,262| HBQ In: 21.10 11:14:24,260|DLQ In: 21.10 11:14:24,261|C In:21.10 11:14:30,341|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 104te_Nachricht. COut: 21.10 11:14:24,267| HBQ In: 21.10 11:14:24,267|DLQ In: 21.10 11:14:24,268|C In:21.10 11:14:30,344|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 105te_Nachricht. COut: 21.10 11:14:24,267| HBQ In: 21.10 11:14:24,266|DLQ In: 21.10 11:14:24,268|C In:21.10 11:14:30,348|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 106te_Nachricht. COut: 21.10 11:14:24,267| HBQ In: 21.10 11:14:24,265|DLQ In: 21.10 11:14:24,269|*******C In:21.10 11:14:30,350|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 107te_Nachricht. COut: 21.10 11:14:24,267| HBQ In: 21.10 11:14:24,264|DLQ In: 21.10 11:14:24,270|C In:21.10 11:14:30,353|
+1-'server@lab22.cpt.haw-hamburg.de'-<0.342.0>-3-9: 108te_Nachricht. 108te_Nachricht. COut: 21.10 11:14:18,372| HBQ In: 21.10 11:14:18,369|DLQ In: 21.10 11:14:24,270|C In:21.10 11:14:30,356|
+2-'server@lab22.cpt.haw-hamburg.de'-<0.346.0>-3-9: 109te_Nachricht. 109te_Nachricht. COut: 21.10 11:14:19,372| HBQ In: 21.10 11:14:19,369|DLQ In: 21.10 11:14:24,271|C In:21.10 11:14:30,359|
+***Fehlernachricht fuer Nachrichten 110 bis 113 um 21.10 11:14:30,271| 113te_Nachricht. COut:  HBQ In: DLQ In: 21.10 11:14:30,272|C In:21.10 11:14:30,362|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 114te_Nachricht. COut: 21.10 11:14:25,366| HBQ In: 21.10 11:14:25,363|DLQ In: 21.10 11:14:30,273|C In:21.10 11:14:30,365|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 115te_Nachricht. COut: 21.10 11:14:25,367| HBQ In: 21.10 11:14:25,364|DLQ In: 21.10 11:14:30,274|C In:21.10 11:14:30,368|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 116te_Nachricht. COut: 21.10 11:14:25,368| HBQ In: 21.10 11:14:25,365|DLQ In: 21.10 11:14:30,274|C In:21.10 11:14:30,374|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 117te_Nachricht. COut: 21.10 11:14:23,368| HBQ In: 21.10 11:14:23,365|DLQ In: 21.10 11:14:30,275|C In:21.10 11:14:30,380|
+3-'server@lab22.cpt.haw-hamburg.de'-<0.350.0>-3-9: 118te_Nachricht. 118te_Nachricht. COut: 21.10 11:14:20,373| HBQ In: 21.10 11:14:20,369|DLQ In: 21.10 11:14:30,276|C In:21.10 11:14:30,383|
+4-'server@lab22.cpt.haw-hamburg.de'-<0.354.0>-3-9: 119te_Nachricht. 119te_Nachricht. COut: 21.10 11:14:21,374| HBQ In: 21.10 11:14:21,371|DLQ In: 21.10 11:14:30,277|C In:21.10 11:14:30,386|
+0-'server@lab22.cpt.haw-hamburg.de'-<0.337.0>-3-9: 120te_Nachricht. 120te_Nachricht. COut: 21.10 11:14:22,373| HBQ In: 21.10 11:14:22,370|DLQ In: 21.10 11:14:30,277|C In:21.10 11:14:30,389|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 121te_Nachricht. COut: 21.10 11:14:26,369| HBQ In: 21.10 11:14:26,366|DLQ In: 21.10 11:14:30,278|C In:21.10 11:14:30,392|
+1-'server@lab22.cpt.haw-hamburg.de'-<0.342.0>-3-9: 122te_Nachricht. 122te_Nachricht. COut: 21.10 11:14:23,373| HBQ In: 21.10 11:14:23,370|DLQ In: 21.10 11:14:30,279|C In:21.10 11:14:30,395|
+1-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 123te_Nachricht. COut: 21.10 11:14:30,263| HBQ In: 21.10 11:14:30,261|DLQ In: 21.10 11:14:30,279|C In:21.10 11:14:30,398|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 124te_Nachricht. COut: 21.10 11:14:30,268| HBQ In: 21.10 11:14:30,271|DLQ In: 21.10 11:14:30,280|C In:21.10 11:14:30,400|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 125te_Nachricht. COut: 21.10 11:14:30,268| HBQ In: 21.10 11:14:30,270|DLQ In: 21.10 11:14:30,281|*******C In:21.10 11:14:30,403|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 126te_Nachricht. COut: 21.10 11:14:30,268| HBQ In: 21.10 11:14:30,270|DLQ In: 21.10 11:14:30,281|C In:21.10 11:14:30,406|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 127te_Nachricht. COut: 21.10 11:14:30,268| HBQ In: 21.10 11:14:30,269|DLQ In: 21.10 11:14:30,282|C In:21.10 11:14:30,409|
+2-'server@lab22.cpt.haw-hamburg.de'-<0.346.0>-3-9: 128te_Nachricht. 128te_Nachricht. COut: 21.10 11:14:24,373| HBQ In: 21.10 11:14:24,370|DLQ In: 21.10 11:14:30,283|C In:21.10 11:14:30,411|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 129te_Nachricht. COut: 21.10 11:14:30,367| HBQ In: 21.10 11:14:30,367|DLQ In: 21.10 11:14:30,367|C In:21.10 11:14:30,414|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 130te_Nachricht. COut: 21.10 11:14:30,368| HBQ In: 21.10 11:14:30,369|DLQ In: 21.10 11:14:30,369|C In:21.10 11:14:30,417|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 131te_Nachricht. COut: 21.10 11:14:30,369| HBQ In: 21.10 11:14:30,371|DLQ In: 21.10 11:14:30,371|C In:21.10 11:14:30,419|
+3-'server@lab22.cpt.haw-hamburg.de'-<0.350.0>-3-9: 132te_Nachricht. 132te_Nachricht. COut: 21.10 11:14:25,374| HBQ In: 21.10 11:14:25,370|DLQ In: 21.10 11:14:30,372|C In:21.10 11:14:30,422|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 133te_Nachricht. COut: 21.10 11:14:29,370| HBQ In: 21.10 11:14:29,367|DLQ In: 21.10 11:14:30,372|C In:21.10 11:14:30,425|
+4-'server@lab22.cpt.haw-hamburg.de'-<0.354.0>-3-9: 134te_Nachricht. 134te_Nachricht. COut: 21.10 11:14:26,375| HBQ In: 21.10 11:14:26,372|DLQ In: 21.10 11:14:30,373|C In:21.10 11:14:30,428|
+0-'server@lab22.cpt.haw-hamburg.de'-<0.337.0>-3-9: 135te_Nachricht. 135te_Nachricht. COut: 21.10 11:14:27,374| HBQ In: 21.10 11:14:27,371|DLQ In: 21.10 11:14:30,373|C In:21.10 11:14:30,430|
+1-'server@lab22.cpt.haw-hamburg.de'-<0.342.0>-3-9: 136te_Nachricht. 136te_Nachricht. COut: 21.10 11:14:28,374| HBQ In: 21.10 11:14:28,371|DLQ In: 21.10 11:14:30,374|C In:21.10 11:14:30,433|
+..getmessages..Done..
+Neuer Sendeintervall: 7 Sekunden (6)
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 151te_Nachricht. C Out: 21.10 11:14:37,436| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 170te_Nachricht. C Out: 21.10 11:14:44,437| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 191te_Nachricht. C Out: 21.10 11:14:51,438| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 215te_Nachricht. C Out: 21.10 11:14:58,439| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 235te_Nachricht. C Out: 21.10 11:15:05,440| gesendet
+254te Nachricht um 21.10 11:15:05,441| vergessen zu senden
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 180te_Nachricht. COut: 21.10 11:14:45,439| HBQ In: 21.10 11:14:45,438|DLQ In: 21.10 11:14:45,438|C In:21.10 11:15:05,447|
+4-'server@lab22.cpt.haw-hamburg.de'-<0.354.0>-3-9: 181te_Nachricht. 181te_Nachricht. COut: 21.10 11:14:41,378| HBQ In: 21.10 11:14:41,375|DLQ In: 21.10 11:14:45,439|C In:21.10 11:15:05,451|
+***Fehlernachricht fuer Nachrichten 182 bis 182 um 21.10 11:14:53,481| 182te_Nachricht. COut:  HBQ In: DLQ In: 21.10 11:14:53,483|C In:21.10 11:15:05,453|
+0-'server@lab22.cpt.haw-hamburg.de'-<0.337.0>-3-9: 183te_Nachricht. 183te_Nachricht. COut: 21.10 11:14:42,412| HBQ In: 21.10 11:14:42,408|DLQ In: 21.10 11:14:53,483|C In:21.10 11:15:05,455|
+***Fehlernachricht fuer Nachrichten 184 bis 184 um 21.10 11:14:53,485| 184te_Nachricht. COut:  HBQ In: DLQ In: 21.10 11:14:53,486|C In:21.10 11:15:05,457|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 185te_Nachricht. COut: 21.10 11:14:47,405| HBQ In: 21.10 11:14:47,402|DLQ In: 21.10 11:14:53,487|C In:21.10 11:15:05,459|
+1-'server@lab22.cpt.haw-hamburg.de'-<0.342.0>-3-9: 186te_Nachricht. 186te_Nachricht. COut: 21.10 11:14:43,409| HBQ In: 21.10 11:14:43,405|DLQ In: 21.10 11:14:53,487|C In:21.10 11:15:05,461|
+***Fehlernachricht fuer Nachrichten 187 bis 187 um 21.10 11:14:54,740| 187te_Nachricht. COut:  HBQ In: DLQ In: 21.10 11:14:54,741|C In:21.10 11:15:05,463|
+2-'server@lab22.cpt.haw-hamburg.de'-<0.346.0>-3-9: 188te_Nachricht. 188te_Nachricht. COut: 21.10 11:14:44,406| HBQ In: 21.10 11:14:44,402|DLQ In: 21.10 11:14:54,743|C In:21.10 11:15:05,465|
+1-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 189te_Nachricht. COut: 21.10 11:14:51,435| HBQ In: 21.10 11:14:51,432|DLQ In: 21.10 11:14:54,744|C In:21.10 11:15:05,467|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 190te_Nachricht. COut: 21.10 11:14:51,437| HBQ In: 21.10 11:14:51,434|DLQ In: 21.10 11:14:54,745|C In:21.10 11:15:05,469|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 191te_Nachricht. COut: 21.10 11:14:51,438| HBQ In: 21.10 11:14:51,435|DLQ In: 21.10 11:14:54,746|*******C In:21.10 11:15:05,471|
+Nr.192: lab0-15-'client1@lab28.cpt.haw-hamburg.de' 192te_Nachricht. COut: "21.10 11:14:44,736|" HBQ In: 21.10 11:14:44,733|DLQ In: 21.10 11:14:54,746|C In:21.10 11:15:05,473|
+***Fehlernachricht fuer Nachrichten 193 bis 196 um 21.10 11:14:57,483| 196te_Nachricht. COut:  HBQ In: DLQ In: 21.10 11:14:57,484|C In:21.10 11:15:05,474|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 197te_Nachricht. COut: 21.10 11:14:50,437| HBQ In: 21.10 11:14:50,435|DLQ In: 21.10 11:14:57,485|C In:21.10 11:15:05,476|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 198te_Nachricht. COut: 21.10 11:14:50,440| HBQ In: 21.10 11:14:50,437|DLQ In: 21.10 11:14:57,486|C In:21.10 11:15:05,478|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 199te_Nachricht. COut: 21.10 11:14:49,483| HBQ In: 21.10 11:14:49,480|DLQ In: 21.10 11:14:57,486|C In:21.10 11:15:05,480|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 200te_Nachricht. COut: 21.10 11:14:51,484| HBQ In: 21.10 11:14:51,481|DLQ In: 21.10 11:14:57,487|C In:21.10 11:15:05,482|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 201te_Nachricht. COut: 21.10 11:14:51,485| HBQ In: 21.10 11:14:51,482|DLQ In: 21.10 11:14:57,488|C In:21.10 11:15:05,484|
+3-'server@lab22.cpt.haw-hamburg.de'-<0.350.0>-3-9: 202te_Nachricht. 202te_Nachricht. COut: 21.10 11:14:45,486| HBQ In: 21.10 11:14:45,482|DLQ In: 21.10 11:14:57,488|C In:21.10 11:15:05,486|
+***Fehlernachricht fuer Nachrichten 203 bis 203 um 21.10 11:14:59,491| 203te_Nachricht. COut:  HBQ In: DLQ In: 21.10 11:14:59,492|C In:21.10 11:15:05,488|
+4-'server@lab22.cpt.haw-hamburg.de'-<0.354.0>-3-9: 204te_Nachricht. 204te_Nachricht. COut: 21.10 11:14:46,405| HBQ In: 21.10 11:14:46,401|DLQ In: 21.10 11:14:59,493|C In:21.10 11:15:05,490|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 205te_Nachricht. COut: 21.10 11:14:51,406| HBQ In: 21.10 11:14:51,403|DLQ In: 21.10 11:14:59,494|C In:21.10 11:15:05,492|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 206te_Nachricht. COut: 21.10 11:14:53,484| HBQ In: 21.10 11:14:53,481|DLQ In: 21.10 11:14:59,495|C In:21.10 11:15:05,494|
+Nr.207: lab0-15-'client1@lab28.cpt.haw-hamburg.de' 207te_Nachricht. COut: "21.10 11:14:49,737|" HBQ In: 21.10 11:14:49,734|DLQ In: 21.10 11:14:59,495|C In:21.10 11:15:05,497|
+0-'server@lab22.cpt.haw-hamburg.de'-<0.337.0>-3-9: 208te_Nachricht. 208te_Nachricht. COut: 21.10 11:14:50,414| HBQ In: 21.10 11:14:50,410|DLQ In: 21.10 11:14:59,496|C In:21.10 11:15:05,499|
+9-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 209te_Nachricht. COut: 21.10 11:14:55,438| HBQ In: 21.10 11:14:55,435|DLQ In: 21.10 11:14:59,497|C In:21.10 11:15:05,502|
+6-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 210te_Nachricht. COut: 21.10 11:14:55,441| HBQ In: 21.10 11:14:55,439|DLQ In: 21.10 11:14:59,498|C In:21.10 11:15:05,504|
+4-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 211te_Nachricht. COut: 21.10 11:14:55,407| HBQ In: 21.10 11:14:55,404|DLQ In: 21.10 11:14:59,498|C In:21.10 11:15:05,507|
+1-'server@lab22.cpt.haw-hamburg.de'-<0.342.0>-3-9: 212te_Nachricht. 212te_Nachricht. COut: 21.10 11:14:51,410| HBQ In: 21.10 11:14:51,407|DLQ In: 21.10 11:14:59,499|C In:21.10 11:15:05,509|
+1-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 213te_Nachricht. COut: 21.10 11:14:58,436| HBQ In: 21.10 11:14:58,433|DLQ In: 21.10 11:14:59,499|C In:21.10 11:15:05,512|
+7-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 214te_Nachricht. COut: 21.10 11:14:58,438| HBQ In: 21.10 11:14:58,435|DLQ In: 21.10 11:14:59,500|C In:21.10 11:15:05,514|
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 215te_Nachricht. COut: 21.10 11:14:58,439| HBQ In: 21.10 11:14:58,436|DLQ In: 21.10 11:14:59,501|*******C In:21.10 11:15:05,516|
+2-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 216te_Nachricht. COut: 21.10 11:14:57,485| HBQ In: 21.10 11:14:57,483|DLQ In: 21.10 11:14:59,501|C In:21.10 11:15:05,518|
+5-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 217te_Nachricht. COut: 21.10 11:14:57,486| HBQ In: 21.10 11:14:57,489|DLQ In: 21.10 11:14:59,502|C In:21.10 11:15:05,521|
+2-'server@lab22.cpt.haw-hamburg.de'-<0.346.0>-3-9: 218te_Nachricht. 218te_Nachricht. COut: 21.10 11:14:52,407| HBQ In: 21.10 11:14:52,404|DLQ In: 21.10 11:14:59,503|C In:21.10 11:15:05,524|
+8-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2 219te_Nachricht. COut: 21.10 11:14:57,485| HBQ In: 21.10 11:14:57,483|DLQ In: 21.10 11:14:59,503|C In:21.10 11:15:05,526|
+3-'server@lab22.cpt.haw-hamburg.de'-<0.350.0>-3-9: 220te_Nachricht. 220te_Nachricht. COut: 21.10 11:14:53,488| HBQ In: 21.10 11:14:53,484|DLQ In: 21.10 11:14:59,504|C In:21.10 11:15:05,528|
+4-'server@lab22.cpt.haw-hamburg.de'-<0.354.0>-3-9: 221te_Nachricht. 221te_Nachricht. COut: 21.10 11:14:54,406| HBQ In: 21.10 11:14:54,403|DLQ In: 21.10 11:14:59,504|C In:21.10 11:15:05,530|
+Nr.222: lab0-15-'client1@lab28.cpt.haw-hamburg.de' 222te_Nachricht. COut: "21.10 11:14:54,743|" HBQ In: 21.10 11:14:54,740|DLQ In: 21.10 11:14:59,505|C In:21.10 11:15:05,533|
+..getmessages..Done..
+Neuer Sendeintervall: 8 Sekunden (7)
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 258te_Nachricht. C Out: 21.10 11:15:13,536| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 273te_Nachricht. C Out: 21.10 11:15:21,537| gesendet
+3-client@lab22.cpt.haw-hamburg.de-<0.39.0>-Gruppe1-2: 292te_Nachricht. C Out: 21.10 11:15:29,539| gesendet
