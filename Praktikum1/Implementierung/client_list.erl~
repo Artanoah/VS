@@ -43,7 +43,7 @@ set_time(ClientID, CurrentTime, [{ClientID, LastNumber, _Time} | Queue]) ->
 set_time(ClientID, CurrentTime, [Client | Queue]) ->
 	[Client | set_time(ClientID, CurrentTime, Queue)].
 
-%Gibt die Nummer der Nachricht zurueck, die der Client als letztes bekommen hat
+
 get_last_message_id(_, []) ->
 	false;
 
@@ -53,7 +53,7 @@ get_last_message_id(ClientID, [{ClientID, Nr, _} | _]) ->
 get_last_message_id(ClientID, [_ | Queue]) ->
 	get_last_message_id(ClientID, Queue).
 
-%Setzt die Nummer der Nachricht, die der Client als letztes bekommen hat
+
 set_last_message_id(_, _, []) -> 
 	[];
 

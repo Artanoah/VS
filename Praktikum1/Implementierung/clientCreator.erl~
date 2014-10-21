@@ -19,6 +19,15 @@ start() ->
 	
 	%Spawne alle Clients
 	createClients(Clients, Lifetime, SendeIntervall, ServerName, Rechnername, PraktikumsGruppe, Teamnummer).
+	
+waitForServer(ServerName) ->
+	Name = erlang:whereis(ServerName),
+	case Name of
+		undefined -> 
+			timer:sleep(50),
+			waitForServer(ServerName);
+		_ -> ok
+	end.
 
 
 createClients(Clients, _, _, _, _, _, _) when Clients == 0 ->

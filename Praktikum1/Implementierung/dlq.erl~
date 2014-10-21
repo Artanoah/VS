@@ -61,7 +61,9 @@ add([{_, NNr}|Queue], {{Text, COut, HBQIn, _, ClientIn}, Nr}) when NNr == 0 ->
 
 add([{_, NNr}|Queue], {{Text, COut, HBQIn, _, ClientIn}, Nr}) ->
 	%Logging-Mist
-	LogFileName = util:get_server_log_file(),
+	{ok, ConfigListe} = file:consult("server.cfg"),
+	{ok, ServerName} = util:get_config_value(servername, ConfigListe),
+	LogFileName = "Server_" ++ util:droplast(util:tail(pid_to_list(self()))) ++ "_" ++ atom_to_list(ServerName) ++ ".log",
 	
 	util:logging(LogFileName, "QVerwaltung>>> Nachricht " ++ integer_to_list(NNr) ++ " wurde geloescht\n"),
 	

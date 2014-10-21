@@ -33,8 +33,8 @@ getMSG(DLQ, PID, ClientList, ClientLifetime) ->
 	LogFileName = util:get_server_log_file(),
 	
 	{Msg, COut, HBQIn, DLQIn, _} = Nachricht,
-	util:logging(LogFileName, Msg ++ " " ++ integer_to_list(Number) ++ "te_Nachricht. COut: " ++ util:timestamp_to_list(COut) ++ 
-	" HBQ In: " ++ util:timestamp_to_list(HBQIn) ++ "DLQ In: " ++ util:timestamp_to_list(DLQIn) ++ " -getmessages von " ++ pid_to_list(PID) ++ "-" ++ 
+	util:logging(LogFileName, Msg ++ " " ++ integer_to_list(Number) ++ "te_Nachricht. COut: " ++ COut ++ 
+	" HBQ In: " ++ HBQIn ++ "DLQ In: " ++ DLQIn ++ " -getmessages von " ++ pid_to_list(PID) ++ "-" ++ 
 	boolean_to_list(Terminated) ++ "\n"),
 	
 	FinalClientList.

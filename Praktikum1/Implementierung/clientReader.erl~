@@ -18,7 +18,7 @@ loop(ServerName, MSGIDList, MessagesDone, LogFileName) ->
 			Message = {Msg, COut, HBQIn, DLQIn, util:timeMilliSecond()}
 	end,
 	
-	%Pruefe ob die empfangene Nachricht eine selbst verschickte ist und logge dementsprechend ("********" wenn die Nachricht von sich selber verschickt wurde)s
+	%Pruefe ob die empfangene Nachricht eine selbst verschickte ist und logge dementsprechend ("********" wenn die Nachricht von sich selber verschickt wurde)
 	case lists:member(Number, MSGIDList) of
 		true -> 
 			util:logging(LogFileName, 
@@ -33,7 +33,6 @@ loop(ServerName, MSGIDList, MessagesDone, LogFileName) ->
 			NewMSGIDDoneList = MessagesDone
 	end,
 	
-	%Wenn noch nicht die letzte Nachricht empfangen wurde, dann frage weiter ab, sonst beende dich.
 	case Terminated of
 		false ->
 			loop(ServerName, MSGIDList, NewMSGIDDoneList, LogFileName);

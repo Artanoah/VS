@@ -325,6 +325,6 @@ droplasthelper([X | XS], List) ->
 	droplasthelper(XS, List ++ [X]).
 
 timestamp_to_list(Timestamp) ->
-	if is_list(Timestamp) -> Timestamp;
-	   is_number(Timestamp) -> integer_to_list(Timestamp)
+	if is_list(Something) -> Timestamp;
+	   is_number(Something) -> integer_to_list(Timestamp)
 	end.

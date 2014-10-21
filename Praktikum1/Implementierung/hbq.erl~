@@ -33,7 +33,7 @@ dropmessage(HBQueue, DLQueue, {{Text, COut, _, DLQIn, ClientIn}, Nr}) ->
 					DLQueueFilled = DLQueue
 			end,
 					
-			%Wenn es keine Luecke zwischen HBQ und DLQ gibt oder die HBQ voll ist, fuelle so lange Elemente von der HBQ in die DLQ, bis entweder eine neue Luecke gefunden wird oder die HBQ leer ist
+			%Wenn 
 			case hbqFollowsDlq(HBQueueFilled, DLQueueFilled) or is_hbq_full(HBQueueFilled, dlq:maxSize(DLQueueFilled)) of
 				true	-> 
 					{_, HeadNum} = util:head(HBQueueFilled),
@@ -42,7 +42,6 @@ dropmessage(HBQueue, DLQueue, {{Text, COut, _, DLQIn, ClientIn}, Nr}) ->
 				false 	-> 
 					{HBQueueDone, DLQueueDone} = {HBQueueFilled, DLQueueFilled}
 			end,
-			%Gib die neue HBQ und die neue DLQ als Tupel zurueck
 			{HBQueueDone, DLQueueDone}
 	end.
 			

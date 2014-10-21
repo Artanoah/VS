@@ -3,6 +3,6 @@
 {servername, 'dispatcher'}.
 {sendeintervall, 5}.
 {praktikumsgruppe, 1}.
-{rechnername, 'lab23.cpt.haw-hamburg.de'}.
+{rechnername, 'ws-66-29.HAW.1X'}.
 {nodename, 'server'}.
 {teamnummer, 2}.
