@@ -1,0 +1,50 @@
+		Verteilte GGT-Berechnung
+
+	Übersicht
+
+Das System soll den GGT von n Zahlen auf n verschiedenen GGT-Prozessen bestimmen und 
+dabei von einem Starter und Koordinator koordiniert und gestartet werden. Dabei soll
+das System für mehrere GGT-Berechnungen zur Verfügung stehen, ohne, dass die beteiligten
+Komponenten neu gestartet werden müssen.
+Das System soll aus vier wesentlichen Komponenten bestehen:
+
+GGT-Prozessen die die Berechnung des GGT bewerkstelligen.
+Starter-Prozessen die jeweils einen Teil der GGT-Prozesse starten.
+Ein Koordinator der sowohl hochfahren, runterfahren des Systems, als auch die Berechnung
+des GGTs überwacht.
+Ein Namensdienst der PIDs Namen zuordnet
+
+
+	Systemphasen
+
+Initialisierungsphase:
+Zunächst werden der Namensdienst und der Koordinator gestartet.
+Daraufhin werden die Starter gestartet und erfragen beim Koordinator die steuernden 
+Werte für die GGT-Prozesse ab. Die Starter starten dann mit den übermittelten Werten
+die GGT-Prozesse. Danach beenden sich die Starter von alleine.
+Die GGT-Prozesse registrieren sich nun beim Namensdienst mit der Nachricht "rebind" und
+beim Koordinator mit der Nachricht "hello".
+Der Koordinator mischt die Prozesse nun, ordnet sie in einem Ring an und informiert sie
+mit der Nachricht "setneighbors" über ihren linken und rechten Nachbarn.
+
+Arbeitsphase:
+Der Koordinator informiert jeden GGT-Prozess über seinen Startwert "mi" mit der Nachricht
+"setpm".
+Wenn alle GGT-Prozesse ihren Startwert bekommen haben schickt der Koordinator an 15% der
+GGT-Prozesse (mindestens 2) eine Nachricht "sendy" um die GGT-Berechnung zu starten.
+Immer wenn sich nun der "mi" eines GGT-Prozesses ändert, dann informiert er den Koordinator
+mit der Nachricht "briefmi" darüber und schickt eine Nachricht "sendy" mit dem neuen Wert
+an seinen linken und rechten Nachbarn.
+Wenn nun einer der GGT-Prozesse für "max_wait_time" Millisekunden keine Nachricht bekommt, 
+startet er eine Terminierungsabstimmung. Dazu schickt er eine Nachricht "abstimmung" mit 
+seinem eigenen registrierten Namen an seinen rechten Nachbarn. Wenn sein Nachbar 
+"max_wait-time" / 2 Millisekunden gewartet hat schickt er diese Nachricht weiter. Wenn
+diese Nachricht beim ursprünglichen Versender wieder ankommt gilt die Berechnung als
+beendet und er schickt das Endergebnis der Berechnung mit der Nachricht "briefterm" an
+den Koordinator
+
+Beendigungsphase:
+Der Koordinator schickt an jeden GGT-Prozess eine Nachricht "kill". Die GGT-Prozesse
+melden sich dann unverzüglich vom Namenstdienst mit einer Nachricht "unbind" ab und 
+terminieren dann.
+
