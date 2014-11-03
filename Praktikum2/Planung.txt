@@ -52,14 +52,14 @@ Koordinator
 	Allgemein(Aufgaben, hier vielleicht ein wenig doppelt durch deine Beschreibung oben aber ich fand es zur schnellen Übersicht ganz gut es als Liste nochmal dazuzuschreiben)
 		-Überwacht das ganze System und gibt mittels einer Textausgabe dem Benutzer
 			die Möglichkeit zur Übersicht.
-		-Fährt die anderen Systeme (Starter) hoch
 		-Startet die Berechnung
 		-bezieht steuernde Werte aus der koordinator.cfg
 			- Erlang Node des Namensdienstes
 			- Anzahl der ggT-Prozesse pro Starter
 			- simulierte Berechnungszeit der ggT-Prozesse (Verzögerungszeit in Mlls)
 			- Terminierungszeit (in Mlls)
-		- nimmt Nachrichten von Startern und ggT-Prozessen entgegen
+		-Gibt steuernde Werte an die Starter
+		-nimmt Nachrichten von Startern und ggT-Prozessen entgegen
 			Zustand "initial":
 				Starter:
 				- Anfrage des Starters <PID>

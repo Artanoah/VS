@@ -1,0 +1,147 @@
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 Start: 21.10 13:56:45,206|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 3te_Nachricht. C Out: 21.10 13:56:50,401| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 16te_Nachricht. C Out: 21.10 13:56:55,408| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 21te_Nachricht. C Out: 21.10 13:57:00,416| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 34te_Nachricht. C Out: 21.10 13:57:05,423| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 41te_Nachricht. C Out: 21.10 13:57:10,431| gesendet
+51te Nachricht um 21.10 13:57:10,462| vergessen zu senden
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 6te_Nachricht. COut: 21.10 13:56:50,401| HBQ In: 21.10 13:56:50,431|DLQ In: 21.10 13:56:50,447|C In:21.10 13:57:10,556|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 7te_Nachricht. COut: 21.10 13:56:50,401| HBQ In: 21.10 13:56:50,416|DLQ In: 21.10 13:56:50,447|C In:21.10 13:57:10,634|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 8te_Nachricht. COut: 21.10 13:56:50,401| HBQ In: 21.10 13:56:50,415|DLQ In: 21.10 13:56:50,447|C In:21.10 13:57:10,681|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 9te_Nachricht. COut: 21.10 13:56:50,401| HBQ In: 21.10 13:56:50,401|DLQ In: 21.10 13:56:50,447|C In:21.10 13:57:10,743|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 10te_Nachricht. COut: 21.10 13:56:55,408| HBQ In: 21.10 13:56:55,455|DLQ In: 21.10 13:56:55,455|C In:21.10 13:57:10,805|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 11te_Nachricht. COut: 21.10 13:56:55,408| HBQ In: 21.10 13:56:55,455|DLQ In: 21.10 13:56:55,455|C In:21.10 13:57:10,868|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 12te_Nachricht. COut: 21.10 13:56:55,408| HBQ In: 21.10 13:56:55,455|DLQ In: 21.10 13:56:55,455|C In:21.10 13:57:10,930|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 13te_Nachricht. COut: 21.10 13:56:55,408| HBQ In: 21.10 13:56:55,439|DLQ In: 21.10 13:56:55,455|C In:21.10 13:57:10,993|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 14te_Nachricht. COut: 21.10 13:56:55,408| HBQ In: 21.10 13:56:55,439|DLQ In: 21.10 13:56:55,455|C In:21.10 13:57:11,055|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 15te_Nachricht. COut: 21.10 13:56:55,408| HBQ In: 21.10 13:56:55,424|DLQ In: 21.10 13:56:55,455|C In:21.10 13:57:11,117|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 16te_Nachricht. COut: 21.10 13:56:55,408| HBQ In: 21.10 13:56:55,423|DLQ In: 21.10 13:56:55,455|*******C In:21.10 13:57:11,180|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 17te_Nachricht. COut: 21.10 13:56:55,408| HBQ In: 21.10 13:56:55,408|DLQ In: 21.10 13:56:55,455|C In:21.10 13:57:11,258|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 18te_Nachricht. COut: 21.10 13:56:55,407| HBQ In: 21.10 13:56:55,407|DLQ In: 21.10 13:56:55,455|C In:21.10 13:57:11,305|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 19te_Nachricht. COut: 21.10 13:57:00,416| HBQ In: 21.10 13:57:00,478|DLQ In: 21.10 13:57:00,478|C In:21.10 13:57:11,367|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 20te_Nachricht. COut: 21.10 13:57:00,416| HBQ In: 21.10 13:57:00,478|DLQ In: 21.10 13:57:00,478|C In:21.10 13:57:11,429|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 21te_Nachricht. COut: 21.10 13:57:00,416| HBQ In: 21.10 13:57:00,463|DLQ In: 21.10 13:57:00,478|*******C In:21.10 13:57:11,492|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 22te_Nachricht. COut: 21.10 13:57:00,416| HBQ In: 21.10 13:57:00,463|DLQ In: 21.10 13:57:00,478|C In:21.10 13:57:11,554|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 23te_Nachricht. COut: 21.10 13:57:00,416| HBQ In: 21.10 13:57:00,447|DLQ In: 21.10 13:57:00,478|C In:21.10 13:57:11,617|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 24te_Nachricht. COut: 21.10 13:57:00,416| HBQ In: 21.10 13:57:00,447|DLQ In: 21.10 13:57:00,478|C In:21.10 13:57:11,679|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 25te_Nachricht. COut: 21.10 13:57:00,416| HBQ In: 21.10 13:57:00,431|DLQ In: 21.10 13:57:00,478|C In:21.10 13:57:11,741|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 26te_Nachricht. COut: 21.10 13:57:00,416| HBQ In: 21.10 13:57:00,416|DLQ In: 21.10 13:57:00,478|C In:21.10 13:57:11,804|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 27te_Nachricht. COut: 21.10 13:57:00,415| HBQ In: 21.10 13:57:00,415|DLQ In: 21.10 13:57:00,478|C In:21.10 13:57:11,866|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 28te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,439|DLQ In: 21.10 13:57:05,439|C In:21.10 13:57:11,913|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 29te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,423|DLQ In: 21.10 13:57:05,439|C In:21.10 13:57:11,975|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 30te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,470|DLQ In: 21.10 13:57:05,470|C In:21.10 13:57:12,038|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 31te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,470|DLQ In: 21.10 13:57:05,470|C In:21.10 13:57:12,100|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 32te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,470|DLQ In: 21.10 13:57:05,470|C In:21.10 13:57:12,163|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 33te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,455|DLQ In: 21.10 13:57:05,470|C In:21.10 13:57:12,225|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 34te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,455|DLQ In: 21.10 13:57:05,470|*******C In:21.10 13:57:12,287|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 35te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,439|DLQ In: 21.10 13:57:05,470|C In:21.10 13:57:12,350|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 36te_Nachricht. COut: 21.10 13:57:05,423| HBQ In: 21.10 13:57:05,423|DLQ In: 21.10 13:57:05,470|C In:21.10 13:57:12,412|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 37te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,478|DLQ In: 21.10 13:57:10,478|C In:21.10 13:57:12,475|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 38te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,478|DLQ In: 21.10 13:57:10,478|C In:21.10 13:57:12,537|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 39te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,447|DLQ In: 21.10 13:57:10,478|C In:21.10 13:57:12,584|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 40te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,478|DLQ In: 21.10 13:57:10,478|C In:21.10 13:57:12,662|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 41te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,462|DLQ In: 21.10 13:57:10,492|*******C In:21.10 13:57:12,709|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 42te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,447|DLQ In: 21.10 13:57:10,493|C In:21.10 13:57:12,787|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 43te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,462|DLQ In: 21.10 13:57:10,508|C In:21.10 13:57:12,849|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 44te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,431|DLQ In: 21.10 13:57:10,509|C In:21.10 13:57:12,896|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 45te_Nachricht. COut: 21.10 13:57:10,431| HBQ In: 21.10 13:57:10,447|DLQ In: 21.10 13:57:10,524|C In:21.10 13:57:12,974|
+..getmessages..Done..
+Neuer Sendeintervall: 6 Sekunden (5)
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 60te_Nachricht. C Out: 21.10 13:57:18,980| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 71te_Nachricht. C Out: 21.10 13:57:24,986| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 82te_Nachricht. C Out: 21.10 13:57:30,992| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 93te_Nachricht. C Out: 21.10 13:57:37,998| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 107te_Nachricht. C Out: 21.10 13:57:43,004| gesendet
+116te Nachricht um 21.10 13:57:43,034| vergessen zu senden
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 55te_Nachricht. COut: 21.10 13:57:16,935| HBQ In: 21.10 13:57:16,935|DLQ In: 21.10 13:57:25,080|C In:21.10 13:57:43,066|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 56te_Nachricht. COut: 21.10 13:57:18,948| HBQ In: 21.10 13:57:18,948|DLQ In: 21.10 13:57:25,080|C In:21.10 13:57:43,098|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 57te_Nachricht. COut: 21.10 13:57:18,964| HBQ In: 21.10 13:57:18,964|DLQ In: 21.10 13:57:25,080|C In:21.10 13:57:43,129|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 58te_Nachricht. COut: 21.10 13:57:18,964| HBQ In: 21.10 13:57:18,964|DLQ In: 21.10 13:57:25,095|C In:21.10 13:57:43,160|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 59te_Nachricht. COut: 21.10 13:57:18,980| HBQ In: 21.10 13:57:18,980|DLQ In: 21.10 13:57:25,095|C In:21.10 13:57:43,191|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 60te_Nachricht. COut: 21.10 13:57:18,980| HBQ In: 21.10 13:57:18,980|DLQ In: 21.10 13:57:25,095|*******C In:21.10 13:57:43,238|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 61te_Nachricht. COut: 21.10 13:57:17,999| HBQ In: 21.10 13:57:17,999|DLQ In: 21.10 13:57:25,111|C In:21.10 13:57:43,269|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 62te_Nachricht. COut: 21.10 13:57:17,014| HBQ In: 21.10 13:57:17,014|DLQ In: 21.10 13:57:25,111|C In:21.10 13:57:43,300|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 63te_Nachricht. COut: 21.10 13:57:17,014| HBQ In: 21.10 13:57:17,014|DLQ In: 21.10 13:57:25,125|C In:21.10 13:57:43,332|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 64te_Nachricht. COut: 21.10 13:57:20,946| HBQ In: 21.10 13:57:20,946|DLQ In: 21.10 13:57:25,126|C In:21.10 13:57:43,363|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 65te_Nachricht. COut: 21.10 13:57:21,008| HBQ In: 21.10 13:57:21,008|DLQ In: 21.10 13:57:25,126|C In:21.10 13:57:43,394|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 66te_Nachricht. COut: 21.10 13:57:21,024| HBQ In: 21.10 13:57:21,024|DLQ In: 21.10 13:57:25,141|C In:21.10 13:57:43,425|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 67te_Nachricht. COut: 21.10 13:57:21,024| HBQ In: 21.10 13:57:21,024|DLQ In: 21.10 13:57:25,142|C In:21.10 13:57:43,456|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 68te_Nachricht. COut: 21.10 13:57:24,955| HBQ In: 21.10 13:57:25,017|DLQ In: 21.10 13:57:25,142|C In:21.10 13:57:43,488|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 69te_Nachricht. COut: 21.10 13:57:24,970| HBQ In: 21.10 13:57:25,033|DLQ In: 21.10 13:57:25,157|C In:21.10 13:57:43,519|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 70te_Nachricht. COut: 21.10 13:57:24,970| HBQ In: 21.10 13:57:25,032|DLQ In: 21.10 13:57:25,158|C In:21.10 13:57:43,550|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 71te_Nachricht. COut: 21.10 13:57:24,986| HBQ In: 21.10 13:57:25,048|DLQ In: 21.10 13:57:25,158|*******C In:21.10 13:57:43,581|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 72te_Nachricht. COut: 21.10 13:57:24,986| HBQ In: 21.10 13:57:25,048|DLQ In: 21.10 13:57:25,173|C In:21.10 13:57:43,612|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 73te_Nachricht. COut: 21.10 13:57:24,955| HBQ In: 21.10 13:57:25,016|DLQ In: 21.10 13:57:25,173|C In:21.10 13:57:43,644|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 74te_Nachricht. COut: 21.10 13:57:25,016| HBQ In: 21.10 13:57:25,064|DLQ In: 21.10 13:57:25,173|C In:21.10 13:57:43,675|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 75te_Nachricht. COut: 21.10 13:57:25,033| HBQ In: 21.10 13:57:25,189|DLQ In: 21.10 13:57:25,189|C In:21.10 13:57:43,706|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 76te_Nachricht. COut: 21.10 13:57:25,032| HBQ In: 21.10 13:57:25,064|DLQ In: 21.10 13:57:25,189|C In:21.10 13:57:43,737|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 77te_Nachricht. COut: 21.10 13:57:28,964| HBQ In: 21.10 13:57:28,964|DLQ In: 21.10 13:57:28,964|C In:21.10 13:57:43,768|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 78te_Nachricht. COut: 21.10 13:57:30,960| HBQ In: 21.10 13:57:30,960|DLQ In: 21.10 13:57:30,961|C In:21.10 13:57:43,800|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 79te_Nachricht. COut: 21.10 13:57:30,976| HBQ In: 21.10 13:57:30,976|DLQ In: 21.10 13:57:30,992|C In:21.10 13:57:43,831|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 80te_Nachricht. COut: 21.10 13:57:30,976| HBQ In: 21.10 13:57:30,976|DLQ In: 21.10 13:57:30,992|C In:21.10 13:57:43,862|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 81te_Nachricht. COut: 21.10 13:57:30,992| HBQ In: 21.10 13:57:31,008|DLQ In: 21.10 13:57:31,008|C In:21.10 13:57:43,909|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 82te_Nachricht. COut: 21.10 13:57:30,992| HBQ In: 21.10 13:57:30,992|DLQ In: 21.10 13:57:31,008|*******C In:21.10 13:57:43,940|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 83te_Nachricht. COut: 21.10 13:57:29,026| HBQ In: 21.10 13:57:29,026|DLQ In: 21.10 13:57:31,022|C In:21.10 13:57:43,971|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 84te_Nachricht. COut: 21.10 13:57:29,042| HBQ In: 21.10 13:57:29,042|DLQ In: 21.10 13:57:31,023|C In:21.10 13:57:44,018|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 85te_Nachricht. COut: 21.10 13:57:29,042| HBQ In: 21.10 13:57:29,042|DLQ In: 21.10 13:57:31,023|C In:21.10 13:57:44,049|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 86te_Nachricht. COut: 21.10 13:57:32,972| HBQ In: 21.10 13:57:32,972|DLQ In: 21.10 13:57:32,973|C In:21.10 13:57:44,080|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 87te_Nachricht. COut: 21.10 13:57:33,036| HBQ In: 21.10 13:57:33,050|DLQ In: 21.10 13:57:33,051|C In:21.10 13:57:44,112|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 88te_Nachricht. COut: 21.10 13:57:33,051| HBQ In: 21.10 13:57:33,067|DLQ In: 21.10 13:57:33,082|C In:21.10 13:57:44,143|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 89te_Nachricht. COut: 21.10 13:57:33,050| HBQ In: 21.10 13:57:33,066|DLQ In: 21.10 13:57:33,082|C In:21.10 13:57:44,174|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 90te_Nachricht. COut: 21.10 13:57:36,967| HBQ In: 21.10 13:57:36,967|DLQ In: 21.10 13:57:36,967|C In:21.10 13:57:44,205|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 91te_Nachricht. COut: 21.10 13:57:36,982| HBQ In: 21.10 13:57:36,982|DLQ In: 21.10 13:57:37,998|C In:21.10 13:57:44,252|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 92te_Nachricht. COut: 21.10 13:57:36,982| HBQ In: 21.10 13:57:36,982|DLQ In: 21.10 13:57:37,998|C In:21.10 13:57:44,299|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 93te_Nachricht. COut: 21.10 13:57:37,998| HBQ In: 21.10 13:57:37,014|DLQ In: 21.10 13:57:37,014|*******C In:21.10 13:57:44,314|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 94te_Nachricht. COut: 21.10 13:57:37,998| HBQ In: 21.10 13:57:37,998|DLQ In: 21.10 13:57:37,014|C In:21.10 13:57:44,346|
+..getmessages..Done..
+Neuer Sendeintervall: 5 Sekunden (6)
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 125te_Nachricht. C Out: 21.10 13:57:49,353| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 133te_Nachricht. C Out: 21.10 13:57:54,361| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 144te_Nachricht. C Out: 21.10 13:57:59,369| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 154te_Nachricht. C Out: 21.10 13:58:04,375| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 165te_Nachricht. C Out: 21.10 13:58:09,383| gesendet
+176te Nachricht um 21.10 13:58:09,399| vergessen zu senden
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 106te_Nachricht. COut: 21.10 13:57:43,004| HBQ In: 21.10 13:57:43,035|DLQ In: 21.10 13:57:49,431|C In:21.10 13:58:09,415|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 107te_Nachricht. COut: 21.10 13:57:43,004| HBQ In: 21.10 13:57:43,034|DLQ In: 21.10 13:57:49,431|C In:21.10 13:58:09,431|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 108te_Nachricht. COut: 21.10 13:57:40,179| HBQ In: 21.10 13:57:40,179|DLQ In: 21.10 13:57:49,447|C In:21.10 13:58:09,446|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 109te_Nachricht. COut: 21.10 13:57:44,205| HBQ In: 21.10 13:57:44,252|DLQ In: 21.10 13:57:49,447|C In:21.10 13:58:09,477|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 110te_Nachricht. COut: 21.10 13:57:44,205| HBQ In: 21.10 13:57:44,236|DLQ In: 21.10 13:57:49,447|C In:21.10 13:58:09,493|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 111te_Nachricht. COut: 21.10 13:57:44,221| HBQ In: 21.10 13:57:44,268|DLQ In: 21.10 13:57:49,463|C In:21.10 13:58:09,509|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 112te_Nachricht. COut: 21.10 13:57:43,191| HBQ In: 21.10 13:57:43,222|DLQ In: 21.10 13:57:49,463|C In:21.10 13:58:09,524|
+***Fehlernachricht fuer Nachrichten 113 bis 117 um 21.10 13:57:58,339| 117te_Nachricht. COut:  HBQ In: DLQ In: 21.10 13:57:58,339|C In:21.10 13:58:09,540|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 118te_Nachricht. COut: 21.10 13:57:46,202| HBQ In: 21.10 13:57:46,202|DLQ In: 21.10 13:57:58,339|C In:21.10 13:58:09,571|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 119te_Nachricht. COut: 21.10 13:57:49,213| HBQ In: 21.10 13:57:49,229|DLQ In: 21.10 13:57:58,355|C In:21.10 13:58:09,587|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 120te_Nachricht. COut: 21.10 13:57:49,213| HBQ In: 21.10 13:57:49,213|DLQ In: 21.10 13:57:58,355|C In:21.10 13:58:09,602|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 121te_Nachricht. COut: 21.10 13:57:49,229| HBQ In: 21.10 13:57:49,229|DLQ In: 21.10 13:57:58,370|C In:21.10 13:58:09,649|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 122te_Nachricht. COut: 21.10 13:57:49,306| HBQ In: 21.10 13:57:49,322|DLQ In: 21.10 13:57:58,370|C In:21.10 13:58:09,665|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 123te_Nachricht. COut: 21.10 13:57:51,335| HBQ In: 21.10 13:57:51,335|DLQ In: 21.10 13:57:58,370|C In:21.10 13:58:09,696|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 124te_Nachricht. COut: 21.10 13:57:51,350| HBQ In: 21.10 13:57:51,350|DLQ In: 21.10 13:57:58,386|C In:21.10 13:58:09,711|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 125te_Nachricht. COut: 21.10 13:57:49,353| HBQ In: 21.10 13:57:49,369|DLQ In: 21.10 13:57:58,386|*******C In:21.10 13:58:09,743|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 126te_Nachricht. COut: 21.10 13:57:49,369| HBQ In: 21.10 13:57:49,463|DLQ In: 21.10 13:57:58,386|C In:21.10 13:58:09,758|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 127te_Nachricht. COut: 21.10 13:57:49,213| HBQ In: 21.10 13:57:49,213|DLQ In: 21.10 13:57:58,401|C In:21.10 13:58:09,774|
+***Fehlernachricht fuer Nachrichten 128 bis 128 um 21.10 13:58:04,127| 128te_Nachricht. COut:  HBQ In: DLQ In: 21.10 13:58:04,127|C In:21.10 13:58:09,805|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 129te_Nachricht. COut: 21.10 13:57:54,221| HBQ In: 21.10 13:57:54,221|DLQ In: 21.10 13:58:04,127|C In:21.10 13:58:09,821|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 130te_Nachricht. COut: 21.10 13:57:54,221| HBQ In: 21.10 13:57:54,221|DLQ In: 21.10 13:58:04,141|C In:21.10 13:58:09,836|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 131te_Nachricht. COut: 21.10 13:57:54,236| HBQ In: 21.10 13:57:54,236|DLQ In: 21.10 13:58:04,142|C In:21.10 13:58:09,852|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 132te_Nachricht. COut: 21.10 13:57:54,314| HBQ In: 21.10 13:57:54,314|DLQ In: 21.10 13:58:04,157|C In:21.10 13:58:09,883|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 133te_Nachricht. COut: 21.10 13:57:54,361| HBQ In: 21.10 13:57:54,361|DLQ In: 21.10 13:58:04,173|*******C In:21.10 13:58:09,899|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 134te_Nachricht. COut: 21.10 13:57:54,377| HBQ In: 21.10 13:57:54,377|DLQ In: 21.10 13:58:04,173|C In:21.10 13:58:09,914|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 135te_Nachricht. COut: 21.10 13:57:51,756| HBQ In: 21.10 13:57:51,818|DLQ In: 21.10 13:58:04,173|C In:21.10 13:58:09,930|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 136te_Nachricht. COut: 21.10 13:57:58,339| HBQ In: 21.10 13:57:58,339|DLQ In: 21.10 13:58:04,189|C In:21.10 13:58:09,945|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 137te_Nachricht. COut: 21.10 13:57:58,355| HBQ In: 21.10 13:57:58,401|DLQ In: 21.10 13:58:04,189|C In:21.10 13:58:09,977|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 138te_Nachricht. COut: 21.10 13:57:53,768| HBQ In: 21.10 13:57:53,768|DLQ In: 21.10 13:58:04,189|C In:21.10 13:58:09,992|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 139te_Nachricht. COut: 21.10 13:57:55,781| HBQ In: 21.10 13:57:55,781|DLQ In: 21.10 13:58:04,205|C In:21.10 13:58:10,008|
+9-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 140te_Nachricht. COut: 21.10 13:57:59,228| HBQ In: 21.10 13:57:59,228|DLQ In: 21.10 13:58:04,205|C In:21.10 13:58:10,023|
+8-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 141te_Nachricht. COut: 21.10 13:57:59,228| HBQ In: 21.10 13:57:59,228|DLQ In: 21.10 13:58:04,220|C In:21.10 13:58:10,055|
+1-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 142te_Nachricht. COut: 21.10 13:57:59,244| HBQ In: 21.10 13:57:59,258|DLQ In: 21.10 13:58:04,220|C In:21.10 13:58:10,070|
+3-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 143te_Nachricht. COut: 21.10 13:57:59,322| HBQ In: 21.10 13:57:59,337|DLQ In: 21.10 13:58:04,220|C In:21.10 13:58:10,086|
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 144te_Nachricht. COut: 21.10 13:57:59,369| HBQ In: 21.10 13:57:59,383|DLQ In: 21.10 13:58:04,236|*******C In:21.10 13:58:10,101|
+5-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 145te_Nachricht. COut: 21.10 13:57:59,383| HBQ In: 21.10 13:57:59,415|DLQ In: 21.10 13:58:04,236|C In:21.10 13:58:10,133|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 146te_Nachricht. COut: 21.10 13:57:57,793| HBQ In: 21.10 13:57:57,793|DLQ In: 21.10 13:58:04,236|C In:21.10 13:58:10,133|
+2-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 147te_Nachricht. COut: 21.10 13:57:59,805| HBQ In: 21.10 13:57:59,821|DLQ In: 21.10 13:58:04,250|C In:21.10 13:58:10,148|
+4-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 148te_Nachricht. COut: 21.10 13:58:05,343| HBQ In: 21.10 13:58:05,343|DLQ In: 21.10 13:58:05,343|C In:21.10 13:58:10,164|
+6-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2 149te_Nachricht. COut: 21.10 13:58:05,359| HBQ In: 21.10 13:58:05,359|DLQ In: 21.10 13:58:05,359|C In:21.10 13:58:10,179|
+..getmessages..Done..
+Neuer Sendeintervall: 4 Sekunden (5)
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 179te_Nachricht. C Out: 21.10 13:58:14,189| gesendet
+7-client@KHAN.informatik.haw-hamburg.de-<0.38.0>-Gruppe1-2: 190te_Nachricht. C Out: 21.10 13:58:18,198| gesendet
