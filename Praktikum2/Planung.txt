@@ -131,7 +131,7 @@ ggT Prozesse
 
 Zustand "initial":
 	Starter:
-	Server ! {getsteeringval, PID}
+	Koordinator ! {getsteeringval, PID}
 		PID -> ProzessID des Starters.
 	Starter ! {steeringval, Arbeitszeit, TermZeit, GGTProzessAnzahl}
 		Arbeitszeit -> Simulierte Rechenzeit des GGT-Prozesses in Millisekunden.
@@ -140,37 +140,32 @@ Zustand "initial":
 	+ Log: Starter <PID> Angemeldet 
 
 	ggT-Prozess:
-	Server ! {hello, Clientname}
+	Koordinator ! {hello, Clientname}
 		Clientname 	-> Atom welches den Clientennamen repräsentiert. Dieser Name kann vom Namensdienst in eine eindeutige ProzessID übersetzt werden.
 	+ Log: PID- ggT-Prozess angemeldet <Timestamp>
 	
 	zoo-keeper:
-	Server ! step
+	Koordinator ! step
 		Der Koordinator wechselt in die Arbeitsphase baut den GGT-Prozess-Ring auf. Danach wartet er auf das Signal zum Start der GGT-Berechnung
 	ZooKeeper ! ok
 		Erfolgsmeldung für den Wechsel in die Arbeitsphase
 	
 Zustand "bereit":
-	Starter:
-	Server ! {getsteeringval, PID}
+		Starter:
+		
+	Koordinator ! {getsteeringval, PID}
 		PID -> ProzessID des Starters
 	Starter ! rejected
 		Da der Koordinator nicht mehr im Zustand "initial" ist wird der Starter abgewiesen
 	+ Log : Starter: <PID> rejected
 	
-	ggT-Prozess:
-	Server ! {hello, Clientname}
+		GGT-Prozess:
+		
+	Koordinator ! {hello, Clientname}
 		Clientname 	-> Atom welches den Clientennamen repräsentiert.
 	GGT-Prozess ! kill
 		Da der Koordinator nicht mehr im Zustand "initial" ist wird der GGT-Prozess abgewiesen
 	+ Log : ggT-Prozess: <PID> rejected
-	
-	GGT-Prozess ! {setpm, NewMi}
-		NewMi -> Neues Mi für den jeweiligen GGT-Prozess
-		
-	GGT-Prozess ! {setneighbors, LeftNeighbor, RightNeighbor}
-		LeftNeighbor -> Atom-name des neuen linken Nachbarn des GGT-Prozesses. 
-		RightNeighbor -> Atom-name des neuen rechten Nachbarn des GGT-Prozesses. 
 	
 	GGT-Prozess ! {sendy, Y}
 		Y -> Neu aufgerufenes Y
@@ -184,12 +179,39 @@ Zustand "bereit":
 		From -> Atomarer Name des anfragenden Prozesses
 	From ! {mi, Mi}
 		Mi -> Aktuelles Mi
+		
 	
-	Koordinator:
-	briefterm
+		Koordinator:
+		
+	GGT-Prozess ! {setpm, NewMi}
+		NewMi -> Neues Mi für den jeweiligen GGT-Prozess
+		Setzt das Mi im empfangenen GGT-Prozess neu.
+
+	GGT-Prozess ! {setneighbors, LeftNeighbor, RightNeighbor}
+		LeftNeighbor -> Atom-name des neuen linken Nachbarn des GGT-Prozesses. 
+		RightNeighbor -> Atom-name des neuen rechten Nachbarn des GGT-Prozesses. 
+		
+	GGT-Prozess ! {sendy, Y}
+		Y -> Neu aufgerufenes Y
+		"Anstupsen" eines GGT-Prozesses zum weiterführen oder starten der Berechnung.
+		
+	GGT-Prozess ! kill
+		Der GGT-Prozess meldet sich vom Namensdienst ab und beendet dann sofort alle Kind-Prozesse und sich selber.
+		
+	GGT-Prozess ! {tellmi, From}
+		From -> Atomarer Name des Koordinators
+	From ! {mi, Mi}
+		Mi -> Aktuelles Mi
 	
-	zoo-keeper:
-	Server ! {calc, WunschGGT}
+	GGT-Prozess ! {pingGGT, From}
+		From -> atomarer Name des Anfragenden Prozesses
+	From ! {pongGGT, GGTname}
+		GGTName -> atomarer Name des Antwortenden Prozesses
+	
+	
+		ZooKeeper:
+		
+	Koordinator ! {calc, WunschGGT}
 		WunschGGT -> Wunsch-GGT der berechnet werden soll.
 		Nach dem Erhalten dieser Nachricht wird eine neue GGT-Berechnung gestartet.
 	ZooKeeper ! ok
@@ -197,26 +219,41 @@ Zustand "bereit":
 	ZooKeeper ! error
 		Wenn bereits eine Berechnung ausgeführt wird.
 	
-	Server ! reset
+	Koordinator ! reset
 		Der Server sendet jedem GGT-Prozess die Nachricht "kill" und bringt sich selber zurück in den Zustand "initial"
 	ZooKeeper ! ok
 		Erfolgsmeldung für den Wechsel in die Arbeitsphase
+		
+	Koordinator ! step
+		Ungültige step-Nachricht
+	ZooKeeper ! error
+		Fehlernachricht, da step in der "bereit"-Phase ein ungültiger Befehl ist
+		
+	Koordinator ! prompt
+		Aufforderung des ZooKeepers die aktuellen Mis aller GGT-Prozesse abzufragen und im Log einzutragen.
+	ZooKeeper ! ok
+		Bestätigung der Anfrage
+		
+	Koordinator ! nudge
+		Aufforderung des ZooKeepers die den Lebenszustand aller GGT-Prozesse abzufragen und im Log einzutragen.
+	ZooKeeper ! ok
+		Bestätigung der Anfrage
+		
+	Koordinator ! toggle
+		Aufforderung des ZooKeepers das Flag zur Korrektur bei falschen Terminierungsmeldungen umzusetzen.
+	ZooKeeper ! {ok, NewFlag}
+		NewFlag -> Neuer Wert des Flags
+		
+	Koordinator ! kill
+		Aufforderung des ZooKeepers an den Koordinator in den Zustand "beenden" zu wechseln.
+	ZooKeeper ! ok
+		Erfolgsmeldung für den WEchsel in die Beendigungsphase
 	
-	+ an 15% um Berechnung zu starten <Nachricht "sendy", berechneterWert>
-	
-	- mi des Prozesses ändert sich <PID ,Nachricht "briefmi">
-	+ Log: Mi des ggT-Prozesses <PID> ändert sich.
-	
-	- Terminierung der ggT-Prozesse <PID ,Nachricht "briefterm", endWert>
-	+ Log: ggT-Prozess <PID> beendet die Berechnung. Ergebnis <endWert>
-	+ Wenn Berechnung nicht stimmt Log: berechneter Wert <endWert> stimmte nicht richtig wäre <kleinsterTeiler>
-	+ Wenn Flag gesetzt: <Nachticht "sendy", kleinsterTeiler>
-				
-	Konsole
-	- Prüfwert angeben <gewünschter_ggT>
-	- terminieren <TerminierungsBefehl>
 	
 Zustand "beenden"
-
-	ggT-Prozess:
-	+ beenden <Nachricht "kill">
+	
+		Koordinator:
+	
+	GGT-Prozess ! kill
+		Der GGT-Prozess meldet sich vom Namensdienst ab und beendet dann sofort alle Kind-Prozesse und sich selber.
+	
