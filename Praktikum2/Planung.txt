@@ -92,7 +92,7 @@ Koordinator
 				- Terminierung der ggT-Prozesse <PID ,Nachricht "briefterm", endWert>
 				+ Log: ggT-Prozess <PID> beendet die Berechnung. Ergebnis <endWert>
 				+ Wenn Berechnung nicht stimmt Log: berechneter Wert <endWert> stimmte nicht richtig wäre <kleinsterTeiler>
-				+ Wenn Flag gesetzt: <Nachticht "sendy", kleinsterTeiler	>
+				+ Wenn Flag gesetzt: <Nachticht "sendy", kleinsterTeiler>
 							
 				Konsole
 				- Prüfwert angeben <gewünschter_ggT>
@@ -126,3 +126,97 @@ ggT Prozesse
 		+ mi ändert sich <PID, Nachricht "sendy", neuerMIWert>
 	Log
 
+
+	Nachrichten
+
+Zustand "initial":
+	Starter:
+	Server ! {getsteeringval, PID}
+		PID -> ProzessID des Starters.
+	Starter ! {steeringval, Arbeitszeit, TermZeit, GGTProzessAnzahl}
+		Arbeitszeit -> Simulierte Rechenzeit des GGT-Prozesses in Millisekunden.
+		TermZeit 	-> Wartezeit eines GGT-Prozesses auf eine neue Nachricht bis eine Abstimmung gestartet wird.
+		GGTProzessAnzahl -> Anzahl der zu erzeugenden GGT-Prozesse
+	+ Log: Starter <PID> Angemeldet 
+
+	ggT-Prozess:
+	Server ! {hello, Clientname}
+		Clientname 	-> Atom welches den Clientennamen repräsentiert. Dieser Name kann vom Namensdienst in eine eindeutige ProzessID übersetzt werden.
+	+ Log: PID- ggT-Prozess angemeldet <Timestamp>
+	
+	zoo-keeper:
+	Server ! step
+		Der Koordinator wechselt in die Arbeitsphase baut den GGT-Prozess-Ring auf. Danach wartet er auf das Signal zum Start der GGT-Berechnung
+	ZooKeeper ! ok
+		Erfolgsmeldung für den Wechsel in die Arbeitsphase
+	
+Zustand "bereit":
+	Starter:
+	Server ! {getsteeringval, PID}
+		PID -> ProzessID des Starters
+	Starter ! rejected
+		Da der Koordinator nicht mehr im Zustand "initial" ist wird der Starter abgewiesen
+	+ Log : Starter: <PID> rejected
+	
+	ggT-Prozess:
+	Server ! {hello, Clientname}
+		Clientname 	-> Atom welches den Clientennamen repräsentiert.
+	GGT-Prozess ! kill
+		Da der Koordinator nicht mehr im Zustand "initial" ist wird der GGT-Prozess abgewiesen
+	+ Log : ggT-Prozess: <PID> rejected
+	
+	GGT-Prozess ! {setpm, NewMi}
+		NewMi -> Neues Mi für den jeweiligen GGT-Prozess
+		
+	GGT-Prozess ! {setneighbors, LeftNeighbor, RightNeighbor}
+		LeftNeighbor -> Atom-name des neuen linken Nachbarn des GGT-Prozesses. 
+		RightNeighbor -> Atom-name des neuen rechten Nachbarn des GGT-Prozesses. 
+	
+	GGT-Prozess ! {sendy, Y}
+		Y -> Neu aufgerufenes Y
+		Rekursiver Aufruf der GGT-Berechnung.
+		
+	GGT-Prozess ! {abstimmung, Initiator}
+		Initiator -> atomarer Name des Initiators der Abstimmung. 
+		Abstimmung über die Terminierung der Berechnung. Wenn der empfangende GGT-Prozess der Initiator ist wird eine Nachricht "briefterm" an den Koordinator verschickt.
+		
+	GGT-Prozess ! {tellmi, From}
+		From -> Atomarer Name des anfragenden Prozesses
+	From ! {mi, Mi}
+		Mi -> Aktuelles Mi
+	
+	Koordinator:
+	briefterm
+	
+	zoo-keeper:
+	Server ! {calc, WunschGGT}
+		WunschGGT -> Wunsch-GGT der berechnet werden soll.
+		Nach dem Erhalten dieser Nachricht wird eine neue GGT-Berechnung gestartet.
+	ZooKeeper ! ok
+		Wenn eine Berechnung gestartet werden kann.
+	ZooKeeper ! error
+		Wenn bereits eine Berechnung ausgeführt wird.
+	
+	Server ! reset
+		Der Server sendet jedem GGT-Prozess die Nachricht "kill" und bringt sich selber zurück in den Zustand "initial"
+	ZooKeeper ! ok
+		Erfolgsmeldung für den Wechsel in die Arbeitsphase
+	
+	+ an 15% um Berechnung zu starten <Nachricht "sendy", berechneterWert>
+	
+	- mi des Prozesses ändert sich <PID ,Nachricht "briefmi">
+	+ Log: Mi des ggT-Prozesses <PID> ändert sich.
+	
+	- Terminierung der ggT-Prozesse <PID ,Nachricht "briefterm", endWert>
+	+ Log: ggT-Prozess <PID> beendet die Berechnung. Ergebnis <endWert>
+	+ Wenn Berechnung nicht stimmt Log: berechneter Wert <endWert> stimmte nicht richtig wäre <kleinsterTeiler>
+	+ Wenn Flag gesetzt: <Nachticht "sendy", kleinsterTeiler>
+				
+	Konsole
+	- Prüfwert angeben <gewünschter_ggT>
+	- terminieren <TerminierungsBefehl>
+	
+Zustand "beenden"
+
+	ggT-Prozess:
+	+ beenden <Nachricht "kill">
