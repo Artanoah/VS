@@ -48,89 +48,13 @@ Der Koordinator schickt an jeden GGT-Prozess eine Nachricht "kill". Die GGT-Proz
 melden sich dann unverzüglich vom Namensdienst mit einer Nachricht "unbind" ab und 
 terminieren dann.
 
-Koordinator
-	Allgemein(Aufgaben, hier vielleicht ein wenig doppelt durch deine Beschreibung oben aber ich fand es zur schnellen Übersicht ganz gut es als Liste nochmal dazuzuschreiben)
-		-Überwacht das ganze System und gibt mittels einer Textausgabe dem Benutzer
-			die Möglichkeit zur Übersicht.
-		-Startet die Berechnung
-		-bezieht steuernde Werte aus der koordinator.cfg
-			- Erlang Node des Namensdienstes
-			- Anzahl der ggT-Prozesse pro Starter
-			- simulierte Berechnungszeit der ggT-Prozesse (Verzögerungszeit in Mlls)
-			- Terminierungszeit (in Mlls)
-		-Gibt steuernde Werte an die Starter
-		-nimmt Nachrichten von Startern und ggT-Prozessen entgegen
-			Zustand "initial":
-				Starter:
-				- Anfrage des Starters <PID>
-				+ Antwort: Anzahl der zu startenden <Anzahl, Verzögerungszeit, Terminierungszeit>
-				+ Log: Starter <PID> Angemeldet 
-			
-				ggT-Prozess:
-				-meldet sich an <PID, Nachricht "hello" Infos über den Prozess, was auch immer da interesant ist>
-				+ Antwort: <Anmeldung Erfolgreich>
-				+ Log: PID- ggT-Prozess angemeldet <Timestamp>
-				
-			Zustand "bereit":(wird manuell erzeugt)
-				- Anfrage des Starters <PID>
-				+ Antwort: <rejected>
-				+ Log : Starter: <PID> rejected
-				
-				ggT-Prozess:
-				- meldet sich an <PID, Nachricht "hello" Infos über den Prozess, was auch immer da interesant ist>
-				+ Antwort: <rejected>
-				+ Log : ggT-Prozess: <PID> rejected
-				
-				+ Ring aufbauen <Nachricht "setneighbors", PID linkerNachbar, PID rechterNachbar>
-				
-				+ ggT Berechnung initialisieren: <Nachricht "setpm", Startwert> (wie berechnet sich der Startwert? Koordinator Punkt 6 verwirrt mich berifft auch das "sendy" Punkt 7)
-				+ an 15% um Berechnung zu starten <Nachricht "sendy", berechneterWert>
-				
-				- mi des Prozesses ändert sich <PID ,Nachricht "briefmi">
-				+ Log: Mi des ggT-Prozesses <PID> ändert sich.
-				
-				- Terminierung der ggT-Prozesse <PID ,Nachricht "briefterm", endWert>
-				+ Log: ggT-Prozess <PID> beendet die Berechnung. Ergebnis <endWert>
-				+ Wenn Berechnung nicht stimmt Log: berechneter Wert <endWert> stimmte nicht richtig wäre <kleinsterTeiler>
-				+ Wenn Flag gesetzt: <Nachticht "sendy", kleinsterTeiler>
-							
-				Konsole
-				- Prüfwert angeben <gewünschter_ggT>
-				- terminieren <TerminierungsBefehl>
-				
-			Zustand "beenden"
-			
-				ggT-Prozess:
-				+ beenden <Nachricht "kill">
-	Log
-		StartNachricht
-		Starter gestartet
-	
-Starter
-	Allegemeines 
-		- startet die ggT-Prozesse
-	Log
-	
-ggT Prozesse
-	Allgemeines
-		- berechnet ggT mittels des Satzes von Euklid
-	Nachrichten
-		Arbeitsphase:
-		Koordinator:
-		+ mi ändert sich <PID ,Nachricht "briefmi">
-		
-		linker Nachbar:
-		+ mi ändert sich <PID, Nachricht "sendy", neuerMIWert>
-		
-		rechter Nachbar:
-		+ mi ändert sich <PID, Nachricht "sendy", neuerMIWert>
-	Log
 
-
-	Nachrichten
+		Nachrichten
 
 Zustand "initial":
-	Starter:
+
+		Starter:
+		
 	Koordinator ! {getsteeringval, PID}
 		PID -> ProzessID des Starters.
 	Starter ! {steeringval, Arbeitszeit, TermZeit, GGTProzessAnzahl}
@@ -139,18 +63,23 @@ Zustand "initial":
 		GGTProzessAnzahl -> Anzahl der zu erzeugenden GGT-Prozesse
 	+ Log: Starter <PID> Angemeldet 
 
-	ggT-Prozess:
+	
+		ggT-Prozess:
+		
 	Koordinator ! {hello, Clientname}
 		Clientname 	-> Atom welches den Clientennamen repräsentiert. Dieser Name kann vom Namensdienst in eine eindeutige ProzessID übersetzt werden.
 	+ Log: PID- ggT-Prozess angemeldet <Timestamp>
 	
-	zoo-keeper:
+	
+		ZooKeeper:
+		
 	Koordinator ! step
 		Der Koordinator wechselt in die Arbeitsphase baut den GGT-Prozess-Ring auf. Danach wartet er auf das Signal zum Start der GGT-Berechnung
 	ZooKeeper ! ok
 		Erfolgsmeldung für den Wechsel in die Arbeitsphase
 	
 Zustand "bereit":
+
 		Starter:
 		
 	Koordinator ! {getsteeringval, PID}
@@ -158,6 +87,7 @@ Zustand "bereit":
 	Starter ! rejected
 		Da der Koordinator nicht mehr im Zustand "initial" ist wird der Starter abgewiesen
 	+ Log : Starter: <PID> rejected
+	
 	
 		GGT-Prozess:
 		
@@ -170,10 +100,19 @@ Zustand "bereit":
 	GGT-Prozess ! {sendy, Y}
 		Y -> Neu aufgerufenes Y
 		Rekursiver Aufruf der GGT-Berechnung.
+	Koordinator ! {briefmi, {Clientname, NewMi, CZeit}}
+		ClientName -> Atomarer Name des reportierenden Prozesses
+		NewMi -> Neue ermitteltes Mi
+		CZeit -> Uhrzeit als String zu der dieser neue Wert ermittelt wurde
 		
 	GGT-Prozess ! {abstimmung, Initiator}
 		Initiator -> atomarer Name des Initiators der Abstimmung. 
 		Abstimmung über die Terminierung der Berechnung. Wenn der empfangende GGT-Prozess der Initiator ist wird eine Nachricht "briefterm" an den Koordinator verschickt.
+	Koordinator ! {briefterm, {Clientname, NewMi, CZeit}}
+		ClientName -> Atomarer Name des reportierenden Prozesses
+		NewMi -> Neue ermitteltes Mi
+		CZeit -> Uhrzeit als String zu der dieser neue Wert ermittelt wurde
+		Terminierungsnachricht des GGT-Prozesses an den Koordinator mit dem entsprechenden Wert
 		
 	GGT-Prozess ! {tellmi, From}
 		From -> Atomarer Name des anfragenden Prozesses
