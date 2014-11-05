@@ -5,8 +5,7 @@
 		 type_is/1,to_String/1,list2String/1,
 		 bestimme_mis/2,
 		 head/1, tail/1, last/1, droplast/1, time_in_ms/0, timestamp_to_list/1,
-		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0,
-		 bind_name/2, unbind_name/2, lookup_name/2]).
+		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0]).
 -define(ZERO, integer_to_list(0)).
 
 %% -------------------------------------------
@@ -334,31 +333,4 @@ droplasthelper([X | XS], List) ->
 timestamp_to_list(Timestamp) ->
 	if is_list(Timestamp) -> Timestamp;
 	   is_number(Timestamp) -> integer_to_list(Timestamp)
-	end.
-
-
-bind_name(Nameservice, Name) ->
-	register(Name, self()),
-	Nameservice ! {self(),{bind, Name, node()}},
-	
-	receive 
-		ok -> ok;
-		in_use -> in_use
-	end.
-
-
-unbind_name(Nameservice, Name) ->
-	Nameservice ! {self(), {unbind, Name}},
-	
-	receive
-		ok -> ok
-	end.
-
-
-lookup_name(Nameservice, Name) ->
-	Nameservice ! {self(), {lookup, Name}}
-
-	receive
-		not_found -> not_found,
-		{pin,{FoundName, Node}} -> {FoundName, Node}
 	end.
