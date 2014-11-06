@@ -13,13 +13,13 @@ Den Starter-Prozessen die jeweils einen Teil der GGT-Prozesse starten.
 Ein Koordinator der sowohl das hoch- und runterfahren des Systems, als auch die Berechnung
 des GGTs überwacht.
 Ein Namensdienst der PIDs Namen zuordnet.
-Ein ZooKeeper der Funktionen besitzt die Nachrichten an den Koordinator schicken.
+Ein ZooKeeper der die Nachrichten verwaltet.
 
 
 	Systemphasen
 
 Initialisierungsphase:
-Zunächst werden Namensdienst und  Koordinator gestartet.
+Zunächst werden Namensdienst und  Koordinator gestartMet.
 Daraufhin werden die Starter gestartet und erfragen beim Koordinator die steuernden 
 Werte für die GGT-Prozesse ab. Die Starter starten dann mit den übermittelten Werten
 die GGT-Prozesse um sich dann von alleine zu beenden.
@@ -196,14 +196,4 @@ Zustand "beenden"
 	
 	GGT-Prozess ! kill
 		Der GGT-Prozess meldet sich vom Namensdienst ab und beendet dann sofort alle Kind-Prozesse und sich selber.
-
 	
-
-	
-	
-###### FEHLEND ######
-
-Datentypen
-Genaue Beschreibung der einzelnen Module
-Dokumentation -> zoo_keeper, ggt_prozess, starter, koordinator
-Logging
