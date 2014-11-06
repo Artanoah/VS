@@ -1,0 +1,12 @@
+Nameservice Startzeit: 06.11 13:22:53,042| mit PID <0.47.0> registriert mit Namen 'nameservice'.
+Nameservice Startzeit: 06.11 13:27:13,347| mit PID <0.34.0> registriert mit Namen 'nameservice'.
+Nameservice Startzeit: 06.11 13:28:48,300| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+Nameservice Startzeit: 06.11 13:34:31,367| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+bind um 06.11 13:41:52,990| von <7241.54.0> (hansi):{hansi,node1@BAGIRA.informatik.haw-hamburg.de}.
+bind um 06.11 13:44:07,588| von <7241.72.0> (hansi):in_use ({hansi,node1@BAGIRA.informatik.haw-hamburg.de}.
+bind um 06.11 13:44:52,984| von <7241.76.0> (hansi):in_use ({hansi,node1@BAGIRA.informatik.haw-hamburg.de}.
+bind um 06.11 13:45:20,097| von <7241.85.0> (hansi):in_use ({hansi,node1@BAGIRA.informatik.haw-hamburg.de}.
+lookup um 06.11 13:45:20,097| von <7241.85.0>:not_found:chef.
+Nameservice Startzeit: 06.11 13:50:26,766| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+bind um 06.11 13:55:15,531| von <7231.110.0> (hansi):{hansi,node1@BAGIRA.informatik.haw-hamburg.de}.
+lookup um 06.11 13:55:15,531| von <7231.110.0>:not_found:chef.

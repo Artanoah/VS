@@ -6,13 +6,14 @@ Das System soll den GGT von n Zahlen auf n verschiedenen GGT-Prozessen bestimmen
 dabei von einem Starter gestartet und einem Koordinator koordiniert werden. Dabei soll
 es für mehrere GGT-Berechnungen zur Verfügung stehen ohne, dass die beteiligten
 Komponenten neu gestartet werden müssen.
-Das System soll aus vier wesentlichen Komponenten bestehen:
+Das System soll aus fünf wesentlichen Komponenten bestehen:
 
 Den GGT-Prozessen die die Berechnung des GGT bewerkstelligen.
 Den Starter-Prozessen die jeweils einen Teil der GGT-Prozesse starten.
 Ein Koordinator der sowohl das hoch- und runterfahren des Systems, als auch die Berechnung
 des GGTs überwacht.
 Ein Namensdienst der PIDs Namen zuordnet.
+Ein ZooKeeper der Funktionen besitzt die Nachrichten an den Koordinator schicken.
 
 
 	Systemphasen
@@ -195,4 +196,14 @@ Zustand "beenden"
 	
 	GGT-Prozess ! kill
 		Der GGT-Prozess meldet sich vom Namensdienst ab und beendet dann sofort alle Kind-Prozesse und sich selber.
+
 	
+
+	
+	
+###### FEHLEND ######
+
+Datentypen
+Genaue Beschreibung der einzelnen Module
+Dokumentation -> zoo_keeper, ggt_prozess, starter, koordinator
+Logging
