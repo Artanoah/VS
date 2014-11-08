@@ -6,7 +6,8 @@
 		 bestimme_mis/2,
 		 head/1, tail/1, last/1, droplast/1, element_before/2, element_after/2, time_in_ms/0, timestamp_to_list/1,
 		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0,
-		 bind_name/2, unbind_name/2, lookup_name/2, wait_for_nameservice/1]).
+		 bind_name/2, unbind_name/2, lookup_name/2, wait_for_nameservice/1, 
+		 toggle_boolean/1, ping_all_clients_helper/4, get_value_of_all_clients_helper/4]).
 -define(ZERO, integer_to_list(0)).
 
 %% -------------------------------------------
@@ -392,4 +393,39 @@ wait_for_nameservice(NameserviceNode) ->
 			wait_for_nameservice(NameserviceNode);
 		Answer == pong ->
 			ok
+	end.
+
+
+toggle_boolean(Boolean) ->
+	case Boolean of
+		true -> false;
+		false -> true
+	end.
+
+
+%Hilfsmethoden koordinator
+
+ping_all_clients_helper(Nameservice, Arbeitszeit, Client, LogFile) ->
+	PID = util:lookup_name(Nameservice, Client),
+	PID ! {pingGGT, self()},
+
+	receive
+		{pongGGT, From} ->
+			util:logging(LogFile, "Alive: " ++ atom_to_list(Client))
+	after 
+		Arbeitszeit * 3 ->
+			util:logging(LogFile, "Dead: " ++ atom_to_list(Client))
+	end.
+
+
+get_value_of_all_clients_helper(Nameservice, Arbeitszeit, Client, LogFile) ->
+	PID = util:lookup_name(Nameservice, Client),
+	PID ! {mi, self()},
+
+	receive
+		{pongGGT, From} ->
+			util:logging(LogFile, "Alive: " ++ atom_to_list(Client))
+	after 
+		Arbeitszeit * 3 ->
+			util:logging(LogFile, "Dead: " ++ atom_to_list(Client))
 	end.

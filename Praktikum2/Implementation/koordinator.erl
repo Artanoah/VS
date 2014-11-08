@@ -51,6 +51,7 @@ initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzess
 working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile) ->
 	receive
 		{kill, PID} ->
+			PID ! ok,
 			ending_loop(ClientList, Nameservice, LogFile);
 
 		{reset, PID} -> 
@@ -58,19 +59,32 @@ working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnz
 			PID ! ok,
 			initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, [], LogFile);
 
-		{getsteeringval, From} ->
-			PID = util:lookup_name(Nameservice, Head),
-			PID ! rejected,
+		{toggle, PID} ->
+			PID ! ok,
+			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, util:toggle_boolean(KorrigierenFlag), ClientList, LogFile);
+
+		{nudge, PID} ->
+			ping_all_clients(Nameservice, Arbeitszeit, ClientList, LogFile),
+			PID ! ok,
+			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile);
+
+		{prompt, PID} ->
+			get_value_of_all_clients(Nameservice, Arbeitszeit, ClientList, LogFile),
+			PID ! ok,
+			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile);
+
+		{getsteeringval, _} ->
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile);
 		
-		{hello, From} ->
-			
+		{hello, _} ->
+			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile)
+	end.
+		
 
 
 % Beendigungsphase
 ending_loop(ClientList, Nameservice, LogFile) ->
 	kill_all_GGTs(ClientList, Nameservice),
-	PID ! ok,
 	ok.
 
 
@@ -100,3 +114,19 @@ kill_all_GGTs([Head | Tail], Nameservice) ->
 	PID = util:lookup_name(Nameservice, Head),
 	PID ! kill,
 	kill_all_GGTs(Tail, Nameservice).
+
+
+ping_all_clients(_, Arbeitszeit, [], LogFile) ->
+	timer:sleep(Arbeitszeit * 3);
+
+ping_all_clients(Nameservice, Arbeitszeit, [Head | ClientList], LogFile) ->
+	spawn(util, ping_all_clients_helper, [Nameservice, Arbeitszeit, Head, LogFile]),
+	ping_all_clients(Nameservice, Arbeitszeit, ClientList, LogFile).
+
+
+get_value_of_all_clients(_, Arbeitszeit, [], LogFile) ->
+	timer:sleep(Arbeitszeit * 3);
+
+get_value_of_all_clients(Nameservice, Arbeitszeit, [Head | ClientList], LogFile) ->
+	spawn(util, get_value_of_all_clients_helper, [Nameservice, Arbeitszeit, Head, LogFile]),
+	get_value_of_all_clients(Nameservice, Arbeitszeit, ClientList, LogFile).
