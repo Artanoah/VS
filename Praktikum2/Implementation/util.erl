@@ -4,9 +4,9 @@
 		 timeMilliSecond/0,reset_timer/3,
 		 type_is/1,to_String/1,list2String/1,
 		 bestimme_mis/2,
-		 head/1, tail/1, last/1, droplast/1, time_in_ms/0, timestamp_to_list/1,
+		 head/1, tail/1, last/1, droplast/1, element_before/2, element_after/2, time_in_ms/0, timestamp_to_list/1,
 		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0,
-		 bind_name/2, unbind_name/2, lookup_name/2]).
+		 bind_name/2, unbind_name/2, lookup_name/2, wait_for_nameservice/1]).
 -define(ZERO, integer_to_list(0)).
 
 %% -------------------------------------------
@@ -297,6 +297,26 @@ last([_ | XS]) ->
 	last(XS).
 
 
+element_before(_, []) ->
+	erlang:fault("Element konnte nicht gefunden werden\n");
+
+element_before(Element, [Value, Element | _]) ->
+	Value;
+
+element_before(Element, [_ | List]) -> 
+	element_before(Element, List).
+
+
+element_after(_, [_ | []]) ->
+	erlang:fault("Element konnte nicht gefunden werden\n");
+
+element_after(Element, [Element, Value | _]) ->
+	Value;
+
+element_after(Element, [_ | List]) ->
+	element_after(Element, List).
+
+
 time_in_ms() ->
 	time_in_ms_helper(os:timestamp()).
 
@@ -361,4 +381,15 @@ lookup_name(Nameservice, Name) ->
 	receive
 		not_found -> not_found;
 		{pin,ID} -> ID
+	end.
+
+wait_for_nameservice(NameserviceNode) ->
+	Answer = net_adm:ping(NameserviceNode),
+	
+	if 
+		Answer == pang -> 
+			timer:sleep(50),
+			wait_for_nameservice(NameserviceNode);
+		Answer == pong ->
+			ok
 	end.

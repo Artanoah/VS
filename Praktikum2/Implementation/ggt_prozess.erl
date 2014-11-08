@@ -12,7 +12,7 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	{ok, KoordinatorName} = util:get_config_value(koordinatorname, ConfigListe),
 
 	% Warte darauf, dass der Nameservice verfuegbar ist
-	wait_for_nameservice(NameserviceNode),
+	util:wait_for_nameservice(NameserviceNode),
 	
   	% Ermittle die PID des Nameservice
 	Nameservice = global:whereis_name(NameserviceName),
@@ -45,6 +45,7 @@ loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbo
 		{setpm, NewMi} ->
 			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, NewMi, LeftNeighbor, RightNeighbor, util:time_in_ms());
 		{sendy, Y} ->
+			timer:sleep(Wartezeit),
 			NewMi = euklid(Mi, Y),
 			if
 				NewMi >= Mi ->
@@ -85,16 +86,6 @@ loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbo
 
 
 % Hilfsfunktionen
-wait_for_nameservice(NameserviceNode) ->
-	Answer = net_adm:ping(NameserviceNode),
-	
-	if 
-		Answer == pang -> 
-			timer:sleep(50),
-			wait_for_nameservice(NameserviceNode);
-		Answer == pong ->
-			ok
-	end.
 
 euklid(Mi, Y) ->
 	if
