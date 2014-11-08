@@ -1,5 +1,5 @@
 -module[starter].
--export([start/1]).
+-export([start/0]).
 
 start() ->
 	%Auslesen der config Datei
