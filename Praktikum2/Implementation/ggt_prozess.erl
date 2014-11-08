@@ -8,13 +8,14 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	% Config-Values suchen
 	{ok, ConfigListe} = file:consult("ggt.cfg"),
 	{ok, NameserviceNode} = util:get_config_value(nameservicenode, ConfigListe),
+	{ok, NameserviceName} = util:get_config_value(nameservicename, ConfigListe),
 	{ok, KoordinatorName} = util:get_config_value(koordinatorname, ConfigListe),
 
 	% Warte darauf, dass der Nameservice verfuegbar ist
 	wait_for_nameservice(NameserviceNode),
 	
   	% Ermittle die PID des Nameservice
-	Nameservice = global:whereis_name(nameservice),
+	Nameservice = global:whereis_name(NameserviceName),
 
 	% Versuche den eigenen Namen beim Nameservice zu binden
 	case util:bind_name(Nameservice, Name) of
