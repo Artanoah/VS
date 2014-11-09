@@ -5,7 +5,7 @@
 		 type_is/1,to_String/1,list2String/1,
 		 bestimme_mis/2,
 		 head/1, tail/1, last/1, droplast/1, element_before/2, element_after/2, list_with_size/2, index_of/2, replace_index_with/3, 
-		 time_in_ms/0, timestamp_to_list/1,
+		 time_in_ms/0, timestamp_to_list/1, list_to_list/1,
 		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0,
 		 bind_name/2, unbind_name/2, lookup_name/2, wait_for_nameservice/1, 
 		 toggle_boolean/1, message_to_all/3]).
@@ -343,6 +343,19 @@ replace_index_with(Counter, Index, Element, [Head | StatusList]) ->
 	[Head] ++ replace_index_with(Counter + 1, Index, Element, StatusList).
 
 
+list_to_list([]) ->
+	"\n";
+
+list_to_list([Head | Tail]) ->
+	if 
+		is_atom(Head) ->
+			atom_to_list(Head) ++ ", " ++ list_to_list(Tail);
+		is_number(Head) ->
+			integer_to_list(Head) ++ ", " ++ list_to_list(Tail)
+	end.
+	
+
+
 list_with_size(0, _) ->
 	[];
 
@@ -413,7 +426,8 @@ unbind_name(Nameservice, Name) ->
 lookup_name(Nameservice, Name) ->
 	Nameservice ! {self(), {lookup, Name}},
 
-	wait_for_nameservice('nameservice@BlueHorst.localdomain'),
+	timer:sleep(50),
+	%wait_for_nameservice('nameservice@BlueHorst.localdomain'),
 
 	receive
 		not_found -> not_found;

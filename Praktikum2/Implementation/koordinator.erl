@@ -72,48 +72,48 @@ working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnz
 		{nudge, PID} ->
 			util:logging(LogFile, "Gesundheitszustand der ggT-Prozesse\n"),
 			StatusList = ping_all_clients(Nameservice, KoordinatorName, Arbeitszeit, ClientList, LogFile),
-			util:logging(LogFile, StatusList),
+			util:logging(LogFile, util:list_to_list(StatusList)),
 			PID ! ok,
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 
 		{prompt, PID} ->
 			util:logging(LogFile, "Mi der antwortenden ggT-Prozesse\n"),
 			MiList = value_of_all_clients(Nameservice, KoordinatorName, Arbeitszeit, ClientList, LogFile),
-			util:logging(LogFile, MiList),
+			util:logging(LogFile, util:list_to_list(MiList)),
 			PID ! ok,
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 
 		{calc, WggT, PID} ->
 			util:logging(LogFile, "Starte Berechnung mit Wunsch-GGT " ++ integer_to_list(WggT) ++"\n"),
+			MiniMis = util:bestimme_mis(WggT, calc_num(length(ClientList))),
 			Mis = util:bestimme_mis(WggT, length(ClientList)),
 			send_mis(Mis, ClientList, Nameservice, LogFile),
-			MiniMis = util:bestimme_mis(WggT, calc_num(length(ClientList))),
 			start_some(MiniMis, ClientList, Nameservice, LogFile),
 			PID ! ok,
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, WggT);
 
 		{briefmi, {ClientName, Mi, Timestamp}} ->
-			util:logging(LogFile, atom_to_list(ClientName) ++ " hat das neue Mi " ++ integer_to_list(Mi) ++ " | " ++ Timestamp),
+			util:logging(LogFile, atom_to_list(ClientName) ++ " hat das neue Mi " ++ integer_to_list(Mi) ++ " | " ++ Timestamp ++ "\n"),
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 		
 		{briefterm, {Clientname, Mi, Timestamp}, From} ->
 			case Mi > Result of
 				false ->
-					util:logging(LogFile, "Das korrekte Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden"),
+					util:logging(LogFile, "Das korrekte Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden\n"),
 					working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 				true ->
-					case KorrigierenFlag of
+					case KorrigierenFlag  == true of
 						false ->
-							util:logging(LogFile, "Das falsche Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden"),
+							util:logging(LogFile, "Das falsche Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden\n"),
 							working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 						true ->
 							util:lookup_name(Nameservice, From) ! {sendy, Result},
-							util:logging(LogFile, "Das falsche Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden. Korrektur versandt.")
+							util:logging(LogFile, "Das falsche Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden. Korrektur versandt\n")
 					end
 			end;
 
 		Message ->
-			util:logging(LogFile, "Unbekannte Nachricht erhalten\n"),
+			util:logging(LogFile, "Unbekannte / unerwartete Nachricht erhalten\n"),
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result)
 	end.
 		
@@ -165,21 +165,21 @@ ping_all_clients_helper(Nameservice, Arbeitszeit, ClientList, StatusList, LogFil
 			NewStatusList = util:replace_index_with(Index, alive, StatusList),
 			ping_all_clients_helper(Nameservice, Arbeitszeit, ClientList, NewStatusList, LogFile)
 	after 
-		Arbeitszeit * 3 ->
+		Arbeitszeit * 5 ->
 			StatusList
 	end.
 
 
 value_of_all_clients(Nameservice, KoordinatorName, Arbeitszeit, ClientList, LogFile) ->
-	util:message_to_all({pingGGT, KoordinatorName}, ClientList, Nameservice),
+	util:message_to_all({tellmi, KoordinatorName}, ClientList, Nameservice),
 	value_of_all_clients_helper([], Arbeitszeit, LogFile).
 
 value_of_all_clients_helper(RespondList, Arbeitszeit, LogFile) ->
 	receive 
 		{mi, Mi} ->
-			value_of_all_clients_helper([Mi] ++ RespondList, Arbeitszeit, LogFile)
+			value_of_all_clients_helper([Mi | RespondList], Arbeitszeit, LogFile)
 	after
-		Arbeitszeit * 3 ->
+		Arbeitszeit * 5 ->
 			RespondList
 	end.
 

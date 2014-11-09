@@ -10,6 +10,7 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	{ok, NameserviceNode} = util:get_config_value(nameservicenode, ConfigListe),
 	{ok, NameserviceName} = util:get_config_value(nameservicename, ConfigListe),
 	{ok, KoordinatorName} = util:get_config_value(koordinatorname, ConfigListe),
+	LogFile = "GGT.log",
 
 	% Warte darauf, dass der Nameservice verfuegbar ist
 	util:wait_for_nameservice(NameserviceNode),
@@ -20,9 +21,9 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	% Versuche den eigenen Namen beim Nameservice zu binden
 	case util:bind_name(Nameservice, Name) of
 		ok -> 
-			util:logging("GGT.log", "Name " ++ atom_to_list(Name) ++ " erfolgreich registriert\n");
+			util:logging(LogFile, "Name " ++ atom_to_list(Name) ++ " erfolgreich registriert\n");
 		in_use -> 
-			util:logging("GGT.log", "Name " ++ atom_to_list(Name) ++ " schon in benutzung - Beende Prozess\n"),
+			util:logging(LogFile, "Name " ++ atom_to_list(Name) ++ " schon in benutzung - Beende Prozess\n"),
 			erlang:fault("Name bereits vergeben\n")
 	end,
 	
@@ -33,68 +34,81 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	wait_for_first_message(),
 	
 	% GGT-Prozessloop
-	loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, -1, -1, -1, util:time_in_ms()),
+	loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, -1, -1, -1, util:time_in_ms(), LogFile),
 
 	% Melde beim Nameservice ab
 	util:unbind_name(Nameservice, Name).
 
-loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp) ->
+loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile) ->
 	receive
 		{setneighbors, LeftN, RightN} ->
-			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftN, RightN, util:time_in_ms());
+			util:logging(LogFile, atom_to_list(Name) ++ ": linker Nachbar " ++ atom_to_list(LeftN) ++ " ich: " ++ atom_to_list(Name) ++ " rechter Nachbar " ++ atom_to_list(RightN) ++ "\n"),
+			wait_for_first_message(),
+			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftN, RightN, util:time_in_ms(), LogFile);
+
 		{setpm, NewMi} ->
-			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, NewMi, LeftNeighbor, RightNeighbor, util:time_in_ms());
+			util:logging(LogFile, atom_to_list(Name) ++ ": Mi auf " ++ integer_to_list(NewMi) ++ " gesetzt\n"),
+			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, NewMi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile);
+
 		{sendy, Y} ->
+			util:logging(LogFile, atom_to_list(Name) ++ ": Berechne Mi: " ++ integer_to_list(Mi) ++ " Y: " ++ integer_to_list(Y) ++ "\n"),
 			timer:sleep(Wartezeit),
 			NewMi = euklid(Mi, Y),
-			if
-				NewMi >= Mi ->
-					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms());
-				NewMi < Mi ->
+			case NewMi < Mi of
+				false ->
+					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile);
+				
+				true -> 
 					util:lookup_name(Nameservice, LeftNeighbor) ! {sendy, NewMi},
 					util:lookup_name(Nameservice, RightNeighbor) ! {sendy, NewMi},
 					util:lookup_name(Nameservice, KoordinatorName) ! {briefmi, {Name, Mi, util:timeMilliSecond()}},
-					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, NewMi, LeftNeighbor, RightNeighbor, util:time_in_ms())
+					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, NewMi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile)
 			end;
+				
 		{abstimmung, Initiator} ->
 			case Name == Initiator of
 				true ->
+					util:logging(LogFile, atom_to_list(Name) ++ ": Abstimmung erfolgreich beendet\n"),
 					util:lookup_name(Nameservice, KoordinatorName) ! {briefterm, {Name, Mi, util:timeMilliSecond()}, Name},
 					wait_for_first_message(),
-					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms());
+					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile);
 				false ->
 					case (util:time_in_ms() - Timestamp) > (Wartezeit / 2) of
 						true ->
+							util:logging(LogFile, atom_to_list(Name) ++ ": Abstimmungsanfrage erhalten - nehme an\n"),
 							util:lookup_name(Nameservice, RightNeighbor) ! {abstimmung, Initiator},
-							loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms());
+							loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile);
 						false ->
-							loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms())
+							util:logging(LogFile, atom_to_list(Name) ++ ": Abstimmungsanfrage erhalten - lehne ab\n"),
+							loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile)
 					end
 			end;
 			
 		{tellmi, From} ->
 			util:lookup_name(Nameservice, From) ! {mi, Mi},
-			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms());
+			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile);
 		{pingGGT, From} ->
 			util:lookup_name(Nameservice, From) ! {pongGGT, Name},
-			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms());
+			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile);
 		kill -> ok
 	after 
 		Wartezeit ->
+			util:logging(LogFile, atom_to_list(Name) ++ ": Starte Abstimmung\n"),
 			util:lookup_name(Nameservice, RightNeighbor) ! {abstimmung, Name},
-			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms())
+			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile)
 	end.
 
 
 % Hilfsfunktionen
 
 euklid(Mi, Y) ->
-	if
-		Y < Mi ->
+	case Y < Mi of
+		true ->
 			((Mi - 1) rem Y) + 1;
-		true -> 
+		false ->
 			Mi
 	end.
+
 
 wait_for_first_message() ->
 	receive 
