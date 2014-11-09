@@ -4,10 +4,11 @@
 		 timeMilliSecond/0,reset_timer/3,
 		 type_is/1,to_String/1,list2String/1,
 		 bestimme_mis/2,
-		 head/1, tail/1, last/1, droplast/1, element_before/2, element_after/2, time_in_ms/0, timestamp_to_list/1,
+		 head/1, tail/1, last/1, droplast/1, element_before/2, element_after/2, list_with_size/2, index_of/2, replace_index_with/3, 
+		 time_in_ms/0, timestamp_to_list/1,
 		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0,
 		 bind_name/2, unbind_name/2, lookup_name/2, wait_for_nameservice/1, 
-		 toggle_boolean/1, ping_all_clients_helper/4, get_value_of_all_clients_helper/4]).
+		 toggle_boolean/1, message_to_all/3]).
 -define(ZERO, integer_to_list(0)).
 
 %% -------------------------------------------
@@ -317,6 +318,36 @@ element_after(Element, [Element, Value | _]) ->
 element_after(Element, [_ | List]) ->
 	element_after(Element, List).
 
+ 
+index_of(Item, List) -> 
+	index_of(Item, List, 1).
+
+index_of(_, [], _)  -> 
+	not_found;
+
+index_of(Item, [Item|_], Index) -> 
+	Index;
+
+index_of(Item, [_|Tl], Index) -> 
+	index_of(Item, Tl, Index+1).
+ 
+
+replace_index_with(Index, Element, StatusList) ->
+	replace_index_with(1, Index, Element, StatusList).
+
+replace_index_with(Counter, Counter, Element, [_ | StatusList]) ->
+	[Element] ++ StatusList;
+
+replace_index_with(Counter, Index, Element, [Head | StatusList]) ->
+	[Head] ++ replace_index_with(Counter + 1, Index, Element, StatusList).
+
+
+list_with_size(0, _) ->
+	[];
+
+list_with_size(Size, Element) ->
+	[Element] ++ list_with_size(Size - 1, Element).
+
 
 time_in_ms() ->
 	time_in_ms_helper(os:timestamp()).
@@ -384,6 +415,7 @@ lookup_name(Nameservice, Name) ->
 		{pin,ID} -> ID
 	end.
 
+
 wait_for_nameservice(NameserviceNode) ->
 	Answer = net_adm:ping(NameserviceNode),
 	
@@ -403,29 +435,9 @@ toggle_boolean(Boolean) ->
 	end.
 
 
-%Hilfsmethoden koordinator
+message_to_all(_, [], _) ->
+	ok;
 
-ping_all_clients_helper(Nameservice, Arbeitszeit, Client, LogFile) ->
-	PID = util:lookup_name(Nameservice, Client),
-	PID ! {pingGGT, self()},
-
-	receive
-		{pongGGT, From} ->
-			util:logging(LogFile, "Alive: " ++ atom_to_list(Client))
-	after 
-		Arbeitszeit * 3 ->
-			util:logging(LogFile, "Dead: " ++ atom_to_list(Client))
-	end.
-
-
-get_value_of_all_clients_helper(Nameservice, Arbeitszeit, Client, LogFile) ->
-	PID = util:lookup_name(Nameservice, Client),
-	PID ! {mi, self()},
-
-	receive
-		{pongGGT, From} ->
-			util:logging(LogFile, "Alive: " ++ atom_to_list(Client))
-	after 
-		Arbeitszeit * 3 ->
-			util:logging(LogFile, "Dead: " ++ atom_to_list(Client))
-	end.
+message_to_all(Message, [Receiver | ReceiverList], Nameservice) ->
+	lookup_name(Nameservice, Receiver) ! Message,
+	message_to_all(Message, ReceiverList, Nameservice).

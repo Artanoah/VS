@@ -33,7 +33,7 @@ start(StarterNummer) ->
 	
 
 startGGTProcesses(_, _, 0, _, _, _) ->
-	true;
+	ok;
 
 startGGTProcesses(Arbeitszeit,Wartezeit,GGTProzessAnzahl, StarterNummer, TeamNummer, PraktikumsGruppe) ->
 	spawn(ggt_prozess, start, [Arbeitszeit,Wartezeit,list_to_atom(lists:concat([PraktikumsGruppe, TeamNummer, GGTProzessAnzahl, StarterNummer]))]),

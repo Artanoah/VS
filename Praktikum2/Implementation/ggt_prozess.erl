@@ -53,12 +53,13 @@ loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbo
 				NewMi < Mi ->
 					util:lookup_name(Nameservice, LeftNeighbor) ! {sendy, NewMi},
 					util:lookup_name(Nameservice, RightNeighbor) ! {sendy, NewMi},
+					util:lookup_name(Nameservice, KoordinatorName) ! {briefmi, {Name, Mi, util:timeMilliSecond()}},
 					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, NewMi, LeftNeighbor, RightNeighbor, util:time_in_ms())
 			end;
 		{abstimmung, Initiator} ->
 			case Name == Initiator of
 				true ->
-					util:lookup_name(Nameservice, KoordinatorName) ! {briefterm, {Name, Mi, util:timeMilliSecond()}},
+					util:lookup_name(Nameservice, KoordinatorName) ! {briefterm, {Name, Mi, util:timeMilliSecond()}, Name},
 					wait_for_first_message(),
 					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms());
 				false ->
