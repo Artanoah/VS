@@ -31,12 +31,18 @@ send_koordinator(Message) ->
 	{ok, NameserviceName} = util:get_config_value(nameservicename, ConfigListe),
 	{ok, NameserviceNode} = util:get_config_value(nameservicenode, ConfigListe),
 
-	erlang:register(zookeeper, self()),
-	util:wait_for_nameservice(NameserviceNode),
+	Known = erlang:whereis(zookeeper),
+	case Known of
+		undefined -> 
+			erlang:register(zookeeper, self()),
+			util:wait_for_nameservice(NameserviceNode);
+		_ -> ok
+	end,
 	
 	Nameservice = global:whereis_name(NameserviceName),
 	util:lookup_name(Nameservice, KoordinatorName) ! Message,
 
 	receive 
+		ok -> ok;
 		Message -> Message
 	end.

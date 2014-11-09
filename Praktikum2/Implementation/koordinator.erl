@@ -138,7 +138,7 @@ inform_all_about_neighbors_helper([Head | []], ClientList, Nameservice) ->
 	PID = util:lookup_name(Nameservice, Head),
 	PID ! {setneighbors, util:element_before(Head, ClientList), util:head(ClientList)};
 
-inform_all_about_neighbors_helper([Head, Tail], ClientList, Nameservice) ->
+inform_all_about_neighbors_helper([Head | Tail], ClientList, Nameservice) ->
 	PID = util:lookup_name(Nameservice, Head),
 	PID ! {setneighbors, util:element_before(Head, ClientList), util:element_after(Head, ClientList)},
 	inform_all_about_neighbors_helper(Tail, ClientList, Nameservice).
