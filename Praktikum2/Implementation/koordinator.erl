@@ -3,7 +3,7 @@
 
 start() -> 
 	% Config-Krams
-	{ok, ConfigListe} = file:consult("korrdinator.cfg"),
+	{ok, ConfigListe} = file:consult("koordinator.cfg"),
 	{ok, NameserviceNode} = util:get_config_value(nameservicenode, ConfigListe),
 	{ok, NameserviceName} = util:get_config_value(nameservicename, ConfigListe),
 	{ok, KoordinatorName} = util:get_config_value(koordinatorname, ConfigListe),
@@ -34,13 +34,16 @@ start() ->
 initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile) ->
 	receive 
 		{getsteeringval, PID} ->
+			util:logging(LogFile, "Starter " ++ pid_to_list(PID) ++ " Angemeldet\n"),
 			PID ! {steeringval, Arbeitszeit, Wartezeit, GGTProzessAnzahl},
 			initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile);
 
 		{hello, ClientName} ->
+			util:logging(LogFile, "GGT-Prozess " ++ atom_to_list(ClientName) ++ " Angemeldet\n"),
 			initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, [ClientName | ClientList], LogFile);
 
 		{step, PID} ->
+			util:logging(LogFile, "Wechsle in Arbeitsphase\n"),
 			PID ! ok,
 			ShuffeledClientList = util:shuffle(ClientList),
 			inform_all_about_neighbors(ShuffeledClientList, Nameservice),
@@ -51,29 +54,37 @@ initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzess
 working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result) ->
 	receive
 		{kill, PID} ->
+			util:logging(LogFile, "System wird heruntergefahren\n"),
 			PID ! ok,
 			ending_loop(ClientList, Nameservice, LogFile);
 
 		{reset, PID} -> 
+			util:logging(LogFile, "Resette Clients\n"),
 			kill_all_GGTs(ClientList, Nameservice),
 			PID ! ok,
 			initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, [], LogFile);
 
 		{toggle, PID} ->
+			util:logging(LogFile, "KorrigierenFlag: " ++ util:toggle_boolean(KorrigierenFlag) ++ "\n"),
 			PID ! ok,
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, util:toggle_boolean(KorrigierenFlag), ClientList, LogFile, Result);
 
 		{nudge, PID} ->
+			util:logging(LogFile, "Gesundheitszustand der ggT-Prozesse\n"),
 			StatusList = ping_all_clients(Nameservice, KoordinatorName, Arbeitszeit, ClientList, LogFile),
+			util:logging(LogFile, StatusList),
 			PID ! ok,
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 
 		{prompt, PID} ->
+			util:logging(LogFile, "Mi der antwortenden ggT-Prozesse\n"),
 			MiList = value_of_all_clients(Nameservice, KoordinatorName, Arbeitszeit, ClientList, LogFile),
+			util:logging(LogFile, MiList),
 			PID ! ok,
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 
 		{calc, WggT, PID} ->
+			util:logging(LogFile, "Starte Berechnung mit Wunsch-GGT " ++ integer_to_list(WggT) ++"\n"),
 			Mis = util:bestimme_mis(WggT, length(ClientList)),
 			send_mis(Mis, ClientList, Nameservice, LogFile),
 			MiniMis = util:bestimme_mis(WggT, calc_num(length(ClientList))),
@@ -81,13 +92,8 @@ working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnz
 			PID ! ok,
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, WggT);
 
-		{getsteeringval, _} ->
-			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
-		
-		{hello, _} ->
-			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
-
-		{briefmi, {Clientname, Mi, Timestamp}} ->
+		{briefmi, {ClientName, Mi, Timestamp}} ->
+			util:logging(LogFile, atom_to_list(ClientName) ++ " hat das neue Mi " ++ integer_to_list(Mi) ++ " | " ++ Timestamp),
 			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 		
 		{briefterm, {Clientname, Mi, Timestamp}, From} ->
@@ -104,7 +110,11 @@ working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnz
 							util:lookup_name(Nameservice, From) ! {sendy, Result},
 							util:logging(LogFile, "Das falsche Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden. Korrektur versandt.")
 					end
-			end
+			end;
+
+		Message ->
+			util:logging(LogFile, "Unbekannte Nachricht erhalten\n"),
+			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result)
 	end.
 		
 

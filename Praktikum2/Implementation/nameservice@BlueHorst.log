@@ -1,0 +1,108 @@
+Nameservice Startzeit: 09.11 14:10:08,923| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+Nameservice Startzeit: 09.11 14:12:01,931| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+bind um 09.11 14:12:12,696| von <7240.38.0> (chef):{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:12:22,212| von <7242.38.0>:{chef,koordinator@BlueHorst.localdomain}.
+bind um 09.11 14:12:25,769| von <7242.53.0> ('3241'):{'3241',clients@BlueHorst.localdomain}.
+bind um 09.11 14:12:25,769| von <7242.56.0> ('3211'):{'3211',clients@BlueHorst.localdomain}.
+bind um 09.11 14:12:25,769| von <7242.55.0> ('3221'):{'3221',clients@BlueHorst.localdomain}.
+bind um 09.11 14:12:25,769| von <7242.51.0> ('3261'):{'3261',clients@BlueHorst.localdomain}.
+bind um 09.11 14:12:25,769| von <7242.54.0> ('3231'):{'3231',clients@BlueHorst.localdomain}.
+bind um 09.11 14:12:25,769| von <7242.52.0> ('3251'):{'3251',clients@BlueHorst.localdomain}.
+lookup um 09.11 14:12:25,769| von <7242.53.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:12:25,769| von <7242.56.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:12:25,769| von <7242.55.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:12:25,769| von <7242.51.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:12:25,769| von <7242.54.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:12:25,769| von <7242.52.0>:{chef,koordinator@BlueHorst.localdomain}.
+Nameservice Startzeit: 09.11 14:14:06,177| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+bind um 09.11 14:14:18,149| von <7240.38.0> (chef):{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:14:28,024| von <7242.38.0>:{chef,koordinator@BlueHorst.localdomain}.
+bind um 09.11 14:14:31,581| von <7242.55.0> ('3221'):{'3221',clients@BlueHorst.localdomain}.
+bind um 09.11 14:14:31,581| von <7242.53.0> ('3241'):{'3241',clients@BlueHorst.localdomain}.
+bind um 09.11 14:14:31,581| von <7242.56.0> ('3211'):{'3211',clients@BlueHorst.localdomain}.
+bind um 09.11 14:14:31,581| von <7242.52.0> ('3251'):{'3251',clients@BlueHorst.localdomain}.
+bind um 09.11 14:14:31,581| von <7242.54.0> ('3231'):{'3231',clients@BlueHorst.localdomain}.
+bind um 09.11 14:14:31,581| von <7242.51.0> ('3261'):{'3261',clients@BlueHorst.localdomain}.
+lookup um 09.11 14:14:31,581| von <7242.55.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:14:31,581| von <7242.53.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:14:31,581| von <7242.56.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:14:31,581| von <7242.52.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:14:31,581| von <7242.51.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:14:31,581| von <7242.54.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:14:45,714| von <7249.38.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:14:46,229| von <7240.38.0>:{3251,clients@BlueHorst.localdomain}.
+lookup um 09.11 14:14:51,752| von <7242.52.0>:{3221,clients@BlueHorst.localdomain}.
+in loop unerwartete Nachricht erhalten.{<7242.55.0>,{lookup,-1}}
+lookup um 09.11 14:14:57,274| von <7242.52.0>:{3221,clients@BlueHorst.localdomain}.
+lookup um 09.11 14:15:02,796| von <7242.52.0>:{3221,clients@BlueHorst.localdomain}.
+Nameservice Startzeit: 09.11 14:16:02,872| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+bind um 09.11 14:16:10,532| von <7240.38.0> (chef):{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:16:24,447| von <7242.38.0>:{chef,koordinator@BlueHorst.localdomain}.
+bind um 09.11 14:16:25,992| von <7242.54.0> ('3231'):{'3231',clients@BlueHorst.localdomain}.
+bind um 09.11 14:16:25,992| von <7242.55.0> ('3221'):{'3221',clients@BlueHorst.localdomain}.
+bind um 09.11 14:16:25,992| von <7242.52.0> ('3251'):{'3251',clients@BlueHorst.localdomain}.
+bind um 09.11 14:16:25,992| von <7242.53.0> ('3241'):{'3241',clients@BlueHorst.localdomain}.
+bind um 09.11 14:16:25,992| von <7242.51.0> ('3261'):{'3261',clients@BlueHorst.localdomain}.
+bind um 09.11 14:16:25,992| von <7242.56.0> ('3211'):{'3211',clients@BlueHorst.localdomain}.
+lookup um 09.11 14:16:25,992| von <7242.54.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:16:25,992| von <7242.55.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:16:25,992| von <7242.52.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:16:25,992| von <7242.53.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:16:25,992| von <7242.51.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:16:25,992| von <7242.56.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:16:48,019| von <7249.38.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:16:48,534| von <7240.38.0>:{3241,clients@BlueHorst.localdomain}.
+Nameservice Startzeit: 09.11 14:18:45,207| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+bind um 09.11 14:18:53,101| von <7240.38.0> (chef):{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:19:00,308| von <7242.38.0>:{chef,koordinator@BlueHorst.localdomain}.
+bind um 09.11 14:19:01,851| von <7242.53.0> ('3241'):{'3241',clients@BlueHorst.localdomain}.
+bind um 09.11 14:19:01,852| von <7242.52.0> ('3251'):{'3251',clients@BlueHorst.localdomain}.
+bind um 09.11 14:19:01,852| von <7242.54.0> ('3231'):{'3231',clients@BlueHorst.localdomain}.
+bind um 09.11 14:19:01,852| von <7242.55.0> ('3221'):{'3221',clients@BlueHorst.localdomain}.
+bind um 09.11 14:19:01,852| von <7242.51.0> ('3261'):{'3261',clients@BlueHorst.localdomain}.
+bind um 09.11 14:19:01,852| von <7242.56.0> ('3211'):{'3211',clients@BlueHorst.localdomain}.
+lookup um 09.11 14:19:01,852| von <7242.52.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:19:01,852| von <7242.54.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:19:01,852| von <7242.55.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:19:01,852| von <7242.51.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:19:01,852| von <7242.56.0>:{chef,koordinator@BlueHorst.localdomain}.
+Nameservice Startzeit: 09.11 14:22:32,580| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+bind um 09.11 14:22:45,028| von <7262.38.0> (chef):{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:23:10,113| von <7264.40.0>:{chef,koordinator@BlueHorst.localdomain}.
+bind um 09.11 14:23:11,689| von <7264.55.0> ('3241'):{'3241',clients@BlueHorst.localdomain}.
+bind um 09.11 14:23:11,736| von <7264.53.0> ('3261'):{'3261',clients@BlueHorst.localdomain}.
+bind um 09.11 14:23:11,782| von <7264.58.0> ('3211'):{'3211',clients@BlueHorst.localdomain}.
+bind um 09.11 14:23:11,814| von <7264.57.0> ('3221'):{'3221',clients@BlueHorst.localdomain}.
+bind um 09.11 14:23:11,845| von <7264.54.0> ('3251'):{'3251',clients@BlueHorst.localdomain}.
+bind um 09.11 14:23:11,891| von <7264.56.0> ('3231'):{'3231',clients@BlueHorst.localdomain}.
+lookup um 09.11 14:23:11,939| von <7264.55.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:23:11,984| von <7264.53.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:23:12,016| von <7264.58.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:23:12,048| von <7264.57.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:23:12,048| von <7264.54.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:23:12,048| von <7264.56.0>:{chef,koordinator@BlueHorst.localdomain}.
+Nameservice Startzeit: 09.11 14:27:49,011| mit PID <0.40.0> registriert mit Namen 'nameservice'.
+bind um 09.11 14:27:55,485| von <7262.38.0> (chef):{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:28:02,801| von <7264.38.0>:{chef,koordinator@BlueHorst.localdomain}.
+bind um 09.11 14:28:04,361| von <7264.51.0> ('3261'):{'3261',clients@BlueHorst.localdomain}.
+bind um 09.11 14:28:04,377| von <7264.54.0> ('3231'):{'3231',clients@BlueHorst.localdomain}.
+bind um 09.11 14:28:04,408| von <7264.52.0> ('3251'):{'3251',clients@BlueHorst.localdomain}.
+bind um 09.11 14:28:04,424| von <7264.55.0> ('3221'):{'3221',clients@BlueHorst.localdomain}.
+bind um 09.11 14:28:04,455| von <7264.53.0> ('3241'):{'3241',clients@BlueHorst.localdomain}.
+bind um 09.11 14:28:04,471| von <7264.56.0> ('3211'):{'3211',clients@BlueHorst.localdomain}.
+lookup um 09.11 14:28:04,502| von <7264.51.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:28:04,517| von <7264.54.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:28:04,533| von <7264.52.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:28:04,580| von <7264.55.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:28:04,611| von <7264.53.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:28:04,627| von <7264.56.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:28:21,584| von <7271.38.0>:{chef,koordinator@BlueHorst.localdomain}.
+lookup um 09.11 14:28:22,146| von <7262.38.0>:{3251,clients@BlueHorst.localdomain}.
+lookup um 09.11 14:28:27,668| von <7264.52.0>:{3211,clients@BlueHorst.localdomain}.
+in loop unerwartete Nachricht erhalten.{<7264.56.0>,{lookup,-1}}
+lookup um 09.11 14:28:33,237| von <7264.52.0>:{3211,clients@BlueHorst.localdomain}.
+lookup um 09.11 14:28:38,713| von <7264.52.0>:{3211,clients@BlueHorst.localdomain}.
+lookup um 09.11 14:28:44,235| von <7264.52.0>:{3211,clients@BlueHorst.localdomain}.
+lookup um 09.11 14:28:49,758| von <7264.52.0>:{3211,clients@BlueHorst.localdomain}.
+lookup um 09.11 14:28:55,280| von <7264.52.0>:{3211,clients@BlueHorst.localdomain}.
+lookup um 09.11 14:29:00,818| von <7264.52.0>:{3211,clients@BlueHorst.localdomain}.

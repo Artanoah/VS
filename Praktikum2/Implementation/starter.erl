@@ -3,7 +3,7 @@
 
 start(StarterNummer) ->
 	%Auslesen der config Datei
-	{ok,GGTConfig} = file:consult("ggt.cfg"),
+	{ok, GGTConfig} = file:consult("ggt.cfg"),
 	{ok, PraktikumsGruppe} = util:get_config_value(praktikumsgruppe,GGTConfig),
 	{ok, TeamNummer} = util:get_config_value(teamnummer,GGTConfig),
 	{ok, NameServiceNode} = util:get_config_value(nameservicenode,GGTConfig),

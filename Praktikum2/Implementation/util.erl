@@ -32,11 +32,12 @@ get_config_value(Key, [{_OKey, _Value} | ConfigT]) ->
 % nebenläufig zur Beschleunigung
 % Beispielaufruf: logging('FileName.log',"Textinhalt"),
 %
-logging(Datei,Inhalt) -> Known = erlang:whereis(logklc),
+logging(Datei,Inhalt) -> wait_random_ms(50),
+						Known = erlang:whereis(logklc),
 						case Known of
 						undefined -> PIDlogklc = spawn(fun() -> logloop(0) end),
-								 erlang:register(logklc,PIDlogklc);
-								_NotUndef -> ok
+							erlang:register(logklc,PIDlogklc);
+							_NotUndef -> ok
 						end,
 						logklc ! {Datei,Inhalt},
 						ok.
@@ -391,6 +392,8 @@ timestamp_to_list(Timestamp) ->
 
 bind_name(Nameservice, Name) ->
 	register(Name, self()),
+	wait_for_nameservice('nameservice@BlueHorst.localdomain'),
+
 	Nameservice ! {self(),{bind, Name, node()}},
 	
 	receive 
@@ -410,6 +413,8 @@ unbind_name(Nameservice, Name) ->
 lookup_name(Nameservice, Name) ->
 	Nameservice ! {self(), {lookup, Name}},
 
+	wait_for_nameservice('nameservice@BlueHorst.localdomain'),
+
 	receive
 		not_found -> not_found;
 		{pin,ID} -> ID
@@ -418,10 +423,10 @@ lookup_name(Nameservice, Name) ->
 
 wait_for_nameservice(NameserviceNode) ->
 	Answer = net_adm:ping(NameserviceNode),
+	timer:sleep(500),
 	
 	if 
 		Answer == pang -> 
-			timer:sleep(50),
 			wait_for_nameservice(NameserviceNode);
 		Answer == pong ->
 			ok
@@ -441,3 +446,9 @@ message_to_all(_, [], _) ->
 message_to_all(Message, [Receiver | ReceiverList], Nameservice) ->
 	lookup_name(Nameservice, Receiver) ! Message,
 	message_to_all(Message, ReceiverList, Nameservice).
+
+
+wait_random_ms(Max) ->
+	{_, _, MS} = os:timestamp(),
+	Time = (MS div 1000) rem Max,
+	timer:sleep(Time).
