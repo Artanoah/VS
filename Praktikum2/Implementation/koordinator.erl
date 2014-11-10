@@ -20,7 +20,7 @@ start() ->
 	Nameservice = global:whereis_name(NameserviceName),
 
 	% Versuche den eigenen Namen beim Nameservice zu binden
-	case util:bind_name(Nameservice, KoordinatorName) of
+	case util:bind_name(Nameservice, KoordinatorName, NameserviceNode) of
 		ok -> 
 			util:logging(LogFile, "Name " ++ atom_to_list(KoordinatorName) ++ " erfolgreich registriert\n");
 		in_use -> 
@@ -47,7 +47,11 @@ initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzess
 			PID ! ok,
 			ShuffeledClientList = util:shuffle(ClientList),
 			inform_all_about_neighbors(ShuffeledClientList, Nameservice),
-			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, -1)
+			working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, -1);
+		
+		Message ->
+			util:logging(LogFile, "Unbekannte / unerwartete Nachricht erhalten\n"),
+			initialize_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile)
 	end.
 
 % Arbeitsphase
@@ -107,7 +111,7 @@ working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnz
 							util:logging(LogFile, "Das falsche Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden\n"),
 							working_loop(Nameservice, KoordinatorName, Arbeitszeit, Wartezeit, GGTProzessAnzahl, KorrigierenFlag, ClientList, LogFile, Result);
 						true ->
-							util:lookup_name(Nameservice, From) ! {sendy, Result},
+							util:send_message_to({sendy, Result}, From, Nameservice),
 							util:logging(LogFile, "Das falsche Ergebnis " ++ integer_to_list(Mi) ++ "wurde von " ++ atom_to_list(Clientname) ++ "um " ++ Timestamp ++ "gefunden. Korrektur versandt\n")
 					end
 			end;
@@ -130,17 +134,14 @@ inform_all_about_neighbors(ClientList, Nameservice) ->
 	inform_all_about_neighbors_helper(ClientList, ClientList, Nameservice).
 
 inform_all_about_neighbors_helper([Head | Tail1], [Head | Tail2], Nameservice) ->
-	PID = util:lookup_name(Nameservice, Head),
-	PID ! {setneighbors, util:last(Tail2), util:head(Tail2)},
+	util:send_message_to({setneighbors, util:last(Tail2), util:head(Tail2)}, Head, Nameservice),
 	inform_all_about_neighbors_helper(Tail1, [Head | Tail2], Nameservice);
 
 inform_all_about_neighbors_helper([Head | []], ClientList, Nameservice) ->
-	PID = util:lookup_name(Nameservice, Head),
-	PID ! {setneighbors, util:element_before(Head, ClientList), util:head(ClientList)};
+	util:send_message_to({setneighbors, util:element_before(Head, ClientList), util:head(ClientList)}, Head, Nameservice);
 
 inform_all_about_neighbors_helper([Head | Tail], ClientList, Nameservice) ->
-	PID = util:lookup_name(Nameservice, Head),
-	PID ! {setneighbors, util:element_before(Head, ClientList), util:element_after(Head, ClientList)},
+	util:send_message_to({setneighbors, util:element_before(Head, ClientList), util:element_after(Head, ClientList)}, Head, Nameservice),
 	inform_all_about_neighbors_helper(Tail, ClientList, Nameservice).
 
 
@@ -148,8 +149,7 @@ kill_all_GGTs([], _) ->
 	ok;
 
 kill_all_GGTs([Head | Tail], Nameservice) ->
-	PID = util:lookup_name(Nameservice, Head),
-	PID ! kill,
+	util:send_message_to(kill, Head, Nameservice),
 	kill_all_GGTs(Tail, Nameservice).
 
 
@@ -188,7 +188,7 @@ send_mis(_, [], _, _) ->
 	ok;
 
 send_mis([Mi | Mis], [Client | ClientList], Nameservice, LogFile) ->
-	util:lookup_name(Nameservice, Client) ! {setpm, Mi},
+	util:send_message_to({setpm, Mi}, Client, Nameservice),
 	send_mis(Mis, ClientList, Nameservice, LogFile).
 
 
@@ -203,5 +203,5 @@ start_some([], _, _, _) ->
 	ok;
 
 start_some([Mi | MiniMis], [Client | ClientList], Nameservice, LogFile) ->
-	util:lookup_name(Nameservice, Client) ! {sendy, Mi},
+	util:send_message_to({sendy, Mi}, Client, Nameservice),
 	start_some(MiniMis, ClientList, Nameservice, LogFile).

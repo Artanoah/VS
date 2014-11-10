@@ -17,11 +17,8 @@ start(StarterNummer) ->
 	% Die PID des NameService herausfinden
 	Nameservice = global:whereis_name(NameServiceName),
 	
-	% PID des Koordinator ueber den Nameservice herausfinden
-	Koordinator = util:lookup_name(Nameservice, KoordinatorName),
-	
 	% Steuernde Werte vom Koordinator erfragen
-	Koordinator ! {getsteeringval , self()},
+	util:send_message_to({getsteeringval , self()}, KoordinatorName, Nameservice),
 	
 	receive
 		{steeringval, Arbeitszeit, Wartezeit, GGTProzessAnzahl} ->
@@ -36,5 +33,5 @@ startGGTProcesses(_, _, 0, _, _, _) ->
 	ok;
 
 startGGTProcesses(Arbeitszeit,Wartezeit,GGTProzessAnzahl, StarterNummer, TeamNummer, PraktikumsGruppe) ->
-	spawn(ggt_prozess, start, [Arbeitszeit,Wartezeit,list_to_atom(lists:concat([PraktikumsGruppe, TeamNummer, GGTProzessAnzahl, StarterNummer]))]),
+	spawn(ggt_prozess, start, [Arbeitszeit,Wartezeit,list_to_atom(lists:concat(["ggT",PraktikumsGruppe, TeamNummer, GGTProzessAnzahl, StarterNummer]))]),
 	startGGTProcesses(Arbeitszeit,Wartezeit,GGTProzessAnzahl - 1, StarterNummer, TeamNummer, PraktikumsGruppe).

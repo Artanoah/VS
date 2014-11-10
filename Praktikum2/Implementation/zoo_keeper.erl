@@ -45,4 +45,7 @@ send_koordinator(Message) ->
 	receive 
 		ok -> ok;
 		Message -> Message
+	after
+		10000 ->
+			timeout
 	end.

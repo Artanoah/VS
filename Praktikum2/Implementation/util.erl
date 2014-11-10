@@ -7,7 +7,7 @@
 		 head/1, tail/1, last/1, droplast/1, element_before/2, element_after/2, list_with_size/2, index_of/2, replace_index_with/3, 
 		 time_in_ms/0, timestamp_to_list/1, list_to_list/1,
 		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0,
-		 bind_name/2, unbind_name/2, lookup_name/2, wait_for_nameservice/1, 
+		 bind_name/3, unbind_name/2, lookup_name/2, wait_for_nameservice/1, send_message_to/3, 
 		 toggle_boolean/1, message_to_all/3]).
 -define(ZERO, integer_to_list(0)).
 
@@ -403,9 +403,9 @@ timestamp_to_list(Timestamp) ->
 	end.
 
 
-bind_name(Nameservice, Name) ->
+bind_name(Nameservice, Name, NameserviceNode) ->
 	register(Name, self()),
-	wait_for_nameservice('nameservice@BlueHorst.localdomain'),
+	wait_for_nameservice(NameserviceNode),			%######## AENDERN ########
 
 	Nameservice ! {self(),{bind, Name, node()}},
 	
@@ -427,12 +427,22 @@ lookup_name(Nameservice, Name) ->
 	Nameservice ! {self(), {lookup, Name}},
 
 	timer:sleep(50),
-	%wait_for_nameservice('nameservice@BlueHorst.localdomain'),
 
 	receive
 		not_found -> not_found;
 		{pin,ID} -> ID
 	end.
+
+
+send_message_to(Message, Name, Nameservice) ->
+	PID = lookup_name(Nameservice, Name),
+	case PID == not_found of
+		true ->
+			error;
+		false ->
+			PID ! Message
+	end.
+		
 
 
 wait_for_nameservice(NameserviceNode) ->

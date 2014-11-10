@@ -10,7 +10,7 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	{ok, NameserviceNode} = util:get_config_value(nameservicenode, ConfigListe),
 	{ok, NameserviceName} = util:get_config_value(nameservicename, ConfigListe),
 	{ok, KoordinatorName} = util:get_config_value(koordinatorname, ConfigListe),
-	LogFile = "GGT.log",
+	LogFile = atom_to_list(Name) ++ "GGT.log",
 
 	% Warte darauf, dass der Nameservice verfuegbar ist
 	util:wait_for_nameservice(NameserviceNode),
@@ -19,7 +19,7 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	Nameservice = global:whereis_name(NameserviceName),
 
 	% Versuche den eigenen Namen beim Nameservice zu binden
-	case util:bind_name(Nameservice, Name) of
+	case util:bind_name(Nameservice, Name, NameserviceNode) of
 		ok -> 
 			util:logging(LogFile, "Name " ++ atom_to_list(Name) ++ " erfolgreich registriert\n");
 		in_use -> 
@@ -28,7 +28,7 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	end,
 	
 	% Melde dich beim Koordinator an
-	util:lookup_name(Nameservice, KoordinatorName) ! {hello, Name},
+	util:send_message_to({hello, Name}, KoordinatorName, Nameservice),
 	
 	% Warte auf eine erste Nachricht
 	wait_for_first_message(),
@@ -52,16 +52,16 @@ loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbo
 
 		{sendy, Y} ->
 			util:logging(LogFile, atom_to_list(Name) ++ ": Berechne Mi: " ++ integer_to_list(Mi) ++ " Y: " ++ integer_to_list(Y) ++ "\n"),
-			timer:sleep(Wartezeit),
+			timer:sleep(Arbeitszeit),
 			NewMi = euklid(Mi, Y),
 			case NewMi < Mi of
 				false ->
 					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile);
 				
 				true -> 
-					util:lookup_name(Nameservice, LeftNeighbor) ! {sendy, NewMi},
-					util:lookup_name(Nameservice, RightNeighbor) ! {sendy, NewMi},
-					util:lookup_name(Nameservice, KoordinatorName) ! {briefmi, {Name, Mi, util:timeMilliSecond()}},
+					util:send_message_to({sendy, NewMi}, LeftNeighbor, Nameservice),
+					util:send_message_to({sendy, NewMi}, RightNeighbor, Nameservice),
+					util:send_message_to({briefmi, {Name, Mi, util:timeMilliSecond()}}, KoordinatorName, Nameservice),
 					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, NewMi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile)
 			end;
 				
@@ -69,14 +69,15 @@ loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbo
 			case Name == Initiator of
 				true ->
 					util:logging(LogFile, atom_to_list(Name) ++ ": Abstimmung erfolgreich beendet\n"),
-					util:lookup_name(Nameservice, KoordinatorName) ! {briefterm, {Name, Mi, util:timeMilliSecond()}, Name},
+					util:send_message_to({briefterm, {Name, Mi, util:timeMilliSecond()}, Name}, KoordinatorName, Nameservice),
 					wait_for_first_message(),
 					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile);
 				false ->
 					case (util:time_in_ms() - Timestamp) > (Wartezeit / 2) of
 						true ->
 							util:logging(LogFile, atom_to_list(Name) ++ ": Abstimmungsanfrage erhalten - nehme an\n"),
-							util:lookup_name(Nameservice, RightNeighbor) ! {abstimmung, Initiator},
+							util:send_message_to({abstimmung, Initiator}, RightNeighbor, Nameservice),
+							wait_for_first_message(),
 							loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile);
 						false ->
 							util:logging(LogFile, atom_to_list(Name) ++ ": Abstimmungsanfrage erhalten - lehne ab\n"),
@@ -85,16 +86,19 @@ loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbo
 			end;
 			
 		{tellmi, From} ->
-			util:lookup_name(Nameservice, From) ! {mi, Mi},
-			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile);
+			util:send_message_to({mi, Mi}, From, Nameservice),
+			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile);
+		
 		{pingGGT, From} ->
-			util:lookup_name(Nameservice, From) ! {pongGGT, Name},
-			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, util:time_in_ms(), LogFile);
+			util:send_message_to({pongGGT, Name}, From, Nameservice),
+			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile);
+		
 		kill -> ok
 	after 
 		Wartezeit ->
 			util:logging(LogFile, atom_to_list(Name) ++ ": Starte Abstimmung\n"),
-			util:lookup_name(Nameservice, RightNeighbor) ! {abstimmung, Name},
+			util:send_message_to({abstimmung, Name}, RightNeighbor, Nameservice),
+			wait_for_first_message(),
 			loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile)
 	end.
 
