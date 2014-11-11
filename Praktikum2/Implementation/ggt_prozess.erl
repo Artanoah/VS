@@ -30,6 +30,7 @@ start(Arbeitszeit, Wartezeit, Name) ->
 	util:lookup_name(Nameservice, KoordinatorName) ! {hello, Name},
 	
 	% Warte auf eine erste Nachricht
+	%So gehen sie in die Arbeitsphase während der Koordinator den Ring aufbaut, sollten sie nicht erst in ihre Arbeitsschleife gehen wenn sie angestubst werden? Von Koordinator oder Nachbar?
 	wait_for_first_message(),
 	
 	% GGT-Prozessloop
