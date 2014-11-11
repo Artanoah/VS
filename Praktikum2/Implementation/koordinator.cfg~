@@ -1,7 +1,7 @@
 {arbeitszeit, 100}.
 {termzeit, 5000}.
 {ggtprozessnummer, 20}.
-{nameservicenode, 'nameservice@lab26.cpt.haw-hamburg.de'}.
+{nameservicenode, 'nameservice@SALLY.informatik.haw-hamburg.de'}.
 {nameservicename, 'nameservice'}.
 {koordinatorname, 'chef'}.
 {korrigieren, 0}.

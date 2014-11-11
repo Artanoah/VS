@@ -153,7 +153,7 @@ kill_all_GGTs([Head | Tail], Nameservice) ->
 	kill_all_GGTs(Tail, Nameservice).
 
 
-ping_all_clients(Nameservice, _, Arbeitszeit, ClientList, LogFile) ->
+ping_all_clients(Nameservice, KoordinatorName, Arbeitszeit, ClientList, LogFile) ->
 	util:message_to_all({pingGGT, self()}, ClientList, Nameservice),
 	StatusList = util:list_with_size(length(ClientList), timeout),
 	ping_all_clients_helper(Nameservice, Arbeitszeit, ClientList, StatusList, LogFile).
@@ -170,7 +170,7 @@ ping_all_clients_helper(Nameservice, Arbeitszeit, ClientList, StatusList, LogFil
 	end.
 
 
-value_of_all_clients(Nameservice, _, Arbeitszeit, ClientList, LogFile) ->
+value_of_all_clients(Nameservice, KoordinatorName, Arbeitszeit, ClientList, LogFile) ->
 	util:message_to_all({tellmi, self()}, ClientList, Nameservice),
 	value_of_all_clients_helper([], Arbeitszeit, LogFile).
 
