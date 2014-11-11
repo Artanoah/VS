@@ -25,7 +25,7 @@ start(StarterNummer) ->
 			startGGTProcesses(Arbeitszeit, Wartezeit, GGTProzessAnzahl, StarterNummer, TeamNummer, PraktikumsGruppe);
 		rejected ->
 			util:logging(LogFile, "Koordinator " ++ atom_to_list(KoordinatorName) ++ " ist nicht in der Initialisierungsphase. Breche ab\n."),
-			erlang:error("Konnte nicht mit Koordinator verbinden\n")
+			erlang:fault("Konnte nicht mit Koordinator verbinden\n")
 	end.
 	
 

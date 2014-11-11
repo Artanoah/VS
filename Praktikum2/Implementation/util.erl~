@@ -446,6 +446,7 @@ send_message_to(Message, Name, Nameservice) ->
 			end;
 		false ->
 			Name ! Message
+		end
 	end.
 
 

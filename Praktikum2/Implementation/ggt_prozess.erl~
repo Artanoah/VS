@@ -70,7 +70,7 @@ loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbo
 			case Name == Initiator of
 				true ->
 					util:logging(LogFile, atom_to_list(Name) ++ ": Abstimmung erfolgreich beendet\n"),
-					util:send_message_to({briefterm, {Name, Mi, util:timeMilliSecond()}, self()}, KoordinatorName, Nameservice),
+					util:send_message_to({briefterm, {Name, Mi, util:timeMilliSecond()}, Name}, KoordinatorName, Nameservice),
 					wait_for_first_message(),
 					loop(Arbeitszeit, Wartezeit, Name, KoordinatorName, Nameservice, Mi, LeftNeighbor, RightNeighbor, Timestamp, LogFile);
 				false ->
