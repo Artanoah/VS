@@ -35,5 +35,4 @@ public class ObjectBroker {
 	public void shutDown() {
 		//TODO
 	}
-			// Beendet die Benutzung der Middleware in dieser Anwendung.
 }
