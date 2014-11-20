@@ -15,5 +15,7 @@ public abstract class AccountImplBase {
 	 * @param rawObjectRef <code>Object</code> Umzuwandelndes Objekt.
 	 * @return <code>AccountImplBase</code> Umgewandeltes Objekt.
 	 */
-	public static AccountImplBase narrowCast(Object rawObjectRef) {...}
+	public static AccountImplBase narrowCast(Object rawObjectRef) {
+		//TODO
+	}
 }
