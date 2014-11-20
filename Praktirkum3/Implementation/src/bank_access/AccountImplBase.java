@@ -1,5 +1,7 @@
 package bank_access;
 
+import to_be_distributed.OverdraftException;
+
 public abstract class AccountImplBase {
 	
 	public abstract void transfer(double amount) throws OverdraftException;

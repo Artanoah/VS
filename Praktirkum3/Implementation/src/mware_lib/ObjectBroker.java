@@ -2,6 +2,10 @@ package mware_lib;
 
 public class ObjectBroker {
 	
+	private ObjectBroker(String serviceHost, int listenPort, boolean debug) {
+		//TODO
+	}
+	
 	/**
 	 * Liefert Einstiegselement in die Middleware aus Anwendersicht sein. 
 	 * Das hier erstellte Objekt bietet die Moeglichkeit ein <code>NameService</code>
@@ -13,7 +17,7 @@ public class ObjectBroker {
 	 * @return <code>ObjectBroker</code> Erstellter Object-Broker 
 	 */
 	public static ObjectBroker init(String serviceHost, int listenPort, boolean debug) {
-		//TODO
+		return new ObjectBroker(serviceHost, listenPort, debug);
 	}
 	
 	/**
