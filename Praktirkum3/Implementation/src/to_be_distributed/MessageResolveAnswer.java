@@ -7,11 +7,11 @@ public class MessageResolveAnswer extends Message {
 	public MessageResolveAnswer(ObjectReference or) {
 		super(COMMAND_RESOLVEANSWER);
 		
-		attributes.put("objectReference", or);
+		attributes.put(COMMAND_RESOLVEANSWER_OBJECTREFERENCE, or);
 	}
 	
 	public ObjectReference getObjectReference() {
-		return (ObjectReference) attributes.get("objectReference");
+		return (ObjectReference) attributes.get(COMMAND_RESOLVEANSWER_OBJECTREFERENCE);
 	}
 
 }

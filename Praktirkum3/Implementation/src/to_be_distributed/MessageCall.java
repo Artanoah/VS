@@ -6,15 +6,15 @@ public class MessageCall extends Message {
 
 	public MessageCall(String objectName, String methodName) {
 		super(COMMAND_CALL);
-		attributes.put("objectName", objectName);
-		attributes.put("methodName", methodName);
+		attributes.put(COMMAND_CALL_OBJECTNAME, objectName);
+		attributes.put(COMMAND_CALL_METHODNAME, methodName);
 	}
 
 	public String getObjectName() {
-		return (String) attributes.get("objectName");
+		return (String) attributes.get(COMMAND_CALL_OBJECTNAME);
 	}
 	
 	public String getMethodName() {
-		return (String) attributes.get("methodName");
+		return (String) attributes.get(COMMAND_CALL_METHODNAME);
 	}
 }

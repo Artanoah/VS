@@ -8,10 +8,10 @@ public class MessageResolve extends Message {
 	public MessageResolve(String objectName) {
 		super(COMMAND_RESOLVE);
 		
-		attributes.put("objectName", objectName);
+		attributes.put(COMMAND_RESOLVE_OBJECTNAME, objectName);
 	}
 	
 	public String getObjectName() {
-		return (String) attributes.get("objectName");
+		return (String) attributes.get(COMMAND_RESOLVE_OBJECTNAME);
 	}
 }

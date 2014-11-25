@@ -7,15 +7,15 @@ public class MessageCallAnswer extends Message {
 	public MessageCallAnswer(String objectName, String answer) {
 		super(COMMAND_CALLANSWER);
 		
-		attributes.put("objectName", objectName);
-		attributes.put("answer", answer);
+		attributes.put(COMMAND_CALLANSWER_OBJECTNAME, objectName);
+		attributes.put(COMMAND_CALLANSWER_ANSWER, answer);
 	}
 	
 	public String getObjectName() {
-		return (String) attributes.get("objectName");
+		return (String) attributes.get(COMMAND_CALLANSWER_OBJECTNAME);
 	}
 	
 	public String getAnswer() {
-		return (String) attributes.get("answer");
+		return (String) attributes.get(COMMAND_CALLANSWER_ANSWER);
 	}
 }

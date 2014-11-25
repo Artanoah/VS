@@ -18,22 +18,6 @@ import org.w3c.dom.Element;
 public class RunNameService {
 
 	public static void main(String[] args) throws ParserConfigurationException, TransformerException {
-		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 		
-		Document doc = docBuilder.newDocument();
-		Element rootElement = doc.createElement("message");
-		Attr commandAttr = doc.createAttribute("command");
-		commandAttr.setValue("resolveName");
-		rootElement.setAttributeNode(commandAttr);
-		doc.appendChild(rootElement);
-		
-		Element port = doc.createElement("port");
-		
-		rootElement.appendChild(port);
-		
-		System.out.println(rootElement.getAttribute("command"));
-		
-		http://stackoverflow.com/questions/1428075/how-to-send-xml-data-through-socket-inputstream
 	}
 }

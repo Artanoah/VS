@@ -7,10 +7,10 @@ public class MessageRebind extends Message {
 	public MessageRebind(ObjectReference or) {
 		super(COMMAND_REBIND);
 		
-		attributes.put("objectReference", or);
+		attributes.put(COMMAND_REBIND_OBJECTREFERENCE, or);
 	}
 
 	public ObjectReference getObjectReference() {
-		return (ObjectReference) attributes.get("objectReference");
+		return (ObjectReference) attributes.get(COMMAND_REBIND_OBJECTREFERENCE);
 	}
 }
