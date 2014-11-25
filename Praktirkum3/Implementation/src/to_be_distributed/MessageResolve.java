@@ -1,10 +1,12 @@
 package to_be_distributed;
 
+import static to_be_distributed.Constants.*;
+
 public class MessageResolve extends Message {
 	
 	
 	public MessageResolve(String objectName) {
-		super("resolve");
+		super(COMMAND_RESOLVE);
 		
 		attributes.put("objectName", objectName);
 	}

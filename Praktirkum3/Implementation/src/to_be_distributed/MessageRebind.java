@@ -1,10 +1,11 @@
 package to_be_distributed;
 
+import static to_be_distributed.Constants.*;
 
 public class MessageRebind extends Message {
 
 	public MessageRebind(ObjectReference or) {
-		super("rebind");
+		super(COMMAND_REBIND);
 		
 		attributes.put("objectReference", or);
 	}
