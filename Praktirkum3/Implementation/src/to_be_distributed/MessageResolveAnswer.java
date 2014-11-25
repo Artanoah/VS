@@ -1,6 +1,7 @@
 package to_be_distributed;
 
-import static to_be_distributed.Constants.*;
+import static to_be_distributed.Constants.COMMAND_RESOLVEANSWER;
+import static to_be_distributed.Constants.COMMAND_RESOLVEANSWER_OBJECTREFERENCE;
 
 public class MessageResolveAnswer extends Message {
 
