@@ -1,6 +1,6 @@
 package mware_lib;
 
-public class NameService {
+public abstract class NameService {
 	
 	/**
 	 * Meldet ein beliebiges referenzierbares Objekt beim Namensdienst an.
@@ -15,9 +15,7 @@ public class NameService {
 	 * @param servant <code>Object</code> Zu bindenes Objekt
 	 * @param name <code>String</code> Name unter dem das Objekt beim Namensdienst gebunden werden soll
 	 */
-	public abstract void rebind(Object servant, String name) {
-		//TODO
-	}
+	public abstract void rebind(Object servant, String name);
 
 	/**
 	 * Erzeugt eine generische Objektreferenz zum angefragten Namen. 
@@ -27,7 +25,5 @@ public class NameService {
 	 * @param name <code>String</code> Name des angefragten Objekts
 	 * @return <code>Object</code> Generische Referenz zum angefragten Objekt
 	 */
-	public abstract Object resolve(String name) {
-		//TODO
-	}
+	public abstract Object resolve(String name);
 }

@@ -3,16 +3,20 @@ package name_service;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
 import to_be_distributed.MessageRebind;
 import to_be_distributed.MessageResolve;
+import to_be_distributed.ObjectReference;
 
 public class RunNameService {
 	private static int port;
 	private static boolean run = true;
+	private static Map<String, ObjectReference> referenceMap;
 
 	/**
 	 * Startet den Nameservice. Dieser antwortet auf die Messages {@link MessageResolve} und {@link MessageRebind}
@@ -26,10 +30,20 @@ public class RunNameService {
 		port = Integer.parseInt(args[0]);
 		
 		ServerSocket serverSocket = new ServerSocket(port);
+		referenceMap = new HashMap<String, ObjectReference>();
 		
 		while(run) {
 			Socket socket = serverSocket.accept();
 			NameServiceThread nst = new NameServiceThread(socket);
+			nst.start();
 		}
+	}
+	
+	public static synchronized void put(String name, ObjectReference or) {
+		referenceMap.put(name, or);
+	}
+	
+	public static synchronized ObjectReference get(String name) {
+		return referenceMap.get(name);
 	}
 }
