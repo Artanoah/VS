@@ -13,6 +13,7 @@ public class Constants {
 	public static final String COMMAND_RESOLVEANSWER_OBJECTREFERENCE = "objectReference";
 	public static final String COMMAND_CALL_OBJECTNAME = "objectName";
 	public static final String COMMAND_CALL_METHODNAME = "methodName";
+	public static final String COMMAND_CALL_ARGUMENTS = "arguments";
 	public static final String COMMAND_CALLSUCCESSANSWER_OBJECTNAME = "callAnswer";
 	public static final String COMMAND_CALLSUCCESSANSWER_ANSWER = "answer";
 	public static final String COMMAND_CALLERRORANSWER_ANSWER = "error";

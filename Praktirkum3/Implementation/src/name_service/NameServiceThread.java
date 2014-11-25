@@ -53,6 +53,8 @@ public class NameServiceThread extends Thread {
 				}
 				log.newInfo("Neues Objekt wird aufgelöst: "+ RunNameService.get(messageResolve.getObjectName()));
 				break;
+			default:
+				
 		}
 	}
 }

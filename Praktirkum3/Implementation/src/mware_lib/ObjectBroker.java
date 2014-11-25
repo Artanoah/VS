@@ -3,13 +3,17 @@ package mware_lib;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ObjectBroker {
 	
 	private String nameServiceHost;
 	private int nameServicePort;
 	private List<NameService> nameServices;
+	
+	private Map<String, Object> sharedObjects;
 	
 	private int listenPort;
 	private ServerSocket serverSocket;
@@ -30,6 +34,7 @@ public class ObjectBroker {
 		this.nameServicePort = listenPort;
 		this.debug = debug;
 		this.nameServices = new ArrayList<NameService>();
+		this.sharedObjects = new HashMap<String, Object>();
 		
 		try {
 			serverSocket = new ServerSocket(0);
@@ -40,7 +45,7 @@ public class ObjectBroker {
 		
 		listenPort = serverSocket.getLocalPort();
 		
-		obd = new ObjectBrokerDispatcher(serverSocket);
+		obd = new ObjectBrokerDispatcher(serverSocket, this);
 		obd.start();
 	}
 	
@@ -76,5 +81,9 @@ public class ObjectBroker {
 	 */
 	public void shutDown() {
 		//TODO
+	}
+	
+	public Object getObject(String objectName) {
+		return sharedObjects.get(objectName);
 	}
 }
