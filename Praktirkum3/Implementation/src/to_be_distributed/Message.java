@@ -1,9 +1,12 @@
 package to_be_distributed;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Message {
+public class Message implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	private String command;
 	protected Map<String, Object> attributes;
 	
