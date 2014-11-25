@@ -45,7 +45,7 @@ public class RunNameService {
 			Socket socket = serverSocket.accept();
 			NameServiceThread nst = new NameServiceThread(socket);
 			nst.start();
-			log.newInfo("Globaler Name Service wurde gestartet.");
+			log.newInfo("Name Service wurde gestartet.");
 		}
 	}
 	

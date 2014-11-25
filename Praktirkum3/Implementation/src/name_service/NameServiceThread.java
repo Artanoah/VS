@@ -37,7 +37,7 @@ public class NameServiceThread extends Thread {
 				MessageRebind messageRebind = (MessageRebind) rawMessage;
 				RunNameService.put(messageRebind.getObjectReference().getName(), messageRebind.getObjectReference());
 				
-				log.newInfo("Neues Objekt wird angeldet: "+ messageRebind.getObjectReference().getName());
+				log.newInfo("Neues Objekt wird angemeldet: "+ messageRebind.getObjectReference().getName());
 			
 				break;
 			case COMMAND_RESOLVE:
@@ -54,7 +54,7 @@ public class NameServiceThread extends Thread {
 				log.newInfo("Neues Objekt wird aufgelöst: "+ RunNameService.get(messageResolve.getObjectName()));
 				break;
 			default:
-				
+				log.newInfo("Unbekanntes Kommando empfangen: "+ rawMessage.getCommand());
 		}
 	}
 }
