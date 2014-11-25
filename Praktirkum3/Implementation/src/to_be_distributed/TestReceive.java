@@ -13,7 +13,7 @@ public class TestReceive extends Thread {
 			sc.setSocket(ss.accept());
 			MessageCall m = (MessageCall) sc.readMessage();
 			System.out.println("EMPFAENGER Antwort: \nEMPFAENGER Command: " + m.getCommand() + "\nEMPFAENGER ObjectName: " + m.getObjectName() + "\nEMPFAENGER MethodName: " + m.getMethodName());
-			sc.writeMessage(new MessageCallAnswer("Hans", "Rumba"));
+			sc.writeMessage(new MessageCallSucessAnswer("Hans", "Rumba"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

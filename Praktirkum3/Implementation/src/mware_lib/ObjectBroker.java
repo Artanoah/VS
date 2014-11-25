@@ -1,9 +1,47 @@
 package mware_lib;
 
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.util.ArrayList;
+import java.util.List;
+
 public class ObjectBroker {
 	
+	private String nameServiceHost;
+	private int nameServicePort;
+	private List<NameService> nameServices;
+	
+	private int listenPort;
+	private ServerSocket serverSocket;
+	
+	private ObjectBrokerDispatcher obd;
+	
+	private boolean debug;
+	
+	/**
+	 * 
+	 * 
+	 * @param serviceHost <code>String</code>
+	 * @param listenPort <code>int</code>
+	 * @param debug <code>boolean</code>
+	 */
 	private ObjectBroker(String serviceHost, int listenPort, boolean debug) {
-		//TODO
+		this.nameServiceHost = serviceHost;
+		this.nameServicePort = listenPort;
+		this.debug = debug;
+		this.nameServices = new ArrayList<NameService>();
+		
+		try {
+			serverSocket = new ServerSocket(0);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		listenPort = serverSocket.getLocalPort();
+		
+		obd = new ObjectBrokerDispatcher(serverSocket);
+		obd.start();
 	}
 	
 	/**

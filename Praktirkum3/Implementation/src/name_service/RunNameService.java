@@ -13,6 +13,8 @@ import to_be_distributed.MessageRebind;
 import to_be_distributed.MessageResolve;
 import to_be_distributed.ObjectReference;
 
+import static to_be_distributed.Constants.*;
+
 public class RunNameService {
 	private static int port;
 	private static boolean run = true;
@@ -27,7 +29,12 @@ public class RunNameService {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws ParserConfigurationException, TransformerException, IOException {
-		port = Integer.parseInt(args[0]);
+		
+		if(args.length >= 1) { 
+			port = Integer.parseInt(args[0]);
+		} else {
+			port = PORT_NAMESERVICE;
+		}
 		
 		ServerSocket serverSocket = new ServerSocket(port);
 		referenceMap = new HashMap<String, ObjectReference>();

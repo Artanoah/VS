@@ -14,5 +14,4 @@ public class MessageResolveAnswer extends Message {
 	public ObjectReference getObjectReference() {
 		return (ObjectReference) attributes.get(COMMAND_RESOLVEANSWER_OBJECTREFERENCE);
 	}
-
 }
