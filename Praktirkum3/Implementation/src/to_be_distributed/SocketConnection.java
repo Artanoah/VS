@@ -19,13 +19,15 @@ public class SocketConnection {
 	
 	
 	//#####Socket initialisieren#####
-	/*Default Konstruktor für den Socket
+	/**
+	 * Default Konstruktor für den Socket
 	 * 
 	 */
 	public SocketConnection() {
 	}
 	
-	/*Socket Verbindung aufbauen mit dem Namen des Hosts und dem Port
+	/**
+	 * Socket Verbindung aufbauen mit dem Namen des Hosts und dem Port
 	 * 
 	 * @param hostName Name des Hosts
 	 * @param port zum Hostname gehöremder Port
@@ -35,7 +37,8 @@ public class SocketConnection {
 	}
 	
 	
-	/*Socket Verbindung aufbauen mit der InetAdresse des Hosts und dem dazugehörigen Port
+	/**
+	 * Socket Verbindung aufbauen mit der InetAdresse des Hosts und dem dazugehörigen Port
 	 * 
 	 * @param address wird wenn möglich zu hostName aufgelöst
 	 * @param port zum Host gehörender Port
@@ -48,7 +51,8 @@ public class SocketConnection {
 	}
 	
 	//#####Setter Getter#####
-	/*Setter um den Socket manuell zu setzen sollte er noch nicht gesetzt sein
+	/**
+	 * Setter um den Socket manuell zu setzen sollte er noch nicht gesetzt sein
 	 * @param socket Socket auf den der Socket gesetzt werden soll
 	 */
 	public void setSocket(Socket socket) {
@@ -58,10 +62,18 @@ public class SocketConnection {
 	}
 	
 	//#####Input initialisieren#####
+	/**
+	 * Initialisiert den InputStream
+	 * @throws IOException
+	 */
 	private void initializeInput() throws IOException {
 		input = socket.getInputStream();
 	}
-
+	
+	/**
+	 * ObjerInputStream initialisieren
+	 * @throws IOException
+	 */
 	private void initializeObjectInput() throws IOException {
 		if (input == null){
 			initializeInput();
@@ -70,10 +82,18 @@ public class SocketConnection {
 	}
 	
 	//#####Output initialisieren#####
+	/**
+	 * OutputStream initialisieren
+	 * @throws IOException
+	 */
 	private void initializeOutput() throws IOException {
 		output = socket.getOutputStream();
 	}
 	
+	/**
+	 * ObjectOutputStream initialisieren
+	 * @throws IOException
+	 */
 	private void initializeObjectOutput() throws IOException {
 		if (output == null) {
 			initializeOutput();
@@ -82,6 +102,13 @@ public class SocketConnection {
 	}
 	
 	//#####Objecte lesen, schreiben#####
+	
+	/**
+	 * Object vom InputStream lesen
+	 * @return	Object, gibt das Object zurück das auf dem InpuStream liegt
+	 * @throws ClassNotFoundException
+	 * @throws IOException
+	 */
 	public Object readObject() throws ClassNotFoundException, IOException {
 		if (inputObject == null) {
 			initializeObjectInput();
@@ -89,6 +116,11 @@ public class SocketConnection {
 		return inputObject.readObject();
 	}
 
+	/**
+	 * Object auf den OutptStream schreiben
+	 * @param object
+	 * @throws IOException
+	 */
 	public void writeObject(Object object) throws IOException{
 		if(outputObject == null){
 			initializeObjectOutput();
@@ -97,6 +129,10 @@ public class SocketConnection {
 	}
 	
 	//#####Verbindungsabbau#####
+	/**
+	 * Sicherstellen, dass alle Verbindungen geschlossen werden
+	 * @throws IOException
+	 */
 	public void closeConnection() throws IOException{
 		if(output != null){
 			output.close();
@@ -111,6 +147,27 @@ public class SocketConnection {
 			inputObject.close();
 		}
 		socket.close();
+	}
+	
+	//##### Read/Write Messages#####
+	
+	/**
+	 * Eine Message vom InputStream lesen
+	 * @return	Message die gelesen wurde
+	 * @throws ClassNotFoundException
+	 * @throws IOException
+	 */
+	public Message readMessage() throws ClassNotFoundException, IOException{
+		return (Message) readObject();
+	}
+	
+	/**
+	 * Eine Message auf den OutputStream schreiben
+	 * @param message Message die geschrieben werden soll
+	 * @throws IOException
+	 */
+	public void writeMessage(Message message) throws IOException{
+		writeObject((Object)message);
 	}
 	
 
