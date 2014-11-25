@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
+import to_be_distributed.Log;
 import to_be_distributed.MessageRebind;
 import to_be_distributed.MessageResolve;
 import to_be_distributed.ObjectReference;
@@ -19,6 +20,7 @@ public class RunNameService {
 	private static int port;
 	private static boolean run = true;
 	private static Map<String, ObjectReference> referenceMap;
+	private static Log log = new Log("RunNameService");
 
 	/**
 	 * Startet den Nameservice. Dieser antwortet auf die Messages {@link MessageResolve} und {@link MessageRebind}
@@ -43,6 +45,7 @@ public class RunNameService {
 			Socket socket = serverSocket.accept();
 			NameServiceThread nst = new NameServiceThread(socket);
 			nst.start();
+			log.newInfo("Globaler Name Service wurde gestartet.");
 		}
 	}
 	
