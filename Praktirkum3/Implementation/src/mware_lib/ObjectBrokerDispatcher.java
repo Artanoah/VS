@@ -18,6 +18,7 @@ public class ObjectBrokerDispatcher extends Thread {
 		try {
 			Socket socket = serverSocket.accept();
 			ProcessCallThread pct = new ProcessCallThread(socket, this);
+			pct.start();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

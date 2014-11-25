@@ -71,7 +71,9 @@ public class ObjectBroker {
 	 * @return <NameService> Erzeugtes Nameservice-Stellvertreter-Objekt.
 	 */
 	public NameService getNameService() {
-		//TODO
+		NameService ns = new NameServiceImplementation(nameServiceHost, nameServicePort, listenPort, debug, this);
+		nameServices.add(ns);
+		return ns;
 	}
 	
 	/**
@@ -85,5 +87,9 @@ public class ObjectBroker {
 	
 	public Object getObject(String objectName) {
 		return sharedObjects.get(objectName);
+	}
+	
+	public void addObject(String name, Object object) {
+		sharedObjects.put(name, object);
 	}
 }
