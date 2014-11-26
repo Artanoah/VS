@@ -8,10 +8,10 @@ public class MessageResolveAnswer extends Message {
 	public MessageResolveAnswer(ObjectReference or) {
 		super(COMMAND_RESOLVEANSWER);
 		
-		attributes.put(COMMAND_RESOLVEANSWER_OBJECTREFERENCE, or);
+		objectReferenceAttributes.put(COMMAND_RESOLVEANSWER_OBJECTREFERENCE, or);
 	}
 	
 	public ObjectReference getObjectReference() {
-		return (ObjectReference) attributes.get(COMMAND_RESOLVEANSWER_OBJECTREFERENCE);
+		return objectReferenceAttributes.get(COMMAND_RESOLVEANSWER_OBJECTREFERENCE);
 	}
 }

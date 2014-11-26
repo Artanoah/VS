@@ -1,6 +1,7 @@
 package to_be_distributed;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +9,11 @@ public class Message implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private String command;
-	protected Map<String, Object> attributes;
+	protected HashMap<String, String> stringAttributes;
+	protected HashMap<String, Integer> integerAttributes;
+	protected HashMap<String, ArrayList<String>> stringListAttributes;
+	protected HashMap<String, Exception> exceptionAttributes;
+	protected HashMap<String, ObjectReference> objectReferenceAttributes;
 	
 	/**
 	 * Erstellt eine generelles <code>Message</code> Objekt.
@@ -17,7 +22,11 @@ public class Message implements Serializable {
 	 */
 	public Message(String command) {
 		this.command = command;
-		this.attributes = new HashMap<String, Object>();
+		this.stringAttributes = new HashMap<String, String>();
+		this.integerAttributes = new HashMap<String, Integer>();
+		this.stringListAttributes = new HashMap<String, ArrayList<String>>();
+		this.exceptionAttributes = new HashMap<String, Exception>();
+		this.objectReferenceAttributes = new HashMap<String, ObjectReference>();
 	}
 	
 	/**
@@ -36,16 +45,23 @@ public class Message implements Serializable {
 	 * @param attributeName <code>String</code> Name des angeforderten Attributes
 	 * @return <code>Object/null</code> Attribut als <code>Object</code> wenn das Attribut existiert, <code>null</code> wenn nicht. 
 	 */
-	public Object getAttribute(String attributeName) {
-		return attributes.get(attributeName);
+	public String getStringAttribute(String attributeName) {
+		return stringAttributes.get(attributeName);
 	}
 	
-	/**
-	 * Gibt die Map mit allen vorhandenen Attributen als <code>Map<String, Object></code> zurueck.
-	 * 
-	 * @return <code>Map<String, Object></code> Attribut-Map.
-	 */
-	public Map<String, Object> getAttributes(){
-		return attributes;
+	public Integer getIntegerAttribute(String attributeName) {
+		return integerAttributes.get(attributeName);
+	}
+	
+	public ArrayList<String> getStringListAttribute(String attributeName) {
+		return stringListAttributes.get(attributeName);
+	}
+	
+	public Exception getExceptionAttribute(String attributeName) {
+		return exceptionAttributes.get(attributeName);
+	}
+	
+	public ObjectReference getObjectReferenceAttributes(String attributeName) {
+		return objectReferenceAttributes.get(attributeName);
 	}
 }

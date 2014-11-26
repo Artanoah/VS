@@ -1,6 +1,10 @@
 package to_be_distributed;
 
-public class ObjectReference {
+import java.io.Serializable;
+
+public class ObjectReference implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	String serviceHost;
 	int port;
 	String name;

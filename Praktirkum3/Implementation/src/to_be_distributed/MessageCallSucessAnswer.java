@@ -9,15 +9,15 @@ public class MessageCallSucessAnswer extends Message {
 	public MessageCallSucessAnswer(String objectName, String answer) {
 		super(COMMAND_CALLSUCCESSANSWER);
 		
-		attributes.put(COMMAND_CALLSUCCESSANSWER_OBJECTNAME, objectName);
-		attributes.put(COMMAND_CALLSUCCESSANSWER_ANSWER, answer);
+		stringAttributes.put(COMMAND_CALLSUCCESSANSWER_OBJECTNAME, objectName);
+		stringAttributes.put(COMMAND_CALLSUCCESSANSWER_ANSWER, answer);
 	}
 	
 	public String getObjectName() {
-		return (String) attributes.get(COMMAND_CALLSUCCESSANSWER_OBJECTNAME);
+		return stringAttributes.get(COMMAND_CALLSUCCESSANSWER_OBJECTNAME);
 	}
 	
 	public String getAnswer() {
-		return (String) attributes.get(COMMAND_CALLSUCCESSANSWER_ANSWER);
+		return stringAttributes.get(COMMAND_CALLSUCCESSANSWER_ANSWER);
 	}
 }

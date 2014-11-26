@@ -10,24 +10,29 @@ import java.util.List;
 
 public class MessageCall extends Message {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public MessageCall(String objectName, String methodName, ArrayList<String> arguments) {
 		super(COMMAND_CALL);
-		attributes.put(COMMAND_CALL_OBJECTNAME, objectName);
-		attributes.put(COMMAND_CALL_METHODNAME, methodName);
-		attributes.put(COMMAND_CALL_ARGUMENTS, arguments);
+		stringAttributes.put(COMMAND_CALL_OBJECTNAME, objectName);
+		stringAttributes.put(COMMAND_CALL_METHODNAME, methodName);
+		stringListAttributes.put(COMMAND_CALL_ARGUMENTS, arguments);
 	}
 
 	public String getObjectName() {
-		return (String) attributes.get(COMMAND_CALL_OBJECTNAME);
+		return stringAttributes.get(COMMAND_CALL_OBJECTNAME);
 	}
 	
 	public String getMethodName() {
-		return (String) attributes.get(COMMAND_CALL_METHODNAME);
+		return stringAttributes.get(COMMAND_CALL_METHODNAME);
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<String> getArguments() {
-		return (ArrayList<String>) attributes.get(COMMAND_CALL_ARGUMENTS);
+		return stringListAttributes.get(COMMAND_CALL_ARGUMENTS);
 	}
 	
 	public int getNumberOfArguments() {

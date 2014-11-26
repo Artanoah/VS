@@ -6,10 +6,10 @@ public class MessageCallErrorAnswer extends Message {
 
 	public MessageCallErrorAnswer(Exception e) {
 		super(COMMAND_CALLERRORANSWER);
-		attributes.put(COMMAND_CALLERRORANSWER_ANSWER, e);
+		exceptionAttributes.put(COMMAND_CALLERRORANSWER_ANSWER, e);
 	}
 	
 	public Exception getError() {
-		return (Exception) attributes.get(COMMAND_CALLERRORANSWER_ANSWER);
+		return exceptionAttributes.get(COMMAND_CALLERRORANSWER_ANSWER);
 	}
 }

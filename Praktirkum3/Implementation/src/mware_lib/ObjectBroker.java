@@ -1,7 +1,9 @@
 package mware_lib;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -75,8 +77,16 @@ public class ObjectBroker {
 	 * @return <NameService> Erzeugtes Nameservice-Stellvertreter-Objekt.
 	 */
 	public NameService getNameService() {
-		NameService ns = new NameServiceImplementation(nameServiceHost, nameServicePort, listenPort, debug, this);
-		nameServices.add(ns);
+		NameService ns = null;
+		
+		try {
+			ns = new NameServiceImplementation(nameServiceHost, nameServicePort, InetAddress.getLocalHost().getCanonicalHostName(), listenPort, debug, this);
+			nameServices.add(ns);
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return ns;
 	}
 	

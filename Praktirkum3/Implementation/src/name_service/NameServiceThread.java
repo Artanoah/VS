@@ -18,6 +18,7 @@ public class NameServiceThread extends Thread {
 	private Log log = new Log("NameServiceThread");
 	
 	public NameServiceThread(Socket socket) {
+		this.socketConnection = new SocketConnection();
 		this.socketConnection.setSocket(socket);
 	}
 	
