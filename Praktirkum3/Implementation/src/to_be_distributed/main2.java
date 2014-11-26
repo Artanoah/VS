@@ -14,7 +14,8 @@ public class main2 {
 		Object object = ns.resolve("SteffensTransaktion");
 		TransactionImplBase account = TransactionImplBase.narrowCast(object);
 		System.out.println("Main2 SteffensBalance: " + account.getBalance(""));
+		account.deposit("", 5.0);
+		System.out.println("Main2 SteffensBalance: " + account.getBalance(""));
 		System.out.println("done2");
 	}
-
 }

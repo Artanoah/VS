@@ -29,12 +29,13 @@ public class AccountImplementation extends AccountImplBase {
 
 	@Override
 	public void transfer(double amount) throws OverdraftException {
+		SocketConnection sc = null;
+		
 		try {
-			
 			ArrayList<String> arguments = new ArrayList<String>();
 			arguments.add(Double.toString(amount));
 			
-			SocketConnection sc = new SocketConnection(hostName, port);
+			sc = new SocketConnection(hostName, port);
 			sc.writeMessage(new MessageCall(objectName, "transfer", arguments));
 			
 			Message rawMessage = sc.readMessage();
@@ -61,17 +62,27 @@ public class AccountImplementation extends AccountImplBase {
 		} catch (InvalidParamException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if(sc != null) {
+				try {
+					sc.closeConnection();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 		
 	}
 
 	@Override
 	public double getBalance() {
+		SocketConnection sc = null;
+		
 		try {
-			
 			ArrayList<String> arguments = new ArrayList<String>();
 			
-			SocketConnection sc = new SocketConnection(hostName, port);
+			sc = new SocketConnection(hostName, port);
 			sc.writeMessage(new MessageCall(objectName, "getBalance", arguments));
 			
 			Message rawMessage = sc.readMessage();
@@ -101,6 +112,15 @@ public class AccountImplementation extends AccountImplBase {
 		} catch (InvalidParamException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if(sc != null) {
+				try {
+					sc.closeConnection();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 		
 		return 0;

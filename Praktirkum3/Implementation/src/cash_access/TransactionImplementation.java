@@ -28,13 +28,15 @@ public class TransactionImplementation extends TransactionImplBase implements St
 	@Override
 	public void deposit(String accountID, double amount)
 			throws InvalidParamException {
+		SocketConnection sc = null;
+		
 		try {
 			
 			ArrayList<String> arguments = new ArrayList<String>();
 			arguments.add(accountID);
 			arguments.add(Double.toString(amount));
 			
-			SocketConnection sc = new SocketConnection(hostName, port);
+			sc = new SocketConnection(hostName, port);
 			sc.writeMessage(new MessageCall(objectName, "deposit", arguments));
 			
 			Message rawMessage = sc.readMessage();
@@ -61,19 +63,29 @@ public class TransactionImplementation extends TransactionImplBase implements St
 		} catch (OverdraftException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if(sc != null) {
+				try {
+					sc.closeConnection();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
 	@Override
 	public void withdraw(String accountID, double amount)
 			throws InvalidParamException, OverdraftException {
+		SocketConnection sc = null;
+		
 		try {
-			
 			ArrayList<String> arguments = new ArrayList<String>();
 			arguments.add(accountID);
 			arguments.add(Double.toString(amount));
 			
-			SocketConnection sc = new SocketConnection(hostName, port);
+			sc = new SocketConnection(hostName, port);
 			sc.writeMessage(new MessageCall(objectName, "withdraw", arguments));
 			
 			Message rawMessage = sc.readMessage();
@@ -97,17 +109,27 @@ public class TransactionImplementation extends TransactionImplBase implements St
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if(sc != null) {
+				try {
+					sc.closeConnection();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
 	@Override
 	public double getBalance(String accountID) throws InvalidParamException {
+		SocketConnection sc = null;
+		
 		try {
-			
 			ArrayList<String> arguments = new ArrayList<String>();
 			arguments.add(accountID);
 			
-			SocketConnection sc = new SocketConnection(hostName, port);
+			sc = new SocketConnection(hostName, port);
 			sc.writeMessage(new MessageCall(objectName, "getBalance", arguments));
 			
 			Message rawMessage = sc.readMessage();
@@ -134,6 +156,15 @@ public class TransactionImplementation extends TransactionImplBase implements St
 		} catch (OverdraftException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if(sc != null) {
+				try {
+					sc.closeConnection();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 		
 		return 0;

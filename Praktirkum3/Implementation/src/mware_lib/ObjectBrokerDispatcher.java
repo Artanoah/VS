@@ -8,6 +8,7 @@ public class ObjectBrokerDispatcher extends Thread {
 	
 	private ServerSocket serverSocket;
 	private ObjectBroker objectBroker;
+	private boolean run = true;
 
 	public ObjectBrokerDispatcher(ServerSocket serverSocket, ObjectBroker objectBroker) {
 		this.serverSocket = serverSocket;
@@ -15,13 +16,15 @@ public class ObjectBrokerDispatcher extends Thread {
 	}
 	
 	public void run() {
-		try {
-			Socket socket = serverSocket.accept();
-			ProcessCallThread pct = new ProcessCallThread(socket, this);
-			pct.start();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		while(run) {
+			try {
+				Socket socket = serverSocket.accept();
+				ProcessCallThread pct = new ProcessCallThread(socket, this);
+				pct.start();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	

@@ -35,7 +35,7 @@ public class ProcessCallThread extends Thread {
 					//Hole das Objekt aus der Objektliste fuer das die Methode aufgerufen werden soll
 					Object object = obd.getObject(messageCall.getObjectName());
 
-					//Erstelle ein Method-Objekt fuer die Methode die aufgerufen werden soll			########FEHLER FLIEGT##########
+					//Erstelle ein Method-Objekt fuer die Methode die aufgerufen werden soll
 					String methodName = messageCall.getMethodName();
 					Class<? extends Object> objectClass = object.getClass();
 					//Method method = objectClass.getMethod(methodName);
@@ -54,7 +54,7 @@ public class ProcessCallThread extends Thread {
 						//Wenn das Argument eine Zahl ist, dann wandel es zu einer Zahl um und caste es auf Object
 						if(stringArguments.get(i).matches(MATCHER_DOUBLE)) {
 							objectArguments[i] = (Object) Double.parseDouble(stringArguments.get(i));
-							methodArgumentClasses[i] = Double.class;
+							methodArgumentClasses[i] = double.class;
 						} else {
 						//Wenn das Arument keine Zahl, also ein String ist, dann caste es nur zu einem Object
 							objectArguments[i] = (Object) stringArguments.get(i);
@@ -110,6 +110,13 @@ public class ProcessCallThread extends Thread {
 		} catch (IllegalArgumentException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		} finally {
+//			try {
+//				socketConnection.closeConnection();
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+		}
 	}
 }

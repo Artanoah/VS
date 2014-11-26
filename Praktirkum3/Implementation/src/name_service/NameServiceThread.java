@@ -31,7 +31,7 @@ public class NameServiceThread extends Thread {
 			e.printStackTrace();
 			log.newWarning("Lesen der Message von der SocketConnection fehlgeschlagen");
 			return;
-		}
+		} 
 		
 		switch(rawMessage.getCommand()) {
 			case COMMAND_REBIND:
@@ -56,6 +56,15 @@ public class NameServiceThread extends Thread {
 				break;
 			default:
 				log.newInfo("Unbekanntes Kommando empfangen: "+ rawMessage.getCommand());
-		}
+		} 
+		
+//		if(socketConnection != null) {
+//			try {
+//				socketConnection.closeConnection();
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
 	}
 }

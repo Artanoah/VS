@@ -49,9 +49,11 @@ public class NameServiceImplementation extends NameService {
 
 	@Override
 	public void rebind(Object servant, String name) {
+		SocketConnection sc = null;
+		
 		try {
 			String className = getClassName(servant);
-			SocketConnection sc = new SocketConnection(nameServicehost, nameServicePort);
+			sc = new SocketConnection(nameServicehost, nameServicePort);
 			sc.writeMessage(new MessageRebind(new ObjectReference(name, className, serverHostName, serverListenPort)));
 			objectBroker.addObject(name, servant);
 		} catch (UnknownHostException e) {
@@ -63,14 +65,23 @@ public class NameServiceImplementation extends NameService {
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if(sc != null) {
+				try {
+					sc.closeConnection();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
 	@Override
 	public Object resolve(String name) {
-		
+		SocketConnection sc = null;
 		try {
-			SocketConnection sc = new SocketConnection(nameServicehost, nameServicePort);
+			sc = new SocketConnection(nameServicehost, nameServicePort);
 			sc.writeMessage(new MessageResolve(name));
 			Message rawMessage = sc.readMessage();
 			
@@ -88,6 +99,15 @@ public class NameServiceImplementation extends NameService {
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			try {
+				if(sc != null) {
+					sc.closeConnection();
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		return null;

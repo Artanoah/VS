@@ -30,13 +30,14 @@ public class ManagerImplementation extends ManagerImplBase {
 	@Override
 	public String createAccount(String owner, String branch)
 			throws InvalidParamException {
+		SocketConnection sc = null;
+		
 		try {
-			
 			ArrayList<String> arguments = new ArrayList<String>();
 			arguments.add(owner);
 			arguments.add(branch);
 			
-			SocketConnection sc = new SocketConnection(hostName, port);
+			sc = new SocketConnection(hostName, port);
 			sc.writeMessage(new MessageCall(objectName, "createAccount", arguments));
 			
 			Message rawMessage = sc.readMessage();
@@ -63,7 +64,16 @@ public class ManagerImplementation extends ManagerImplBase {
 		} catch (OverdraftException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		} finally {
+			if(sc != null) {
+				try {
+					sc.closeConnection();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
 		
 		return "";
 	}
