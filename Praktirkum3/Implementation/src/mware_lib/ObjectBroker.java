@@ -9,8 +9,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import to_be_distributed.Log;
-
 public class ObjectBroker {
 	
 	private String nameServiceHost;
@@ -48,7 +46,7 @@ public class ObjectBroker {
 			e.printStackTrace();
 		}
 		
-		listenPort = serverSocket.getLocalPort();
+		this.listenPort = serverSocket.getLocalPort();
 		
 		obd = new ObjectBrokerDispatcher(serverSocket, this);
 		obd.start();
@@ -104,6 +102,7 @@ public class ObjectBroker {
 	}
 	
 	public void addObject(String name, Object object) {
+		System.out.println(object.getClass());
 		sharedObjects.put(name, object);
 	}
 }

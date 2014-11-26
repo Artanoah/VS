@@ -1,6 +1,8 @@
 package cash_access;
 
-public class TransactionImplBase {
+import mware_lib.ObjectReference;
+
+public abstract class TransactionImplBase {
 		public abstract void deposit(String accountID, double amount) throws InvalidParamException;
 		
 		public abstract void withdraw(String accountID, double amount) throws InvalidParamException, OverdraftException;
@@ -18,6 +20,7 @@ public class TransactionImplBase {
 		 * @return <code>TransactionImplBase</code> Umgewandeltes Objekt.
 		 */
 		public static TransactionImplBase narrowCast(Object rawObjectRef) {
-			//TODO
+			return new TransactionImplementation((ObjectReference) rawObjectRef);
+			
 		}
 }

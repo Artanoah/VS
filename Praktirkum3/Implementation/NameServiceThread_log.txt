@@ -1,2 +1,2 @@
-26.11.2014 11:32:28
-Info: Neues Objekt wird aufgelöst: to_be_distributed.ObjectReference@6a21370c
+26.11.2014 15:10:31
+Info: Neues Objekt wird aufgelöst: to_be_distributed.ObjectReference@5bd3162f

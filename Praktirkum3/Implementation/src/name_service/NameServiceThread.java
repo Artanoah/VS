@@ -3,14 +3,14 @@ package name_service;
 import java.io.IOException;
 import java.net.Socket;
 
-import to_be_distributed.Log;
-import to_be_distributed.Message;
-import to_be_distributed.MessageRebind;
-import to_be_distributed.MessageResolve;
-import to_be_distributed.MessageResolveAnswer;
-import to_be_distributed.ObjectReference;
-import to_be_distributed.SocketConnection;
-import static to_be_distributed.Constants.*;
+import mware_lib.Log;
+import mware_lib.Message;
+import mware_lib.MessageRebind;
+import mware_lib.MessageResolve;
+import mware_lib.MessageResolveAnswer;
+import mware_lib.ObjectReference;
+import mware_lib.SocketConnection;
+import static mware_lib.Constants.*;
 
 public class NameServiceThread extends Thread {
 	

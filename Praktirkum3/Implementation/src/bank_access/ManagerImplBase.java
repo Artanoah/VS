@@ -1,5 +1,7 @@
 package bank_access;
 
+import mware_lib.ObjectReference;
+
 public abstract class ManagerImplBase {
 
 	public abstract String createAccount(String owner, String branch) throws InvalidParamException;
@@ -15,6 +17,6 @@ public abstract class ManagerImplBase {
 	 * @return <code>ManagerImplBase</code> Umgewandeltes Objekt.
 	 */
 	public static ManagerImplBase narrowCast(Object rawObjectRef) {
-		//TODO
+		return new ManagerImplementation((ObjectReference) rawObjectRef);
 	}
 }

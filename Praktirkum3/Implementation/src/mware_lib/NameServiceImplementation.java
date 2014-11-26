@@ -3,13 +3,7 @@ package mware_lib;
 import java.io.IOException;
 import java.net.UnknownHostException;
 
-import to_be_distributed.Message;
-import to_be_distributed.MessageRebind;
-import to_be_distributed.MessageResolve;
-import to_be_distributed.MessageResolveAnswer;
-import to_be_distributed.ObjectReference;
-import to_be_distributed.SocketConnection;
-import static to_be_distributed.Constants.*;
+import static mware_lib.Constants.*;
 
 public class NameServiceImplementation extends NameService {
 	
@@ -59,7 +53,7 @@ public class NameServiceImplementation extends NameService {
 			String className = getClassName(servant);
 			SocketConnection sc = new SocketConnection(nameServicehost, nameServicePort);
 			sc.writeMessage(new MessageRebind(new ObjectReference(name, className, serverHostName, serverListenPort)));
-			objectBroker.addObject("name", servant);
+			objectBroker.addObject(name, servant);
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -84,19 +78,8 @@ public class NameServiceImplementation extends NameService {
 				case COMMAND_RESOLVEANSWER:
 					MessageResolveAnswer messageResolveAnswer = (MessageResolveAnswer) rawMessage;
 					ObjectReference or = messageResolveAnswer.getObjectReference();
-					String datatype = or.getDatatype();
 					
-					if(datatype.contains("AccountImplBase")) {
-						//TODO
-					} else if(datatype.contains("ManagerImplBase")) {
-						//TODO
-					} else if(datatype.contains("TransactionImplBase")) {
-						//TODO
-					} else if(datatype.contains("String")) {
-						//TODO
-					} else if(datatype.contains("Integer")) {
-						//TODO
-					}
+					return or;
 			}
 			
 		} catch (IOException e) {

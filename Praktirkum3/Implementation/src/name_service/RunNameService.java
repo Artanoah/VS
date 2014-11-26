@@ -9,12 +9,11 @@ import java.util.Map;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
-import to_be_distributed.Log;
-import to_be_distributed.MessageRebind;
-import to_be_distributed.MessageResolve;
-import to_be_distributed.ObjectReference;
-
-import static to_be_distributed.Constants.*;
+import mware_lib.Log;
+import mware_lib.MessageRebind;
+import mware_lib.MessageResolve;
+import mware_lib.ObjectReference;
+import static mware_lib.Constants.*;
 
 public class RunNameService {
 	private static int port;

@@ -1,6 +1,6 @@
 package bank_access;
 
-import to_be_distributed.OverdraftException;
+import mware_lib.ObjectReference;
 
 public abstract class AccountImplBase {
 	
@@ -18,6 +18,6 @@ public abstract class AccountImplBase {
 	 * @return <code>AccountImplBase</code> Umgewandeltes Objekt.
 	 */
 	public static AccountImplBase narrowCast(Object rawObjectRef) {
-		//TODO
+		return new AccountImplementation((ObjectReference) rawObjectRef);
 	}
 }
