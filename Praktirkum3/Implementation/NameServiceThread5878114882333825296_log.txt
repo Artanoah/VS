@@ -1,0 +1,4 @@
+27.11.2014 15:59:42
+Info: Aufloesen des Namens mware_lib.ObjectReference@7074a7af erfolgt
+27.11.2014 15:59:42
+Info: Neues Objekt wird aufgeloest: mware_lib.ObjectReference@7074a7af

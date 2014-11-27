@@ -44,15 +44,16 @@ public class NameServiceThread extends Thread {
 			case COMMAND_RESOLVE:
 				MessageResolve messageResolve = (MessageResolve) rawMessage;
 				ObjectReference or = RunNameService.get(messageResolve.getObjectName());
+				log.newInfo("Aufloesen des Namens " + RunNameService.get(messageResolve.getObjectName()) + " erfolgt");
 				
 				try {
 					socketConnection.writeMessage(new MessageResolveAnswer(or));
 				} catch (IOException e) {
 					e.printStackTrace();
-					log.newWarning("Auflösen des Namens " + RunNameService.get(messageResolve.getObjectName())+ " fehlgeschlagen");
+					log.newWarning("Aufloesen des Namens " + RunNameService.get(messageResolve.getObjectName())+ " fehlgeschlagen");
 					return;
 				}
-				log.newInfo("Neues Objekt wird aufgelöst: "+ RunNameService.get(messageResolve.getObjectName()));
+				log.newInfo("Neues Objekt wird aufgeloest: "+ RunNameService.get(messageResolve.getObjectName()));
 				break;
 			default:
 				log.newInfo("Unbekanntes Kommando empfangen: "+ rawMessage.getCommand());

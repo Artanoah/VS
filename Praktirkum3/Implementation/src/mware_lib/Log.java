@@ -1,5 +1,6 @@
 package mware_lib;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -20,8 +21,10 @@ public class Log {
 		this.fileName = logName + "_log.txt";
 		
 		try {
-			writer = new PrintWriter(fileName);
+			File logFile = File.createTempFile(logName, "_log.txt", new File("./"));
+			writer = new PrintWriter(logFile);
 		} catch (IOException e) {
+			e.printStackTrace();
 			System.err.println("LogFile konnte nicht erstellt werden");
 		}
 	}

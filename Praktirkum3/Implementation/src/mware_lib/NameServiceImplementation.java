@@ -13,6 +13,7 @@ public class NameServiceImplementation extends NameService {
 	private int serverListenPort;
 	private boolean debug;
 	private ObjectBroker objectBroker;
+	private Log log;
 
 	/**
 	 * Erstellt ein Nameservice Objekt. Mit diesem Objekt koennen Objekte freigegeben oder aufgeloest werden.
@@ -45,10 +46,15 @@ public class NameServiceImplementation extends NameService {
 		this.serverListenPort = serverListenPort;
 		this.debug = debug;
 		this.objectBroker = objectBroker;
+		this.log = new Log("NameServiceImplementation");
+		
+		log.newInfo("NameServiceImplementation instanziiert");
 	}
 
 	@Override
 	public void rebind(Object servant, String name) {
+		log.newInfo("Rebind des Objektes " + servant + " mit dem Namen " + name);
+		
 		SocketConnection sc = null;
 		
 		try {
@@ -79,6 +85,8 @@ public class NameServiceImplementation extends NameService {
 
 	@Override
 	public Object resolve(String name) {
+		log.newInfo("Resolve eines Objektes mit dem Namen " + name);
+		
 		SocketConnection sc = null;
 		try {
 			sc = new SocketConnection(nameServicehost, nameServicePort);
@@ -91,6 +99,9 @@ public class NameServiceImplementation extends NameService {
 					ObjectReference or = messageResolveAnswer.getObjectReference();
 					
 					return or;
+				
+				default:
+					//TODO
 			}
 			
 		} catch (IOException e) {
