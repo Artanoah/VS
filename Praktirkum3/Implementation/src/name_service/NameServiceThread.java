@@ -1,16 +1,17 @@
 package name_service;
 
+import static name_service.Constants.COMMAND_REBIND;
+import static name_service.Constants.COMMAND_RESOLVE;
+
 import java.io.IOException;
 import java.net.Socket;
 
-import mware_lib.Log;
 import mware_lib.Message;
 import mware_lib.MessageRebind;
 import mware_lib.MessageResolve;
 import mware_lib.MessageResolveAnswer;
 import mware_lib.ObjectReference;
 import mware_lib.SocketConnection;
-import static mware_lib.Constants.*;
 
 public class NameServiceThread extends Thread {
 	

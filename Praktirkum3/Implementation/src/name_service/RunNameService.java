@@ -1,5 +1,7 @@
 package name_service;
 
+import static name_service.Constants.PORT_NAMESERVICE;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -9,11 +11,9 @@ import java.util.Map;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
-import mware_lib.Log;
 import mware_lib.MessageRebind;
 import mware_lib.MessageResolve;
 import mware_lib.ObjectReference;
-import static mware_lib.Constants.*;
 
 public class RunNameService {
 	private static int port;
