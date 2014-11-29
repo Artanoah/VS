@@ -1,0 +1,4 @@
+29.11.2014 15:45:47
+Info: Neuer NameServiceThread wurde gestartet.
+29.11.2014 15:45:53
+Info: Neuer NameServiceThread wurde gestartet.
