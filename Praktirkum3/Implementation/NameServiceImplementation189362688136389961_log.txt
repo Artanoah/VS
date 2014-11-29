@@ -1,4 +1,0 @@
-27.11.2014 15:59:40
-Info: NameServiceImplementation instanziiert
-27.11.2014 15:59:40
-Info: Rebind des Objektes cash_access.Transaction@495c83b2 mit dem Namen SteffensTransaktion

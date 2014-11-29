@@ -12,6 +12,7 @@ public class Message implements Serializable {
 	protected HashMap<String, Integer> integerAttributes;
 	protected HashMap<String, ArrayList<String>> stringListAttributes;
 	protected HashMap<String, ObjectReference> objectReferenceAttributes;
+	protected HashMap<String, Exception> exceptionAttributes;
 	
 	/**
 	 * Erstellt eine generelles <code>Message</code> Objekt.
@@ -20,10 +21,11 @@ public class Message implements Serializable {
 	 */
 	public Message(String command) {
 		this.command = command;
-		this.stringAttributes = new HashMap<String, String>();
-		this.integerAttributes = new HashMap<String, Integer>();
-		this.stringListAttributes = new HashMap<String, ArrayList<String>>();
-		this.objectReferenceAttributes = new HashMap<String, ObjectReference>();
+//		this.stringAttributes = new HashMap<String, String>();
+//		this.integerAttributes = new HashMap<String, Integer>();
+//		this.stringListAttributes = new HashMap<String, ArrayList<String>>();
+//		this.objectReferenceAttributes = new HashMap<String, ObjectReference>();
+//		this.exceptionAttributes = new HashMap<String, Exception>();
 	}
 	
 	/**
@@ -56,5 +58,9 @@ public class Message implements Serializable {
 	
 	public ObjectReference getObjectReferenceAttributes(String attributeName) {
 		return objectReferenceAttributes.get(attributeName);
+	}
+	
+	public Exception getExceptionAttribute(String attributeName) {
+		return exceptionAttributes.get(attributeName);
 	}
 }

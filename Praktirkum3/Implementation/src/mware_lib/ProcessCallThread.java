@@ -9,9 +9,6 @@ import java.lang.reflect.Method;
 import java.net.Socket;
 import java.util.List;
 
-import bank_access.InvalidParamException;
-import bank_access.OverdraftException;
-
 public class ProcessCallThread extends Thread {
 	
 	SocketConnection socketConnection;
@@ -84,11 +81,7 @@ public class ProcessCallThread extends Thread {
 					} catch (InvocationTargetException e) {
 						//Wenn durch das invoke eine gewollte Exception geworfen wurde, dann uebertrage diese dementsprechend
 						Exception exception = (Exception) e.getTargetException();
-						if(exception instanceof InvalidParamException) {
-							socketConnection.writeMessage(new MessageCallErrorAnswerInvalidParam(exception));
-						} else if(exception instanceof OverdraftException) {
-							socketConnection.writeMessage(new MessageCallErrorAnswerOverdraft(exception));
-						}
+						socketConnection.writeMessage(new MessageCallErrorAnswer(exception));
 					}
 					
 					break;
@@ -111,12 +104,12 @@ public class ProcessCallThread extends Thread {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-//			try {
-//				socketConnection.closeConnection();
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
+			try {
+				socketConnection.closeConnection();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }

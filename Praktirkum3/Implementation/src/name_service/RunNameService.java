@@ -46,6 +46,8 @@ public class RunNameService {
 			nst.start();
 			log.newInfo("Neuer NameServiceThread wurde gestartet.");
 		}
+		
+		serverSocket.close();
 	}
 	
 	public static synchronized void put(String name, ObjectReference or) {

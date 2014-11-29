@@ -3,6 +3,7 @@ package mware_lib;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class ObjectBrokerDispatcher extends Thread {
 	
@@ -21,6 +22,8 @@ public class ObjectBrokerDispatcher extends Thread {
 				Socket socket = serverSocket.accept();
 				ProcessCallThread pct = new ProcessCallThread(socket, this);
 				pct.start();
+			} catch(SocketException e) {
+				// TODO (kein Stacktrace printen)
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -30,5 +33,16 @@ public class ObjectBrokerDispatcher extends Thread {
 	
 	public Object getObject(String objectName) {
 		return objectBroker.getObject(objectName);
+	}
+	
+	public void shutdown() {
+		this.run = false;
+		
+		try {
+			serverSocket.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -6,8 +6,7 @@ public class Constants {
 	public static final String COMMAND_RESOLVEANSWER = "resolveAnswer";
 	public static final String COMMAND_CALL = "call";
 	public static final String COMMAND_CALLSUCCESSANSWER = "callAnswer";
-	public static final String COMMAND_CALLERRORANSWER_INVALIDPARAM = "callAnswerInvalidParam";
-	public static final String COMMAND_CALLERRORANSWER_OVERDRAFT = "callAnswerOverdraft";
+	public static final String COMMAND_CALLERRORANSWER = "callErrorAnswer";
 	
 	public static final String COMMAND_REBIND_OBJECTREFERENCE = "objectReference";
 	public static final String COMMAND_RESOLVE_OBJECTNAME = "objectName";

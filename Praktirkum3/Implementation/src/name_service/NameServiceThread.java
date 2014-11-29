@@ -15,7 +15,7 @@ import static mware_lib.Constants.*;
 public class NameServiceThread extends Thread {
 	
 	private SocketConnection socketConnection;
-	private Log log = new Log("NameServiceThread");
+	private static volatile Log log = new Log("NameServiceThread");
 	
 	public NameServiceThread(Socket socket) {
 		this.socketConnection = new SocketConnection();
@@ -44,28 +44,28 @@ public class NameServiceThread extends Thread {
 			case COMMAND_RESOLVE:
 				MessageResolve messageResolve = (MessageResolve) rawMessage;
 				ObjectReference or = RunNameService.get(messageResolve.getObjectName());
-				log.newInfo("Aufloesen des Namens " + RunNameService.get(messageResolve.getObjectName()) + " erfolgt");
+				log.newInfo("Aufloesen des Namens " + messageResolve.getObjectName() + " erfolgt");
 				
 				try {
 					socketConnection.writeMessage(new MessageResolveAnswer(or));
 				} catch (IOException e) {
 					e.printStackTrace();
-					log.newWarning("Aufloesen des Namens " + RunNameService.get(messageResolve.getObjectName())+ " fehlgeschlagen");
+					log.newWarning("Aufloesen des Namens " + messageResolve.getObjectName() + " fehlgeschlagen");
 					return;
 				}
-				log.newInfo("Neues Objekt wird aufgeloest: "+ RunNameService.get(messageResolve.getObjectName()));
+				log.newInfo("Neues Objekt wurde erfolgreich aufgeloest: "+ RunNameService.get(messageResolve.getObjectName()));
 				break;
 			default:
 				log.newInfo("Unbekanntes Kommando empfangen: "+ rawMessage.getCommand());
 		} 
 		
-//		if(socketConnection != null) {
-//			try {
-//				socketConnection.closeConnection();
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
+		if(socketConnection != null) {
+			try {
+				socketConnection.closeConnection();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 }

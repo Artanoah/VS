@@ -1,17 +1,18 @@
 package cash_access;
 
+import static mware_lib.Constants.COMMAND_CALLERRORANSWER;
+import static mware_lib.Constants.COMMAND_CALLSUCCESSANSWER;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 import mware_lib.Message;
 import mware_lib.MessageCall;
-import mware_lib.MessageCallErrorAnswerInvalidParam;
-import mware_lib.MessageCallErrorAnswerOverdraft;
+import mware_lib.MessageCallErrorAnswer;
 import mware_lib.MessageCallSucessAnswer;
 import mware_lib.ObjectReference;
 import mware_lib.SocketConnection;
 import mware_lib.Stub;
-import static mware_lib.Constants.*;
 
 public class TransactionImplementation extends TransactionImplBase implements Stub {
 	
@@ -42,13 +43,14 @@ public class TransactionImplementation extends TransactionImplBase implements St
 			Message rawMessage = sc.readMessage();
 			
 			switch(rawMessage.getCommand()) {
-				case COMMAND_CALLERRORANSWER_INVALIDPARAM:
-					MessageCallErrorAnswerInvalidParam messageCallErrorAnswerInvalidParam = (MessageCallErrorAnswerInvalidParam) rawMessage;
-					throw new InvalidParamException(messageCallErrorAnswerInvalidParam.getException());
+				case COMMAND_CALLERRORANSWER:
+					MessageCallErrorAnswer messageCallErrorAnswer = (MessageCallErrorAnswer) rawMessage;
 					
-				case COMMAND_CALLERRORANSWER_OVERDRAFT:
-					MessageCallErrorAnswerOverdraft messageCallErrorAnswerOverdraft = (MessageCallErrorAnswerOverdraft) rawMessage;
-					throw new OverdraftException(messageCallErrorAnswerOverdraft.getException());
+					if(messageCallErrorAnswer.getException() instanceof InvalidParamException) {
+						throw (InvalidParamException) messageCallErrorAnswer.getException();
+					} else {
+						throw (OverdraftException) messageCallErrorAnswer.getException();
+					}
 					
 				case COMMAND_CALLSUCCESSANSWER:
 					MessageCallSucessAnswer messageCallSuccessAnswer = (MessageCallSucessAnswer) rawMessage;
@@ -91,13 +93,14 @@ public class TransactionImplementation extends TransactionImplBase implements St
 			Message rawMessage = sc.readMessage();
 			
 			switch(rawMessage.getCommand()) {
-				case COMMAND_CALLERRORANSWER_INVALIDPARAM:
-					MessageCallErrorAnswerInvalidParam messageCallErrorAnswerInvalidParam = (MessageCallErrorAnswerInvalidParam) rawMessage;
-					throw new InvalidParamException(messageCallErrorAnswerInvalidParam.getException());
+				case COMMAND_CALLERRORANSWER:
+					MessageCallErrorAnswer messageCallErrorAnswer = (MessageCallErrorAnswer) rawMessage;
 					
-				case COMMAND_CALLERRORANSWER_OVERDRAFT:
-					MessageCallErrorAnswerOverdraft messageCallErrorAnswerOverdraft = (MessageCallErrorAnswerOverdraft) rawMessage;
-					throw new OverdraftException(messageCallErrorAnswerOverdraft.getException());
+					if(messageCallErrorAnswer.getException() instanceof InvalidParamException) {
+						throw (InvalidParamException) messageCallErrorAnswer.getException();
+					} else {
+						throw (OverdraftException) messageCallErrorAnswer.getException();
+					}
 					
 				case COMMAND_CALLSUCCESSANSWER:
 					MessageCallSucessAnswer messageCallSuccessAnswer = (MessageCallSucessAnswer) rawMessage;
@@ -135,13 +138,14 @@ public class TransactionImplementation extends TransactionImplBase implements St
 			Message rawMessage = sc.readMessage();
 			
 			switch(rawMessage.getCommand()) {
-				case COMMAND_CALLERRORANSWER_INVALIDPARAM:
-					MessageCallErrorAnswerInvalidParam messageCallErrorAnswerInvalidParam = (MessageCallErrorAnswerInvalidParam) rawMessage;
-					throw new InvalidParamException(messageCallErrorAnswerInvalidParam.getException());
+				case COMMAND_CALLERRORANSWER:
+					MessageCallErrorAnswer messageCallErrorAnswer = (MessageCallErrorAnswer) rawMessage;
 					
-				case COMMAND_CALLERRORANSWER_OVERDRAFT:
-					MessageCallErrorAnswerOverdraft messageCallErrorAnswerOverdraft = (MessageCallErrorAnswerOverdraft) rawMessage;
-					throw new OverdraftException(messageCallErrorAnswerOverdraft.getException());
+					if(messageCallErrorAnswer.getException() instanceof InvalidParamException) {
+						throw (InvalidParamException) messageCallErrorAnswer.getException();
+					} else {
+						throw (OverdraftException) messageCallErrorAnswer.getException();
+					}
 					
 				case COMMAND_CALLSUCCESSANSWER:
 					MessageCallSucessAnswer messageCallSuccessAnswer = (MessageCallSucessAnswer) rawMessage;

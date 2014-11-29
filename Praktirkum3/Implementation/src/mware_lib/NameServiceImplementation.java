@@ -1,9 +1,9 @@
 package mware_lib;
 
+import static mware_lib.Constants.COMMAND_RESOLVEANSWER;
+
 import java.io.IOException;
 import java.net.UnknownHostException;
-
-import static mware_lib.Constants.*;
 
 public class NameServiceImplementation extends NameService {
 	
@@ -14,6 +14,7 @@ public class NameServiceImplementation extends NameService {
 	private boolean debug;
 	private ObjectBroker objectBroker;
 	private Log log;
+	private boolean run;
 
 	/**
 	 * Erstellt ein Nameservice Objekt. Mit diesem Objekt koennen Objekte freigegeben oder aufgeloest werden.
@@ -47,12 +48,18 @@ public class NameServiceImplementation extends NameService {
 		this.debug = debug;
 		this.objectBroker = objectBroker;
 		this.log = new Log("NameServiceImplementation");
+		this.run = true;
 		
 		log.newInfo("NameServiceImplementation instanziiert");
 	}
 
 	@Override
 	public void rebind(Object servant, String name) {
+		
+		if(!run) {
+			return;
+		}
+		
 		log.newInfo("Rebind des Objektes " + servant + " mit dem Namen " + name);
 		
 		SocketConnection sc = null;
@@ -85,6 +92,11 @@ public class NameServiceImplementation extends NameService {
 
 	@Override
 	public Object resolve(String name) {
+		
+		if(!run) {
+			return null;
+		}
+		
 		log.newInfo("Resolve eines Objektes mit dem Namen " + name);
 		
 		SocketConnection sc = null;
@@ -142,6 +154,10 @@ public class NameServiceImplementation extends NameService {
 		}
 		
 		return akku;
+	}
+	
+	public void shutdown() {
+		this.run = false;
 	}
 
 }

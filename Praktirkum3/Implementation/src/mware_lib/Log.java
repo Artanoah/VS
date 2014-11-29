@@ -38,6 +38,10 @@ public class Log {
 		writer.println(now);
 		writer.println("Info: " + message);
 		writer.flush();
+		
+		System.out.println(now);
+		System.out.println("Info: " + message);
+		System.out.flush();
 	}
 	
 	/**
@@ -49,5 +53,9 @@ public class Log {
 		writer.println(now);
 		writer.println("Warning: " + message);
 		writer.flush();
+		
+		System.out.println(now);
+		System.out.println("Warning: " + message);
+		System.out.flush();
 	}
 }

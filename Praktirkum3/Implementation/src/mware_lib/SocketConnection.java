@@ -20,7 +20,7 @@ public class SocketConnection {
 	
 	//#####Socket initialisieren#####
 	/**
-	 * Default Konstruktor für den Socket
+	 * Default Konstruktor fï¿½r den Socket
 	 * 
 	 */
 	public SocketConnection() {
@@ -30,18 +30,19 @@ public class SocketConnection {
 	 * Socket Verbindung aufbauen mit dem Namen des Hosts und dem Port
 	 * 
 	 * @param hostName Name des Hosts
-	 * @param port zum Hostname gehöremder Port
+	 * @param port zum Hostname gehï¿½remder Port
 	 */
 	public SocketConnection(String hostName, int port) throws UnknownHostException, IOException{
 		socket = new Socket(hostName, port);
+		socket.setSoTimeout(0);
 	}
 	
 	
 	/**
-	 * Socket Verbindung aufbauen mit der InetAdresse des Hosts und dem dazugehörigen Port
+	 * Socket Verbindung aufbauen mit der InetAdresse des Hosts und dem dazugehï¿½rigen Port
 	 * 
-	 * @param address wird wenn möglich zu hostName aufgelöst
-	 * @param port zum Host gehörender Port
+	 * @param address wird wenn mï¿½glich zu hostName aufgelï¿½st
+	 * @param port zum Host gehï¿½render Port
 	 */
 	public SocketConnection(InetAddress address, int port) throws UnknownHostException, IOException{
 		if (address.getHostName() != null) {
@@ -105,7 +106,7 @@ public class SocketConnection {
 	
 	/**
 	 * Object vom InputStream lesen
-	 * @return	Object, gibt das Object zurück das auf dem InpuStream liegt
+	 * @return	Object, gibt das Object zurï¿½ck das auf dem InpuStream liegt
 	 * @throws ClassNotFoundException
 	 * @throws IOException
 	 */

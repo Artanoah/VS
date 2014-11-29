@@ -13,7 +13,7 @@ public class ObjectBroker {
 	
 	private String nameServiceHost;
 	private int nameServicePort;
-	private List<NameService> nameServices;
+	private List<NameServiceImplementation> nameServices;
 	
 	private Map<String, Object> sharedObjects;
 	
@@ -23,6 +23,7 @@ public class ObjectBroker {
 	private ObjectBrokerDispatcher obd;
 	
 	private boolean debug;
+	private boolean run;
 	private Log log = new Log("ObjectBroker");
 	
 	/**
@@ -36,8 +37,9 @@ public class ObjectBroker {
 		this.nameServiceHost = serviceHost;
 		this.nameServicePort = listenPort;
 		this.debug = debug;
-		this.nameServices = new ArrayList<NameService>();
+		this.nameServices = new ArrayList<NameServiceImplementation>();
 		this.sharedObjects = new HashMap<String, Object>();
+		this.run = true;
 		
 		try {
 			serverSocket = new ServerSocket(0);
@@ -75,10 +77,16 @@ public class ObjectBroker {
 	 * @return <NameService> Erzeugtes Nameservice-Stellvertreter-Objekt.
 	 */
 	public NameService getNameService() {
-		NameService ns = null;
+		
+		if(!run) {
+			return null;
+		}
+		
+		NameServiceImplementation ns = null;
 		
 		try {
-			ns = new NameServiceImplementation(nameServiceHost, nameServicePort, InetAddress.getLocalHost().getCanonicalHostName(), listenPort, debug, this);
+			//ns = new NameServiceImplementation(nameServiceHost, nameServicePort, InetAddress.getLocalHost().getCanonicalHostName(), listenPort, debug, this);
+			ns = new NameServiceImplementation(nameServiceHost, nameServicePort, InetAddress.getByName("localhost").getCanonicalHostName(), listenPort, debug, this);
 			nameServices.add(ns);
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
@@ -94,7 +102,12 @@ public class ObjectBroker {
 	 * geschlossen.
 	 */
 	public void shutDown() {
-		//TODO
+		obd.shutdown();
+		this.run = false;
+		
+		for(NameServiceImplementation n : nameServices) {
+			n.shutdown();
+		}
 	}
 	
 	public Object getObject(String objectName) {
