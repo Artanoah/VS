@@ -1,0 +1,22 @@
+NameServiceStub -> NameService
+Anfrage:
+{rebind, Name, ObjektReference}
+
+Antwort:
+---
+
+
+Anfrage:
+{resolve, Name}
+
+Antwort:
+{resolveAnswer, ObjectReference}
+
+
+ManagementStub/AccountStub/TransactionStub -> ObjectBroker
+Anfrage:
+{call, ObjectName, Method, List<Arguments>}
+
+Antwort:
+{callSuccessAnswer, Value} / {callErrorAnswer, Exception}
+

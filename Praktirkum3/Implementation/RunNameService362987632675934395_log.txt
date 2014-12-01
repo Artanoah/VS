@@ -1,0 +1,2 @@
+01.12.2014 15:37:01
+Info: Neuer NameServiceThread wurde gestartet.
