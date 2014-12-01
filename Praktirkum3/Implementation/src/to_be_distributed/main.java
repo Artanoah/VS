@@ -29,7 +29,7 @@ public class main {
 		System.out.println("main1: Steffens Guthaben: " + t.getBalance(""));
 		t.deposit("", 5.0);
 		System.out.println("main1: Steffens Guthaben: " + t.getBalance(""));
-		System.out.println("done");
+		System.out.println("done");	
 
 //		while(true) {
 //			

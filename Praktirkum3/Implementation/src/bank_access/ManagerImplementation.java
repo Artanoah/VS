@@ -46,8 +46,10 @@ public class ManagerImplementation extends ManagerImplBase {
 					
 					if(messageCallErrorAnswer.getException() instanceof InvalidParamException) {
 						throw (InvalidParamException) messageCallErrorAnswer.getException();
-					} else {
+					} else if (messageCallErrorAnswer.getException() instanceof OverdraftException){
 						throw (OverdraftException) messageCallErrorAnswer.getException();
+					} else if (messageCallErrorAnswer.getException() instanceof NullPointerException){
+						throw (NullPointerException) messageCallErrorAnswer.getException();
 					}
 					
 				case COMMAND_CALLSUCCESSANSWER:

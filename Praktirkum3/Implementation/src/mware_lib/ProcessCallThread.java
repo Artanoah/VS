@@ -48,6 +48,11 @@ public class ProcessCallThread extends Thread {
 					List<String> stringArguments = messageCall.getArguments();
 					
 					for(int i = 0; i < numberOfArguments; i++) {
+						//Wenn das Argument null ist, dann muss es vorher ein String gewesen sein
+						if(stringArguments.get(i) == null) {
+							objectArguments[i] = (Object) stringArguments.get(i);
+							methodArgumentClasses[i] = String.class;
+						}
 						//Wenn das Argument eine Zahl ist, dann wandel es zu einer Zahl um und caste es auf Object
 						if(stringArguments.get(i).matches(MATCHER_DOUBLE)) {
 							objectArguments[i] = (Object) Double.parseDouble(stringArguments.get(i));

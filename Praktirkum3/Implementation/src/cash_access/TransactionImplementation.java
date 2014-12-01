@@ -36,7 +36,7 @@ public class TransactionImplementation extends TransactionImplBase implements St
 			ArrayList<String> arguments = new ArrayList<String>();
 			arguments.add(accountID);
 			arguments.add(Double.toString(amount));
-			
+
 			sc = new SocketConnection(hostName, port);
 			sc.writeMessage(new MessageCall(objectName, "deposit", arguments));
 			
@@ -48,8 +48,10 @@ public class TransactionImplementation extends TransactionImplBase implements St
 					
 					if(messageCallErrorAnswer.getException() instanceof InvalidParamException) {
 						throw (InvalidParamException) messageCallErrorAnswer.getException();
-					} else {
+					} else if (messageCallErrorAnswer.getException() instanceof OverdraftException){
 						throw (OverdraftException) messageCallErrorAnswer.getException();
+					} else if (messageCallErrorAnswer.getException() instanceof NullPointerException){
+						throw (NullPointerException) messageCallErrorAnswer.getException();
 					}
 					
 				case COMMAND_CALLSUCCESSANSWER:
@@ -98,8 +100,10 @@ public class TransactionImplementation extends TransactionImplBase implements St
 					
 					if(messageCallErrorAnswer.getException() instanceof InvalidParamException) {
 						throw (InvalidParamException) messageCallErrorAnswer.getException();
-					} else {
+					} else if (messageCallErrorAnswer.getException() instanceof OverdraftException){
 						throw (OverdraftException) messageCallErrorAnswer.getException();
+					} else if (messageCallErrorAnswer.getException() instanceof NullPointerException){
+						throw (NullPointerException) messageCallErrorAnswer.getException();
 					}
 					
 				case COMMAND_CALLSUCCESSANSWER:
@@ -143,8 +147,10 @@ public class TransactionImplementation extends TransactionImplBase implements St
 					
 					if(messageCallErrorAnswer.getException() instanceof InvalidParamException) {
 						throw (InvalidParamException) messageCallErrorAnswer.getException();
-					} else {
+					} else if (messageCallErrorAnswer.getException() instanceof OverdraftException){
 						throw (OverdraftException) messageCallErrorAnswer.getException();
+					} else if (messageCallErrorAnswer.getException() instanceof NullPointerException){
+						throw (NullPointerException) messageCallErrorAnswer.getException();
 					}
 					
 				case COMMAND_CALLSUCCESSANSWER:
