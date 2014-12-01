@@ -9,6 +9,8 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import mware_lib.Message;
+
 public class SocketConnection {
 	
 	private Socket socket = null;
@@ -20,7 +22,7 @@ public class SocketConnection {
 	
 	//#####Socket initialisieren#####
 	/**
-	 * Default Konstruktor f�r den Socket
+	 * Default Konstruktor fuer den Socket
 	 * 
 	 */
 	public SocketConnection() {
@@ -41,7 +43,7 @@ public class SocketConnection {
 	/**
 	 * Socket Verbindung aufbauen mit der InetAdresse des Hosts und dem dazugeh�rigen Port
 	 * 
-	 * @param address wird wenn m�glich zu hostName aufgel�st
+	 * @param address wird wenn moeglich zu hostName aufgeloest
 	 * @param port zum Host geh�render Port
 	 */
 	public SocketConnection(InetAddress address, int port) throws UnknownHostException, IOException{
@@ -106,7 +108,7 @@ public class SocketConnection {
 	
 	/**
 	 * Object vom InputStream lesen
-	 * @return	Object, gibt das Object zur�ck das auf dem InpuStream liegt
+	 * @return	Object, gibt das Object zurueck das auf dem InpuStream liegt
 	 * @throws ClassNotFoundException
 	 * @throws IOException
 	 */
