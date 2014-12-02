@@ -12,9 +12,8 @@ import mware_lib.MessageCallErrorAnswer;
 import mware_lib.MessageCallSucessAnswer;
 import mware_lib.ObjectReference;
 import mware_lib.SocketConnection;
-import mware_lib.Stub;
 
-public class TransactionImplementation extends TransactionImplBase implements Stub {
+public class TransactionImplementation extends TransactionImplBase {
 	
 	String objectName;
 	String hostName;
