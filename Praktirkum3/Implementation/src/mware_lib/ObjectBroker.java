@@ -34,6 +34,10 @@ public class ObjectBroker {
 	 * @param debug <code>boolean</code>
 	 */
 	private ObjectBroker(String serviceHost, int listenPort, boolean debug) {
+		if(debug) {
+			log.newInfo("ObjectBroker wird initialisiert");
+		}
+		
 		this.nameServiceHost = serviceHost;
 		this.nameServicePort = listenPort;
 		this.debug = debug;
@@ -77,6 +81,9 @@ public class ObjectBroker {
 	 * @return <NameService> Erzeugtes Nameservice-Stellvertreter-Objekt.
 	 */
 	public NameService getNameService() {
+		if(debug) {
+			log.newInfo("getNameService aufgerufen");
+		}
 		
 		if(!run) {
 			return null;
@@ -88,8 +95,12 @@ public class ObjectBroker {
 			//ns = new NameServiceImplementation(nameServiceHost, nameServicePort, InetAddress.getLocalHost().getCanonicalHostName(), listenPort, debug, this);
 			ns = new NameServiceImplementation(nameServiceHost, nameServicePort, InetAddress.getByName("localhost").getCanonicalHostName(), listenPort, debug, this);
 			nameServices.add(ns);
+			
+			if(debug) {
+				log.newInfo("getNameService erfolgreich beendet");
+			}
 		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("getNameService hat eine UnknownHostException geworfen und wird null zurueckgeben");
 			e.printStackTrace();
 		}
 		
@@ -102,6 +113,10 @@ public class ObjectBroker {
 	 * geschlossen.
 	 */
 	public void shutDown() {
+		if(debug) {
+			log.newInfo("shutDown aufgerufen");
+		}
+		
 		obd.shutdown();
 		this.run = false;
 		
@@ -115,6 +130,9 @@ public class ObjectBroker {
 	}
 	
 	public void addObject(String name, Object object) {
+		if(debug) {
+			log.newInfo("addObject aufgerufen. Objekt mit dem Namen " + name + " registriert");
+		}
 		System.out.println(object.getClass());
 		sharedObjects.put(name, object);
 	}

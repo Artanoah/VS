@@ -11,31 +11,52 @@ import java.util.List;
 
 public class ProcessCallThread extends Thread {
 	
-	SocketConnection socketConnection;
-	ObjectBrokerDispatcher obd;
+	private SocketConnection socketConnection;
+	private ObjectBrokerDispatcher obd;
+	private boolean debug;
+	private Log log = new Log("ProcessCallThread");
 
-	public ProcessCallThread(Socket socket, ObjectBrokerDispatcher obd) {
+	public ProcessCallThread(Socket socket, ObjectBrokerDispatcher obd, boolean debug) {
+		if(debug) {
+			log.newInfo("ProcessCallThread wird initialisiert.");
+		}
+		
 		this.socketConnection = new SocketConnection();
 		this.socketConnection.setSocket(socket);
 		this.obd = obd;
+		this.debug = debug;
 	}
 	
 	public void run() {
+		if(debug) {
+			log.newInfo("run aufgerufen");
+		}
 		try {
 			Message rawMessage = socketConnection.readMessage();
 			
 			switch(rawMessage.getCommand()) {
 				case COMMAND_CALL:
+					if(debug) {
+						log.newInfo("COMMAND_CALL Nachricht angekommen");
+					}
+					
 					//Caste die allgemeine Message zu einer MessageCall
 					MessageCall messageCall = (MessageCall) rawMessage;
 					
 					//Hole das Objekt aus der Objektliste fuer das die Methode aufgerufen werden soll
 					Object object = obd.getObject(messageCall.getObjectName());
+					
+					if(debug) {
+						if(object != null) {
+							log.newInfo("Object wurde erfolgreich vom ObjectBrokerDispatcher geholt");
+						} else {
+							log.newWarning("Object konnte nicht erfolgreich vom ObjectBrokerDispatcher geholt werden. Arbeite mit null weiter");
+						}
+					}
 
 					//Erstelle ein Method-Objekt fuer die Methode die aufgerufen werden soll
 					String methodName = messageCall.getMethodName();
 					Class<? extends Object> objectClass = object.getClass();
-					//Method method = objectClass.getMethod(methodName);
 					
 					//Stelle die Anzahl der benoetigten Argumente fuer den Methodenaufruf fest
 					int numberOfArguments = messageCall.getNumberOfArguments();
@@ -50,6 +71,9 @@ public class ProcessCallThread extends Thread {
 					for(int i = 0; i < numberOfArguments; i++) {
 						//Wenn das Argument null ist, dann muss es vorher ein String gewesen sein
 						if(stringArguments.get(i) == null) {
+							if(debug) {
+								log.newInfo("Null wurde als Argument fuer die Methode " + methodName + " uebergeben");
+							}
 							objectArguments[i] = (Object) stringArguments.get(i);
 							methodArgumentClasses[i] = String.class;
 						}
@@ -66,10 +90,18 @@ public class ProcessCallThread extends Thread {
 					
 					Method method = objectClass.getMethod(methodName, methodArgumentClasses);
 					
+					if(debug) {
+						log.newInfo("Methode konnte erfolgreicht aus dem Object geholt werden");
+					}
+					
 					try {
 						//Rufe die Methode auf das Objekt mit den ermittelten Argumenten auf
 						Object objectAnswer = method.invoke(object, objectArguments);
 						String answer = null;
+						
+						if(debug) {
+							log.newInfo("Invoke wurde ohne Exception aufgerufen. Schreibe Antwort als String zum Client zurueck.");
+						}
 						
 						//Wenn das Ergebnis ein String ist, dann caste es auf einen String
 						if(objectAnswer instanceof String) {
@@ -85,34 +117,43 @@ public class ProcessCallThread extends Thread {
 						socketConnection.writeMessage(new MessageCallSucessAnswer(messageCall.getObjectName(), answer));
 					} catch (InvocationTargetException e) {
 						//Wenn durch das invoke eine gewollte Exception geworfen wurde, dann uebertrage diese dementsprechend
+						if(debug) {
+							log.newInfo("Die per invoke aufgerufene Methode hat eine Exception geworfen");
+						}
+						
 						Exception exception = (Exception) e.getTargetException();
 						socketConnection.writeMessage(new MessageCallErrorAnswer(exception));
 					}
 					
+					if(debug) {
+						log.newInfo("Die CallAnfrage wurde erfolgreich bearbeitet");
+					}
 					break;
 				default:
-					
+					log.newWarning("Unbekannte Nachricht empfangen. Diese Nachricht wird verworfen");
 			}
-		} catch (ClassNotFoundException | IOException e) {
-			// TODO Auto-generated catch block
+		} catch (ClassNotFoundException e) {
+			log.newWarning("ClassNotFoundException geworfen. Nachricht konnte nicht erfolgreich gelesen werden");
 			e.printStackTrace();
+		} catch (IOException e) {
+			log.newWarning("IOException geworfen. Nachricht konnte entweder nicht gelesen oder geschrieben werden");
 		} catch (NoSuchMethodException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("NoSuchMethodException geworfen. Angefragte Methode konnte nicht gefunden werden");
 			e.printStackTrace();
 		} catch (SecurityException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("SecurityException geworfen. Invoke konnte nicht erfolgreich aufgerufen werden.");
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("IllegalAccessException geworfen. Invoke konnte nicht erfolgreich aufgerufen werden.");
 			e.printStackTrace();
 		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("IllegalArgumentException geworfen. Invoke konnte nicht erfolgreich aufgerufen werden");
 			e.printStackTrace();
 		} finally {
 			try {
 				socketConnection.closeConnection();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				log.newWarning("IOException geworfen. SocketConnection konnte nicht erfolgreich geschlossen werden.");
 				e.printStackTrace();
 			}
 		}

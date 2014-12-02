@@ -11,23 +11,39 @@ public class ObjectBrokerDispatcher extends Thread {
 	private ObjectBroker objectBroker;
 	private boolean debug;
 	private boolean run = true;
+	private Log log = new Log("ObjectBrokerDispatcher");
 
 	public ObjectBrokerDispatcher(ServerSocket serverSocket, ObjectBroker objectBroker, boolean debug) {
 		this.serverSocket = serverSocket;
 		this.objectBroker = objectBroker;
 		this.debug = debug;
+		
+		if(debug) {
+			log.newInfo("ObjectBrokerDispatcher wird initialisiert");
+		}
 	}
 	
 	public void run() {
+		if(debug) {
+			log.newInfo("run aufgerufen");
+		}
+		
 		while(run) {
 			try {
 				Socket socket = serverSocket.accept();
-				ProcessCallThread pct = new ProcessCallThread(socket, this);
+				if(debug) {
+					log.newInfo("Verbindung angenommen, starte ProcessCallThread");
+				}
+				ProcessCallThread pct = new ProcessCallThread(socket, this, debug);
 				pct.start();
+				
+				if(debug) {
+					log.newInfo("ProcessCallThread erfolgreich gestartet");
+				}
 			} catch(SocketException e) {
-				// TODO (kein Stacktrace printen)
+				log.newWarning("SocketException geworfen. Wenn shutdown kurz zuvoraufgerufen wurde ist dies unproblematisch.");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				log.newWarning("IOException geworfen. Vermutlich ist das Accept fehlgeschlagen");
 				e.printStackTrace();
 			}
 		}
@@ -38,12 +54,15 @@ public class ObjectBrokerDispatcher extends Thread {
 	}
 	
 	public void shutdown() {
+		if(debug) {
+			log.newInfo("shutdown aufgerufen");
+		}
 		this.run = false;
 		
 		try {
 			serverSocket.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("IOException geworfen. serverSocket konnte nicht geschlossen werden.");
 			e.printStackTrace();
 		}
 	}
