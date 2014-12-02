@@ -64,7 +64,7 @@ public class NameServiceThread extends Thread {
 			try {
 				socketConnection.closeConnection();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				log.newWarning("Socket Connection konnte nicht geschlossen werden.");
 				e.printStackTrace();
 			}
 		}

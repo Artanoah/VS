@@ -50,7 +50,7 @@ public class NameServiceImplementation extends NameService {
 		this.log = new Log("NameServiceImplementation");
 		this.run = true;
 		
-		log.newInfo("NameServiceImplementation instanziiert");
+		if (debug)log.newInfo("NameServiceImplementation instanziiert");
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class NameServiceImplementation extends NameService {
 			return;
 		}
 		
-		log.newInfo("Rebind des Objektes " + servant + " mit dem Namen " + name);
+		if(debug) log.newInfo("Rebind des Objektes " + servant + " mit dem Namen " + name);
 		
 		SocketConnection sc = null;
 		
@@ -70,20 +70,20 @@ public class NameServiceImplementation extends NameService {
 			sc.writeMessage(new MessageRebind(new ObjectReference(name, className, serverHostName, serverListenPort)));
 			objectBroker.addObject(name, servant);
 		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("new SocketConnection: SocketConnection aufbau fehlgeschlagen: Host unbekannt");
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("IOException new SocketConnection oder write Message fehlgeschlagen.");
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("getClassName, Klasse konnte nicht gefunden werden");
 			e.printStackTrace();
 		} finally {
 			if(sc != null) {
 				try {
 					sc.closeConnection();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
+					log.newWarning("Schlieﬂen der SocketConnection fehlgeschlagen.");
 					e.printStackTrace();
 				}
 			}
@@ -97,7 +97,7 @@ public class NameServiceImplementation extends NameService {
 			return null;
 		}
 		
-		log.newInfo("Resolve eines Objektes mit dem Namen " + name);
+		if(debug) log.newInfo("Resolve eines Objektes mit dem Namen " + name);
 		
 		SocketConnection sc = null;
 		try {
@@ -113,14 +113,14 @@ public class NameServiceImplementation extends NameService {
 					return or;
 				
 				default:
-					//TODO
+					log.newInfo("resolve: Unbekannte Nachricht empfangen");
 			}
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("resolve: SocketConnection Aufbau, writeMessage oder readMessage IOException");
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			log.newWarning("resolve: read Message fehlgeschlagen, Klasse nicht gefunden.");
 			e.printStackTrace();
 		} finally {
 			try {
@@ -128,7 +128,7 @@ public class NameServiceImplementation extends NameService {
 					sc.closeConnection();
 				}
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				log.newWarning("resolve: Schlieﬂen der SocketConnection fehlgeschlagen.");
 				e.printStackTrace();
 			}
 		}
