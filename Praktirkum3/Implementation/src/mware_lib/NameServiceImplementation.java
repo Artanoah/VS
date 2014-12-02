@@ -113,7 +113,7 @@ public class NameServiceImplementation extends NameService {
 					return or;
 				
 				default:
-					if (debug) log.newInfo("resolve: Unbekannte Nachricht empfangen");
+					log.newInfo("resolve: Unbekannte Nachricht empfangen");
 			}
 			
 		} catch (IOException e) {
