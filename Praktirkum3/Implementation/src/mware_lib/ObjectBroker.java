@@ -50,7 +50,7 @@ public class ObjectBroker {
 		
 		this.listenPort = serverSocket.getLocalPort();
 		
-		obd = new ObjectBrokerDispatcher(serverSocket, this);
+		obd = new ObjectBrokerDispatcher(serverSocket, this, debug);
 		obd.start();
 		log.newInfo("ObjectBrokerDispatcher gestartet");
 	}

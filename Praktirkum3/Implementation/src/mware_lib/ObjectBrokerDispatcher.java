@@ -9,11 +9,13 @@ public class ObjectBrokerDispatcher extends Thread {
 	
 	private ServerSocket serverSocket;
 	private ObjectBroker objectBroker;
+	private boolean debug;
 	private boolean run = true;
 
-	public ObjectBrokerDispatcher(ServerSocket serverSocket, ObjectBroker objectBroker) {
+	public ObjectBrokerDispatcher(ServerSocket serverSocket, ObjectBroker objectBroker, boolean debug) {
 		this.serverSocket = serverSocket;
 		this.objectBroker = objectBroker;
+		this.debug = debug;
 	}
 	
 	public void run() {
