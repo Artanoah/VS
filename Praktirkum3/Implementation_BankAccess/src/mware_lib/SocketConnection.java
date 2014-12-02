@@ -111,10 +111,10 @@ public class SocketConnection {
 	 * @throws IOException
 	 */
 	public Object readObject() throws ClassNotFoundException, IOException {
+		
 		if (inputObject == null) {
 			initializeObjectInput();
 		}
-		
 		if(inputObject.available() == 0) {
 			try {
 				Thread.sleep(10);
@@ -123,6 +123,7 @@ public class SocketConnection {
 				e.printStackTrace();
 			}
 		}
+		
 		
 		return inputObject.readObject();
 	}

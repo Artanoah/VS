@@ -1,0 +1,50 @@
+02.12.2014 13:08:03
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:09
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:09
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:09
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:09
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:09
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:14
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:14
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:14
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:14
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:14
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:15
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:15
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:15
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:15
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:15
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:15
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:16
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:17
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:17
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:17
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:17
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:18
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:18
+Info: Neuer NameServiceThread wurde gestartet.
+02.12.2014 13:08:18
+Info: Neuer NameServiceThread wurde gestartet.
