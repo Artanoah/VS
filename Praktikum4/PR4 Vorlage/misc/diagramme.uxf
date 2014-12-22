@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+// fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+PID ! {sync}.
+
+Time = syncmgr:getTime ().
+{get_time}
+current_time()
+
+{sync} -&gt;
+sync_time()
+Absender ! current_time()
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>0</x>
+      <y>550</y>
+      <w>610</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>title: Ereignis "Slot vorbei" mit Kollision
+_Slot Manager:B~id2_|_Sync Manager_~id3|_Empfänger:D~id4_|
+id2-&gt;&gt;&gt;id2:id2:Slot-Timer abgelaufen
+id2-&gt;&gt;&gt;id2:id2:Slot-Timer neu setzen
+id2-&gt;&gt;id4:id2,id4:Slot vorbei
+id4-&gt;&gt;&gt;id4:id4:Kollision entdeckt
+id4-&gt;&gt;&gt;id4:id4:Kollidierte Nachrichten verwerfen
+id4-&gt;&gt;id2:id2,id4:Kollision entdeckt
+id2-&gt;&gt;&gt;id2:id2:Reservierten Slot zurücksetzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>870</x>
+      <y>280</y>
+      <w>560</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>title: Ereignis "Sende-Timer abgelaufen"
+_Sender:A~id1_|_Slot Manager:B~id2_|_Sync Manager:C~id3_
+id1-&gt;&gt;&gt;id1:id1:Timer abgelaufen
+id1-&gt;&gt;id2:id1,id2:Resevierbarer Slot?
+id2.&gt;&gt;id1:id1,id2:Slot-Nummer
+id1-&gt;&gt;&gt;id3:id1,id3:Aktuelle Zeit erfragen
+id3.&gt;&gt;id1:id1,id3:Aktuelle Zeit
+id1-&gt;&gt;&gt;id1:id1:Überprüfen ob pünktlich
+id1-&gt;&gt;&gt;id1:id1:Ggf. Nachricht senden
+id1-&gt;&gt;id2:id1,id2:Sendestatus mitteilen
+id2-&gt;&gt;&gt;id2:id2:Wenn Slot verpasst wurde, Reservierung aufheben</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>0</x>
+      <y>200</y>
+      <w>790</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>title: Ereignis "Slot vorbei" ohne Kollision
+_Sender:A~id1_|_Slot Manager:B~id2_|_Sync Manager:C~id3_|_Empfänger:D~id4_|_Datensenke:E~id5_
+id2-&gt;&gt;&gt;id2:id2:Slot-Timer abgelaufen
+id2-&gt;&gt;&gt;id2:id2:Slot-Timer neu setzen
+id2-&gt;&gt;id4:id2,id4:Slot vorbei
+id4-&gt;&gt;&gt;id4:id4:Keine Kollision entdeckt
+id4-&gt;&gt;id5:id4,id5:Nutzdaten übertragen
+id4-&gt;&gt;id3:id3,id4:Zeit, Stationstyp
+id4-&gt;&gt;id2:id2,id4:Reservierter Slot aus Nachricht
+id2-&gt;&gt;&gt;id2:id2:Slot aus Freiliste löschen
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>0</x>
+      <y>870</y>
+      <w>610</w>
+      <h>430</h>
+    </coordinates>
+    <panel_attributes>title: Ereignis "Frame vorbei"
+_Sender:A~id1_|_Slot Manager:B~id2_|_Sync Manager:C~id3_
+id2-&gt;&gt;id3:id2,id3:Frame vorbei
+id3-&gt;&gt;&gt;id3:id3:Abweichung neu berechnen
+id3-&gt;&gt;&gt;id3:id3:Abweichungsliste zurücksetzen
+id2-&gt;&gt;&gt;id3:id2,id3:Aktuelle Zeit abfragen
+id3.&gt;&gt;id2:id2,id3:Aktuelle Zeit
+id2-&gt;&gt;&gt;id2:id2:Sendeslot bestimmen
+id2-&gt;&gt;&gt;id2:id2:Wartezeit für Sender errechnen
+id2-&gt;&gt;id1:id1,id2:Neuen Timer setzen
+id2-&gt;&gt;&gt;id2:id2:Slot-Freiliste zurücksetzen
+id2-&gt;&gt;&gt;id2:id2:Wartezeit für Frame-Timer errechnen
+id2-&gt;&gt;&gt;id2:id2:Frame-Timer neu setzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>920</x>
+      <y>740</y>
+      <w>530</w>
+      <h>430</h>
+    </coordinates>
+    <panel_attributes>Aktivität Sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1150</x>
+      <y>810</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Warten auf Nachrichten
+vom Slot Manager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1230</x>
+      <y>770</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1230</x>
+      <y>760</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>960</x>
+      <y>860</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Nachricht erhalten:
+Neuen Timer setzen
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1060</x>
+      <y>890</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Es existiert kein Timer]</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>990</x>
+      <y>960</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Neuen Timer mit erhaltener
+Wartezeit erstellen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>820</y>
+      <w>240</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0;10.0;160.0;60.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLTimer</id>
+    <coordinates>
+      <x>930</x>
+      <y>1020</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Sende-Timer
+abgelaufen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>1040</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1250</x>
+      <y>1030</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>1060</y>
+      <w>110</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Slot verpasst]</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1150</x>
+      <y>1110</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Nachricht an Slot Manager:
+Sendeslot verpasst
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>990</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Slot eingehalten]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1230</x>
+      <y>890</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Nachricht senden</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>840</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1230</x>
+      <y>960</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Reservierbaren Slot
+beim Manager erfragen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>830</x>
+      <y>1460</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>1470</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>790</x>
+      <y>1510</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Frame &amp; Slot
+Timer setzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>330</x>
+      <y>1690</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Nachricht erhalten:
+Kollision entdeckt
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>760</x>
+      <y>1590</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Nachricht erhalten:
+Eingehende
+Slotreservierung
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLTimer</id>
+    <coordinates>
+      <x>400</x>
+      <y>2080</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Frame-Timer abgelaufen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLTimer</id>
+    <coordinates>
+      <x>470</x>
+      <y>1440</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Slot-Timer
+abgelaufen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>570</x>
+      <y>2000</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Nachricht erhalten:
+Reservierbarer
+Slot angefordert
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>560</x>
+      <y>1900</y>
+      <w>400</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Nachrichten vom Sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>580</x>
+      <y>1930</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Nachricht erhalten:
+Slot verpasst
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>320</x>
+      <y>1580</y>
+      <w>590</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Nachrichten vom Empfänger</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>1520</y>
+      <w>70</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>50.0;230.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>790</x>
+      <y>1750</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Auf Nachrichten warten</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>360</x>
+      <y>1530</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Aktuelle Zeit erfragen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>560</x>
+      <y>1530</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Slot-Timer neu setzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>1540</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>570</x>
+      <y>1460</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Empfänger
+benachrichtigen
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>360</x>
+      <y>2000</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Aktuelle Zeit erfragen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>360</x>
+      <y>1940</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Frame-Timer neu setzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>1970</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>410</x>
+      <y>1880</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>1860</y>
+      <w>160</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Slot reserviert]</panel_attributes>
+    <additional_attributes>60.0;10.0;60.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>1770</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Kein Slot reserviert]</panel_attributes>
+    <additional_attributes>80.0;10.0;60.0;10.0;60.0;130.0;90.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>440</x>
+      <y>1830</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Wartezeit bis
+Sendeslot berechnen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>640</x>
+      <y>1830</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Sender
+benachrichtigen
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>1830</y>
+      <w>70</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>50.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>400</x>
+      <y>1760</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Unreservierten Slot
+aus letzter Runde wählen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>1790</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>410</x>
+      <y>1620</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>1650</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>1630</y>
+      <w>310</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Aktueller Slot = Sendeslot]</panel_attributes>
+    <additional_attributes>140.0;60.0;140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>520</x>
+      <y>1690</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Reservierung für nächsten
+Slot zurücksetzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>1640</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>1800</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>630</x>
+      <y>1770</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Slot-Freiliste
+zurücksetzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>770</x>
+      <y>1670</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Slot aus Frei-
+liste löschen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>780</x>
+      <y>1930</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Reservierung
+für nächsten
+Slot zurücksetzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>1940</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>570</x>
+      <y>2100</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Freien Slot auswählen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>2050</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>2110</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>760</x>
+      <y>2040</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Slot aus Freiliste löschen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>760</x>
+      <y>1980</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Reservierten Slot
+setzen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>2010</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>1780</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>1810</y>
+      <w>30</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>790</x>
+      <y>2100</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Slot dem Sender
+mitteilen
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>2070</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>920</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1040</x>
+      <y>1030</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Aktuelle Zeit (sync_manager)
+mit Timerzeit vergleichen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>1040</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>1810</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>2090</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>1910</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>310</x>
+      <y>1430</y>
+      <w>670</w>
+      <h>740</h>
+    </coordinates>
+    <panel_attributes>Aktivität Slot Manager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>610</x>
+      <y>1600</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Nachrichten
+ignorieren</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>1600</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Aktueller Slot != Sendeslot]</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>1610</y>
+      <w>120</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100.0;140.0;100.0;110.0;40.0;110.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>1450</y>
+      <w>70</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>1490</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>1700</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>320</x>
+      <y>2080</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Sync Manager
+benachrichtigen
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>2030</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+</diagram>
