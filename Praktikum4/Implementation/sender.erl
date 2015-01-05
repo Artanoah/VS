@@ -31,8 +31,8 @@ loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, Timer, ReservedSendI
 	end.
 
 get_slot_and_data(SlotManager, DataSource) ->
-	SlotManager ! {get_reservable_slot},
-	DataSource  ! {get_payload},
+	SlotManager ! {get_reservable_slot, self()},
+	DataSource  ! {get_payload, self()},
 
 	receive 
 		{reservable_slot, Slot} ->
