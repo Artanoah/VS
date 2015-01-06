@@ -9,7 +9,7 @@
 		 get_client_log_file/1, get_server_log_file/1, get_client_log_file/0, get_server_log_file/0,
 		 bind_name/3, unbind_name/2, lookup_name/2, wait_for_nameservice/1, send_message_to/3, 
 		 toggle_boolean/1, message_to_all/3,
-		 wait_random_ms/1,
+		 wait_random_ms/1, random/1,
 		 get_time_master_time/1, console_out/1]).
 -define(ZERO, integer_to_list(0)).
 -define(TTL, 1).
@@ -530,3 +530,8 @@ get_time_master_time(TimeMaster) ->
 
 console_out(String) ->
 	io:fwrite(String ++ "~n").
+
+
+random(Max) ->
+	{_, _, MS} = os:timestamp(),
+	(MS rem (Max - 1)) + 1.

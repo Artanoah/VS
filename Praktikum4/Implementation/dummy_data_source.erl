@@ -5,5 +5,6 @@
 start() ->
 	receive
 		{get_payload, PID} ->
-			PID ! {payload, "DUMMY_STRING"}
+			PID ! {payload, "DUMMY_STRINGDUMMY_STRING"},
+			start()
 	end.

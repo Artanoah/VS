@@ -5,13 +5,13 @@
 start(TimeMaster) ->
 	receive
 		{missing_references, Sender, Receiver} ->
-			util:console_out("Got References - Waiting for next Frame"),
-			wait_until_next_frame(TimeMaster),
+			util:console_out("Slot-Manager: Got References - Waiting for next Frame"),
+			ok = wait_until_next_frame(TimeMaster),
 			self() ! {slot_ended},
 			loop(TimeMaster, Sender, Receiver, 0, [], -1, -1);
 
 		Message ->
-			util:console_out("Unknown Message Received"),
+			util:console_out("Slot-Manager: Unknown Message Received"),
 			self() ! Message,
 			start(TimeMaster)
 	end.
@@ -20,15 +20,15 @@ start(TimeMaster) ->
 loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, LastReservedSlot) ->
 	receive
 		{no_messages} ->
-			%%util:console_out("No Messages received"),
+			% util:console_out("No Messages received"),
 			loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, LastReservedSlot);
 
 		{slot_reservation, Slot} ->
-			util:console_out("Someone reserved a slot"),
+			util:console_out("Slot-Manager: Someone reserved a slot"),
 			loop(TimeMaster, Sender, Receiver, SlotCounter, [Slot, ReservedSlotList], ReservedSlot, LastReservedSlot);
 
 		{collision_detected} ->
-			util:console_out("Collision detected"),
+			util:console_out("Slot-Manager: Collision detected"),
 			Time = util:get_time_master_time(TimeMaster),
 			CurrentSlot = get_current_slot(Time),
 
@@ -38,11 +38,13 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 			end;
 
 		{get_reservable_slot, PID} ->
+			util:console_out("Slot-Manager: Someone requested a slot to reserve"),
 			ReservableSlot = get_reservable_slot(ReservedSlotList),
 			PID ! {reservable_slot, ReservableSlot},
 			loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservableSlot, LastReservedSlot);
 
 		{slot_missed} ->
+			util:console_out("Slot-Manager: Sender missed his slot"),
 			loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, -1, LastReservedSlot);
 
 		{slot_ended} ->
@@ -51,7 +53,7 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 			% Wenn ein Frame zu Ende ist
 			case is_new_frame(TimeMaster) of
 				true ->
-					util:console_out("Frame ended"),
+					util:console_out("Slot-Manager: Frame ended"),
 					TimeMaster ! {sync},
 					% Wenn ein Slot reserviert wurde
 					case ReservedSlot >= 0 of
@@ -76,7 +78,7 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 			end;
 
 		_ ->
-			util:console_out("Unknown Message received"),
+			util:console_out("Slot-Manager: Unknown Message received"),
 			loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, LastReservedSlot)
 
 		end.
@@ -86,10 +88,10 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 wait_until_next_frame(TimeMaster) ->
 	Time = util:get_time_master_time(TimeMaster),
 	erlang:send_after(time_until_frame(Time), self(), {let_the_frames_begin}),
-	util:console_out("Waiting for " ++ integer_to_list(time_until_frame(Time))),
+	util:console_out("Slot-Manager: Waiting for next frame - " ++ integer_to_list(time_until_frame(Time))),
 	receive
 		{let_the_frames_begin} ->
-			util:console_out("Frame ended")
+		  ok
 	end.
 			
 
@@ -121,7 +123,7 @@ set_slot_timer(Time) ->
 
 get_random_free_slot(SlotList) ->
 	FreeSlots = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24] -- SlotList,
-	Index = random:uniform(length(FreeSlots)),
+	Index = util:random(length(FreeSlots)),
 	lists:nth(Index, FreeSlots).
 
 
