@@ -5,6 +5,7 @@
 start(DataSource, SlotManager, TimeMaster, Interface, IP, Port, StationType) ->
 	util:console_out("Sender: start"),
 	Socket = util:openSe(Interface, Port),
+	inet:setopts(Socket, [{broadcast, true}]),
 	util:console_out("Sender: started"),
 	loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, dummy, 0, StationType).
 

@@ -24,8 +24,8 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 			loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, LastReservedSlot);
 
 		{slot_reservation, Slot} ->
-			util:console_out("Slot-Manager: Someone reserved a slot"),
-			loop(TimeMaster, Sender, Receiver, SlotCounter, [Slot, ReservedSlotList], ReservedSlot, LastReservedSlot);
+			util:console_out("Slot-Manager: Someone reserved the slot no - " ++ integer_to_list(Slot)),
+			loop(TimeMaster, Sender, Receiver, SlotCounter, [Slot | ReservedSlotList], ReservedSlot, LastReservedSlot);
 
 		{collision_detected} ->
 			util:console_out("Slot-Manager: Collision detected"),
@@ -34,13 +34,16 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 
 			if
 				CurrentSlot == LastReservedSlot ->
-					loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, -1, LastReservedSlot)
+					loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, -1, LastReservedSlot);
+				
+				true ->
+					loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, LastReservedSlot)
 			end;
 
 		{get_reservable_slot, PID} ->
-			util:console_out("Slot-Manager: Someone requested a slot to reserve"),
-			ReservableSlot = get_reservable_slot(ReservedSlotList),
+			ReservableSlot = get_random_free_slot(ReservedSlotList),
 			PID ! {reservable_slot, ReservableSlot},
+			util:console_out("Slot-Manager: Someone requested a slot to reserve - reserving Slot no " ++ integer_to_list(ReservableSlot)),
 			loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservableSlot, LastReservedSlot);
 
 		{slot_missed} ->
@@ -53,7 +56,7 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 			% Wenn ein Frame zu Ende ist
 			case is_new_frame(TimeMaster) of
 				true ->
-					util:console_out("Slot-Manager: Frame ended"),
+					util:console_out("Slot-Manager: Frame ended - Slot: " ++ integer_to_list(ReservedSlot)),
 					TimeMaster ! {sync},
 					% Wenn ein Slot reserviert wurde
 					case ReservedSlot >= 0 of
@@ -74,7 +77,7 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 					Time = util:get_time_master_time(TimeMaster),
 					set_slot_timer(Time),
 					Receiver ! {slot_passed},
-					loop(TimeMaster, Sender, Receiver, NewSlot, ReservedSlotList, -1, ReservedSlot)
+					loop(TimeMaster, Sender, Receiver, NewSlot, ReservedSlotList, ReservedSlot, LastReservedSlot)
 			end;
 
 		_ ->
@@ -102,17 +105,6 @@ time_until_frame(Time) ->
 get_current_slot(Time) ->
 	(Time rem 1000) div 40.
 
-
-get_reservable_slot(SlotList) ->
-	get_reservable_slot_helper(SlotList, 0).
-
-get_reservable_slot_helper(SlotList, Counter) ->
-	case lists:member(Counter, SlotList) of
-		false ->
-			Counter;
-		true ->
-			get_reservable_slot_helper(SlotList, Counter + 1)
-	end.
 
 
 set_slot_timer(Time) ->

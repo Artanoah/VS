@@ -6,7 +6,7 @@ start(Parent, Interface, MultiIP, Port) ->
 
 init(Parent, Interface, MultiIP, Port) ->
 	Socket = werkzeug:openRec(MultiIP, Interface, Port),
-	gen_udp:controlling_process(Socket, self()),
+	%gen_udp:controlling_process(Socket, self()),
 	loop(Parent, Socket).
 
 loop(Parent, Socket) ->

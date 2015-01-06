@@ -6,6 +6,7 @@ start(Receiver, TimeMaster, Interface, IP, Port) ->
 	Socket = util:openRec(IP, Interface, Port),
 	gen_udp:controlling_process(Socket, self()),
 	util:console_out("udp_receiver: started"),
+	inet:setopts(Socket, [{broadcast, true}]),
 	loop(Receiver, TimeMaster, Socket).
 
 loop(Receiver, TimeMaster, Socket) ->
@@ -13,12 +14,12 @@ loop(Receiver, TimeMaster, Socket) ->
 	case Message of
 		% Fehler beim Empfangen
 		{error, Reason} ->
-			util:console_out("udp_receiver: Error while receiving UDP-Message: " ++ Reason);
+			util:console_out("udp_receiver: Error while receiving UDP-Message");
 
 		% UDP-Nachricht erfolgreich empfangen
 		{ok, {_, _, Paket}} ->
 			util:console_out("udp_receiver: UDP-Paket received"),
-			OurTimestamp = util:time_master_time(TimeMaster),
+			OurTimestamp = util:get_time_master_time(TimeMaster),
 
 			<<StationType:1/binary,
 			  Payload:24/binary,

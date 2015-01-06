@@ -168,6 +168,7 @@ openRecA(MultiCast, Addr, Port) ->
   {ok, Socket} = gen_udp:open(Port, [binary, 	{active, true}, {multicast_if, Addr}, inet, 
 												{multicast_ttl, ?TTL}, {multicast_loop, false}, {add_membership, {MultiCast, Addr}}]),
   Socket.
+  
 
 	
 %% -------------------------------------------
