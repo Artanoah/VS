@@ -15,6 +15,7 @@ loop(Receiver, TimeMaster, Socket) ->
 
 		% UDP-Nachricht erfolgreich empfangen
 		{ok, {_, _, Paket}} ->
+			util:console_out("UDP-Paket received"),
 			OurTimestamp = util:time_master_time(TimeMaster),
 
 			<<StationType:1/binary,

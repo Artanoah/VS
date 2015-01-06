@@ -20,7 +20,7 @@ start(TimeMaster) ->
 loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, LastReservedSlot) ->
 	receive
 		{no_messages} ->
-			util:console_out("No Messages received"),
+			%%util:console_out("No Messages received"),
 			loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, LastReservedSlot);
 
 		{slot_reservation, Slot} ->
@@ -46,12 +46,12 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 			loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, -1, LastReservedSlot);
 
 		{slot_ended} ->
-			util:console_out("Slot Ended"),
 			NewSlot = SlotCounter + 1,
 			
 			% Wenn ein Frame zu Ende ist
-			case NewSlot == 25 of
+			case is_new_frame(TimeMaster) of
 				true ->
+					util:console_out("Frame ended"),
 					TimeMaster ! {sync},
 					% Wenn ein Slot reserviert wurde
 					case ReservedSlot >= 0 of
@@ -61,11 +61,10 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 						false ->
 							SlotToUse = get_random_free_slot(ReservedSlotList)
 					end,
-					TempTime = util:get_time_master_time(TimeMaster),
-					Sender ! {new_timer, SlotToUse * 40, {TempTime + SlotToUse * 40, TempTime + SlotToUse * 40 + 40}},
-					
 					Time = util:get_time_master_time(TimeMaster),
+					Sender ! {new_timer, SlotToUse * 40, {Time + SlotToUse * 40, Time + SlotToUse * 40 + 40}},
 					set_slot_timer(Time),
+					
 					Receiver ! {slot_passed},
 					loop(TimeMaster, Sender, Receiver, 0, [], -1, ReservedSlot);
 				
@@ -85,7 +84,9 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 				
 
 wait_until_next_frame(TimeMaster) ->
-	erlang:start_timer(time_until_frame(util:get_time_master_time(TimeMaster)), self(), {let_the_frames_begin}),
+	Time = util:get_time_master_time(TimeMaster),
+	erlang:send_after(time_until_frame(Time), self(), {let_the_frames_begin}),
+	util:console_out("Waiting for " ++ integer_to_list(time_until_frame(Time))),
 	receive
 		{let_the_frames_begin} ->
 			util:console_out("Frame ended")
@@ -113,11 +114,17 @@ get_reservable_slot_helper(SlotList, Counter) ->
 
 
 set_slot_timer(Time) ->
-	TimeToWait = 40 - (Time rem 40),
+	% (SlotDauer - (Zeitpunkt mod SlotDauer)) + ExtraWartezeit
+	TimeToWait = (40 - (Time rem 40)) + 10,
 	erlang:send_after(TimeToWait, self(), {slot_ended}).
 
 
 get_random_free_slot(SlotList) ->
 	FreeSlots = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24] -- SlotList,
 	Index = random:uniform(length(FreeSlots)),
-	list:nth(Index, FreeSlots).
+	lists:nth(Index, FreeSlots).
+
+
+is_new_frame(TimeMaster) ->
+	Time = util:get_time_master_time(TimeMaster),
+	(Time rem 1000) =< 40.

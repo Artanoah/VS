@@ -3,12 +3,15 @@
 
 
 start(DataSource, SlotManager, TimeMaster, Interface, IP, Port, StationType) ->
+	util:console_out("Sender start"),
 	Socket = util:openSe(Interface, Port),
+	util:console_out("Sender started"),
 	loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, dummy, 0, StationType).
 
 loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, Timer, ReservedSendIntervall, StationType) ->
 	receive 
 		{send_timer} ->
+			util:console_out("Send Timer run out"),
 			{SendIntervallBegin, SendIntervallEnd} = ReservedSendIntervall,
 			{Slot, Data} = get_slot_and_data(SlotManager, DataSource),
 			Time = util:time_master_time(TimeMaster),
@@ -16,18 +19,25 @@ loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, Timer, ReservedSendI
 			case (SendIntervallBegin < Time) and (SendIntervallEnd > Time) of
 				% Wenn wir innerhalb unseres Sendeintervalls sind
 				true -> 
+					util:console_out("Broadcasting Message"),
 					Paket = create_paket(StationType, Data, Slot, Time),
 					ok = gen_udp:send(Socket, IP, Port, Paket);
 
 				% Wenn wir unseren Sendeintervall verpasst haben
 				false ->
+					util:console_out("Too late"),
 					SlotManager ! {slot_missed}
 			end,
 
 			loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, Timer, ReservedSendIntervall, StationType);
 
-		{new_timer, TimeToWait, NewReservedSendIntervall} ->	
-			loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, erlang:new_timer(TimeToWait, self(), {send_timer}), NewReservedSendIntervall, StationType)
+		{new_timer, TimeToWait, NewReservedSendIntervall} ->
+			util:console_out("Got new Timer: " ++ integer_to_list(TimeToWait)),
+			NewTimer = erlang:send_after(TimeToWait, self(), {send_timer}),
+			loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, NewTimer, NewReservedSendIntervall, StationType);
+
+		_ ->
+			util:console_out("Unknown Message received")
 	end.
 
 get_slot_and_data(SlotManager, DataSource) ->

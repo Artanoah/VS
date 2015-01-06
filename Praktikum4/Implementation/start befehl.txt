@@ -1,1 +1,1 @@
-starter:start(5, "LAN-Verbindung", {127, 0, 0, 1}, 50005, "A", 0).
+starter:start(5, 'LAN-Verbindung', {192, 168, 1, 12}, 50005, "A", 0).
