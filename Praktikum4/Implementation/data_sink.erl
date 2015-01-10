@@ -5,6 +5,6 @@
 start(LogFileName) ->
 	receive
 		{data, Data} ->
-			util:logging(LogFileName, "Message Received: " ++ Data),
+			util:logging(LogFileName, "Message Received: " ++ Data ++ "~n"),
 			start(LogFileName)
 	end.

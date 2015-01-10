@@ -51,9 +51,9 @@ logstop( ) -> 	Known = erlang:whereis(logklc),
 				end.
 					
 logloop(Y) -> 	receive
-					{Datei,Inhalt} -> io:format(Inhalt),
-									  file:write_file(Datei,Inhalt,[append]),
-									  logloop(Y+1);
+					{Datei,Inhalt} -> %io:format(Inhalt),
+						file:write_file(Datei,Inhalt,[append]),
+						logloop(Y+1);
 					kill -> true
 				end.
 
@@ -517,7 +517,7 @@ message_to_all(Message, [Receiver | ReceiverList], Nameservice) ->
 
 wait_random_ms(Max) ->
 	{_, _, MS} = os:timestamp(),
-	Time = (MS div 1000) rem Max,
+	Time = MS rem Max,
 	timer:sleep(Time).
 
 
@@ -535,4 +535,4 @@ console_out(String) ->
 
 random(Max) ->
 	{_, _, MS} = os:timestamp(),
-	(MS rem (Max - 1)) + 1.
+	(MS rem Max) + 1.

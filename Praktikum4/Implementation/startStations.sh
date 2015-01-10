@@ -43,7 +43,7 @@ teamNo="2"
 # Example:    dataSource="~/somewhere/DataSource"
 #         or  dataSource="java -cp . datasource.DataSource"
 ########################################################################################################
-dataSource="java datasource.DataSource"
+dataSource="java -cp . DataSource"
 
 ########################################################################################################
 # TODO: Enter your station's start command.
@@ -51,7 +51,7 @@ dataSource="java datasource.DataSource"
 #
 # Example: stationCmd="java aufgabe4.MyStation $interfaceName $mcastAddress $receivePort $stationClass"
 ########################################################################################################
-stationCmd="erl -noshell -pa bin -s station start $interfaceName $mcastAddress $receivePort $stationClass $UTCoffsetMs"
+stationCmd="erl -s station start $interfaceName $mcastAddress $receivePort $stationClass $UTCoffsetMs"
 
 
 printUsage() {
