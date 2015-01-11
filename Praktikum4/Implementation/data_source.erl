@@ -3,8 +3,9 @@
 
 
 start() -> 
-	MessageLoop = spawn(fun() -> messageLoop("DUMMYMESSAGEDUMMYMESSAGE") end),
-	dataLoop(io:get_chars("", 24), MessageLoop).
+	MessageLoop = spawn(fun() -> messageLoop("DUMMY_STRINGDUMMY_STRING") end),
+	spawn(fun() -> dataLoop(io:get_chars("", 24), MessageLoop) end),
+	MessageLoop.
 
 
 dataLoop(LastData, MessageLoop) ->
