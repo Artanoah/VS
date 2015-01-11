@@ -16,8 +16,6 @@ loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, Timer, ReservedSendI
 			{SendIntervallBegin, SendIntervallEnd} = ReservedSendIntervall,
 			{Slot, Data} = get_slot_and_data(SlotManager, DataSource),
 			
-			%util:wait_random_ms(10),
-			
 			Time = util:get_time_master_time(TimeMaster),
 			
 			case (SendIntervallBegin < Time) and (SendIntervallEnd > Time) of
@@ -38,7 +36,14 @@ loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, Timer, ReservedSendI
 		{new_timer, TimeToWait, NewReservedSendIntervall} ->
 			%util:console_out("Sender: Got new Timer: " ++ integer_to_list(TimeToWait)),
 			_ = erlang:cancel_timer(Timer),
-			NewTimer = erlang:send_after(TimeToWait, self(), {send_timer}),
+			if 
+				TimeToWait < 0 ->
+					ActualTimeToWait = 0;
+				
+				true ->
+					ActualTimeToWait = TimeToWait
+			end,
+			NewTimer = erlang:send_after(ActualTimeToWait, self(), {send_timer}),
 			loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, NewTimer, NewReservedSendIntervall, StationType);
 		
 		{dummy_timer} ->
