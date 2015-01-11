@@ -530,10 +530,7 @@ get_time_master_time(TimeMaster) ->
 
 
 console_out(String) ->
-	spawn(fun() -> console_out_helper(String) end).
-
-console_out_helper(String) ->
-	io:fwrite(String ++"~n").
+	io:fwrite(String ++ "~n").
 
 
 random(0) ->
@@ -542,4 +539,3 @@ random(0) ->
 random(Max) ->
 	{_, _, MS} = os:timestamp(),
 	(MS rem Max) + 1.
-	

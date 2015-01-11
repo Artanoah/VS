@@ -6,7 +6,7 @@ start(Receiver, TimeMaster, Interface, IP, Port) ->
 	Socket = util:openRec(IP, Interface, Port),
 	gen_udp:controlling_process(Socket, self()),
 	util:console_out("udp_receiver: started"),
-	inet:setopts(Socket, [{broadcast, true}]),
+	%inet:setopts(Socket, [{broadcast, true}]),
 	loop(Receiver, TimeMaster, Socket).
 
 loop(Receiver, TimeMaster, Socket) ->

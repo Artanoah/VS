@@ -5,7 +5,7 @@
 start(DataSource, SlotManager, TimeMaster, Interface, IP, Port, StationType) ->
 	%util:console_out("Sender: start"),
 	Socket = util:openSe(Interface, Port),
-	inet:setopts(Socket, [{broadcast, true}]),
+	%inet:setopts(Socket, [{broadcast, true}]),
 	%util:console_out("Sender: started"),
 	loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, erlang:send_after(1, self(), {dummy_timer}), 0, StationType).
 
@@ -51,16 +51,15 @@ loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, Timer, ReservedSendI
 get_slot_and_data(SlotManager, DataSource) ->
 	SlotManager ! {get_reservable_slot, self()},
 	DataSource  ! {get_payload, self()},
-	
-
-	receive 
-		{reservable_slot, Slot} ->
-			NewSlot = Slot
-	end,
 
 	receive 
 		{payload, Data} ->
 			NewData = Data
+	end,
+	
+	receive 
+		{reservable_slot, Slot} ->
+			NewSlot = Slot
 	end,
 
 	{NewSlot, NewData}.
