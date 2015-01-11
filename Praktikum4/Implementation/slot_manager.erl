@@ -53,7 +53,7 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 					end,
 					Time = util:get_time_master_time(TimeMaster),
 					FrameBeginTime = Time - (Time rem 1000),
-					Sender ! {new_timer, SlotToUse * 40 + 20 - (Time rem 1000), {FrameBeginTime + SlotToUse * 40, FrameBeginTime + SlotToUse * 40 + 39}},
+					Sender ! {new_timer, SlotToUse * 40 + 25 - (Time rem 1000), {FrameBeginTime + SlotToUse * 40, FrameBeginTime + SlotToUse * 40 + 39}},
 					set_slot_timer(Time),
 					
 					io:format("slot_manager: Current Slot-Reservations = ~p~n", [NewReservedSlotList]),
