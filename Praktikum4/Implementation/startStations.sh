@@ -43,7 +43,7 @@ teamNo="2"
 # Example:    dataSource="~/somewhere/DataSource"
 #         or  dataSource="java -cp . datasource.DataSource"
 ########################################################################################################
-dataSource="java -cp . DataSource"
+dataSource="java datasource.DataSource"
 
 ########################################################################################################
 # TODO: Enter your station's start command.
@@ -51,7 +51,7 @@ dataSource="java -cp . DataSource"
 #
 # Example: stationCmd="java aufgabe4.MyStation $interfaceName $mcastAddress $receivePort $stationClass"
 ########################################################################################################
-stationCmd="erl -s station start $interfaceName $mcastAddress $receivePort $stationClass $UTCoffsetMs"
+stationCmd="erl -noshell -s station start $interfaceName $mcastAddress $receivePort $stationClass $UTCoffsetMs"
 
 
 printUsage() {
@@ -73,7 +73,9 @@ then
 				for i in `seq $firstIndex $lastIndex`
 				do
 					# Launching data source and station.
-					$dataSource $teamNo $i | $stationCmd &
+					# $dataSource $teamNo $i | $stationCmd &
+					echo "$stationCmd"
+					$stationCmd &
 					#
 					# If your are annoyed by all the output, try this instead:
 					#  $dataSource $teamNo $i | $stationCmd > /dev/null 2>&1 &

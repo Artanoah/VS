@@ -4,7 +4,7 @@
 
 start() -> 
 	MessageLoop = spawn(fun() -> messageLoop("DUMMYMESSAGEDUMMYMESSAGE") end),
-	spawn(fun() -> dataLoop(io:get_chars("", 24), MessageLoop) end).
+	dataLoop(io:get_chars("", 24), MessageLoop).
 
 
 dataLoop(LastData, MessageLoop) ->

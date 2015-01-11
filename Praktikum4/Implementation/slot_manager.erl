@@ -53,7 +53,7 @@ loop(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, 
 					end,
 					Time = util:get_time_master_time(TimeMaster),
 					FrameBeginTime = Time - (Time rem 1000),
-					Sender ! {new_timer, SlotToUse * 40 + 5, {FrameBeginTime + SlotToUse * 40, FrameBeginTime + SlotToUse * 40 + 39}},
+					Sender ! {new_timer, SlotToUse * 40, {FrameBeginTime + SlotToUse * 40, FrameBeginTime + SlotToUse * 40 + 39}},
 					set_slot_timer(Time),
 					
 					io:format("slot_manager: Current Slot-Reservations = ~p~n", [NewReservedSlotList]),
@@ -149,4 +149,4 @@ receive_receiver_answer(TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotL
 					util:console_out("Slot-Manager: Collision detected"),
 					{TimeMaster, Sender, Receiver, SlotCounter, ReservedSlotList, ReservedSlot, LastReservedSlot}
 			end
-	end.
+	end. 

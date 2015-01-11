@@ -533,6 +533,9 @@ console_out(String) ->
 	io:fwrite(String ++ "~n").
 
 
+random(0) ->
+	0;
+
 random(Max) ->
 	{_, _, MS} = os:timestamp(),
 	(MS rem Max) + 1.

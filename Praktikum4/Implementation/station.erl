@@ -1,5 +1,12 @@
 -module(station).
--export([start/5, start/4]).
+-export([start/5, start/4, start/1]).
+
+
+start([AtomInterfaceName, AtomIP, AtomPort, AtomStationType]) ->
+	start(AtomInterfaceName, AtomIP, AtomPort, AtomStationType, '0');
+
+start([AtomInterfaceName, AtomIP, AtomPort, AtomStationType, AtomOffset]) ->
+	start(AtomInterfaceName, AtomIP, AtomPort, AtomStationType, AtomOffset).
 
 start(AtomInterfaceName, AtomIP, AtomPort, AtomStationType) ->
 	start(AtomInterfaceName, AtomIP, AtomPort, AtomStationType, '0').
