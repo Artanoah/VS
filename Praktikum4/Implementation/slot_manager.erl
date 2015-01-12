@@ -59,7 +59,7 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 					%io:format("slot_manager: Current Slot-Reservations = ~p~n", [NewReservedSlotList]),
 					%util:console_out("slot_manager: Current Slot-Reservations = " ++ ReservedSlotList),
 					
-					loop(NewTimeMaster, NewSender, NewReceiver, [], -1, NewReservedSlot);
+					loop(NewTimeMaster, NewSender, NewReceiver, [], -1, SlotToUse);
 				
 				false ->
 					Time = util:get_time_master_time(TimeMaster),
@@ -79,7 +79,7 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 
 wait_until_next_frame(TimeMaster) ->
 	Time = util:get_time_master_time(TimeMaster),
-	erlang:send_after(time_until_frame(Time), self(), {let_the_frames_begin}),
+	erlang:send_after(time_until_frame(Time) + 45, self(), {let_the_frames_begin}),
 	util:console_out("Slot-Manager: Waiting for next frame - " ++ integer_to_list(time_until_frame(Time))),
 	receive
 		{let_the_frames_begin} ->
@@ -98,7 +98,7 @@ get_current_slot(Time) ->
 
 set_slot_timer(Time) ->
 	% (SlotDauer - (Zeitpunkt mod SlotDauer)) + ExtraWartezeit
-	TimeToWait = (40 - (Time rem 40)) + 2,
+	TimeToWait = (40 - (Time rem 40)) + 5,
 	erlang:send_after(TimeToWait, self(), {slot_ended}).
 
 
