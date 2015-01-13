@@ -529,7 +529,7 @@ get_time_master_time(TimeMaster) ->
 	end.
 
 
-console_out(_) ->
+console_out(String) ->
 	ok.
 	%spawn(fun() -> console_out_helper(String) end).
 
