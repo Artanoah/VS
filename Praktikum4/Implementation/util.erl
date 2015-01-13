@@ -530,7 +530,8 @@ get_time_master_time(TimeMaster) ->
 
 
 console_out(String) ->
-	spawn(fun() -> console_out_helper(String) end).
+	ok.
+	%spawn(fun() -> console_out_helper(String) end).
 
 console_out_helper(String) ->
 	io:fwrite(String ++"~n").

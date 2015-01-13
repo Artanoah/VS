@@ -36,7 +36,9 @@ loop(DataSink, SlotManager, TimeMaster, Messages) ->
 					DataSink    ! {data, Payload},
 
 					if StationType == "A" ->
-						TimeMaster  ! {new_message, ForeignTimestamp, OurTimestamp}
+						TimeMaster  ! {new_message, ForeignTimestamp, OurTimestamp};
+					    true ->
+						ok
 					end,
 
 					loop(DataSink, SlotManager, TimeMaster, []);
