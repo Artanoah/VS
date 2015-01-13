@@ -529,12 +529,12 @@ get_time_master_time(TimeMaster) ->
 	end.
 
 
-console_out(String) ->
+console_out(_) ->
 	ok.
 	%spawn(fun() -> console_out_helper(String) end).
 
-console_out_helper(String) ->
-	io:fwrite(String ++"~n").
+%console_out_helper(String) ->
+%	io:fwrite(String ++"~n").
 
 
 random(0) ->

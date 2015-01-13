@@ -21,5 +21,5 @@ loop(Offset, Abweichungen) ->
 		{sync} ->
 			%util:console_out("time_master: Synchronisiere"),
 			DurchschnittlicheAbweichung = util:average_int(Abweichungen),
-			loop(Offset + (DurchschnittlicheAbweichung div 2), [])
+			loop(Offset + (DurchschnittlicheAbweichung), [])
 	end.
