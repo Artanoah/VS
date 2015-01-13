@@ -38,7 +38,7 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 				true ->
 					Receiver ! {slot_passed},
 	
-					{NewTimeMaster, NewSender, NewReceiver, NewReservedSlotList, NewReservedSlot, _, _} = receive_receiver_answer(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedSlot, FirstFrame),
+					{NewTimeMaster, NewSender, NewReceiver, NewReservedSlotList, NewReservedSlot, _, NewFirstFrame} = receive_receiver_answer(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedSlot, FirstFrame),
 					
 					NewTimeMaster ! {sync},
 					% Wenn ein Slot reserviert wurde
@@ -62,11 +62,11 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 					loop(NewTimeMaster, NewSender, NewReceiver, [], -1, SlotToUse, NewFirstFrame);
 				
 				false ->
-					NewFirstFrame = false,
 					Time = util:get_time_master_time(TimeMaster),
 					set_slot_timer(Time),
 					Receiver ! {slot_passed},
-					{NewTimeMaster, NewSender, NewReceiver, NewReservedSlotList, NewReservedSlot, NewLastReservedSlot, NewFirstFrame} = receive_receiver_answer(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedSlot, FirstFrame),
+					{NewTimeMaster, NewSender, NewReceiver, NewReservedSlotList, NewReservedSlot, NewLastReservedSlot, _} = receive_receiver_answer(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedSlot, FirstFrame),
+					NewFirstFrame = false,
 					loop(NewTimeMaster, NewSender, NewReceiver, NewReservedSlotList, NewReservedSlot, NewLastReservedSlot, NewFirstFrame)
 			end;
 

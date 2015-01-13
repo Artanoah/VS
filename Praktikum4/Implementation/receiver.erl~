@@ -32,7 +32,7 @@ loop(DataSink, SlotManager, TimeMaster, Messages) ->
 
 				1 ->
 					[{StationType, Payload, Slot, ForeignTimestamp, OurTimestamp} | _] = Messages,
-					SlotManager ! {slot_reservation, Slot - 1},
+					SlotManager ! {slot_reservation, Slot},
 					DataSink    ! {data, Payload},
 
 					if StationType == "A" ->

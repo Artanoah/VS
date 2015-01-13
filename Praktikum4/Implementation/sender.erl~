@@ -22,7 +22,7 @@ loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, Timer, ReservedSendI
 				% Wenn wir innerhalb unseres Sendeintervalls sind
 				true -> 
 					%util:console_out("Sender: Broadcasting Message"),
-					Paket = create_paket(StationType, Data, Slot, Time),
+					Paket = create_paket(StationType, Data + 1, Slot, Time),
 					ok = gen_udp:send(Socket, IP, Port, Paket);
 
 				% Wenn wir unseren Sendeintervall verpasst haben
