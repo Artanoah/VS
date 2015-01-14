@@ -45,6 +45,9 @@ loop(DataSink, SlotManager, TimeMaster, Messages) ->
 
 				_ -> 
 					SlotManager ! {collision_detected},
+					[{_, _, _, ForeignTimestamp1, OurTimestamp1}, {_, _, _, ForeignTimestamp2, OurTimestamp2} | _] = Messages,
+					io:fwrite("Our1: " ++ integer_to_list(OurTimestamp1) ++ " Foreign1: " ++ integer_to_list(ForeignTimestamp1) ++ "~n" ++
+						  "Our2: " ++ integer_to_list(OurTimestamp2) ++ " Foreign2: " ++ integer_to_list(ForeignTimestamp2) ++ "~n"),
 					loop(DataSink, SlotManager, TimeMaster, [])
 			end
 	end.

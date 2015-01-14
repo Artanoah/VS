@@ -31,13 +31,11 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 			loop(TimeMaster, Sender, Receiver, ReservedSlotList, -1, LastReservedSlot, FirstFrame);
 
 		{slot_ended} ->
-			%NewSlot = SlotCounter + 1,
+			Receiver ! {slot_passed},
 			
 			% Wenn ein Frame zu Ende ist
 			case (is_new_frame(TimeMaster)) and (not FirstFrame) of
 				true ->
-					Receiver ! {slot_passed},
-	
 					{NewTimeMaster, NewSender, NewReceiver, NewReservedSlotList, NewReservedSlot, _, NewFirstFrame} = receive_receiver_answer(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedSlot, FirstFrame),
 					
 					NewTimeMaster ! {sync},
@@ -53,7 +51,7 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 					end,
 					Time = util:get_time_master_time(TimeMaster),
 					FrameBeginTime = Time - (Time rem 1000),
-					Sender ! {new_timer, SlotToUse * 40 + 25 - (Time rem 1000), {FrameBeginTime + SlotToUse * 40, FrameBeginTime + SlotToUse * 40 + 39}},
+					Sender ! {new_timer, SlotToUse * 40 + 20 - (Time rem 1000), {FrameBeginTime + SlotToUse * 40 + 5, FrameBeginTime + SlotToUse * 40 + 35}},
 					set_slot_timer(Time),
 					
 					%io:format("slot_manager: Current Slot-Reservations = ~p~n", [NewReservedSlotList]),
@@ -64,7 +62,6 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 				false ->
 					Time = util:get_time_master_time(TimeMaster),
 					set_slot_timer(Time),
-					Receiver ! {slot_passed},
 					{NewTimeMaster, NewSender, NewReceiver, NewReservedSlotList, NewReservedSlot, NewLastReservedSlot, _} = receive_receiver_answer(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedSlot, FirstFrame),
 					NewFirstFrame = false,
 					loop(NewTimeMaster, NewSender, NewReceiver, NewReservedSlotList, NewReservedSlot, NewLastReservedSlot, NewFirstFrame)
@@ -121,7 +118,7 @@ receive_receiver_answer(TimeMaster, Sender, Receiver, ReservedSlotList, Reserved
 			{TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedSlot, FirstFrame};
 
 		{slot_reservation, Slot} ->
-			%util:console_out("Slot-Manager: Someone reserved the slot no - " ++ integer_to_list(Slot)),
+			util:console_out("Slot-Manager: Someone reserved the slot no - " ++ integer_to_list(Slot)),
 			case (Slot == ReservedSlot) and (lists:member(Slot, ReservedSlotList)) of
 				true ->
 					{TimeMaster, Sender, Receiver, ReservedSlotList, -1, LastReservedSlot, FirstFrame};
