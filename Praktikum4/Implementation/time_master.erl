@@ -3,6 +3,7 @@
 
 
 start(Offset) ->
+	%erlang:process_flag(priority, max),
 	loop(Offset, []).
 
 loop(Offset, Abweichungen) ->

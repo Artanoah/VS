@@ -5,6 +5,7 @@
 start(DataSource, SlotManager, TimeMaster, Interface, IP, Port, StationType) ->
 	%util:console_out("Sender: start"),
 	Socket = util:openSe(Interface, Port),
+	%erlang:process_flag(priority, max),
 	%inet:setopts(Socket, [{broadcast, true}]),
 	%util:console_out("Sender: started"),
 	loop(DataSource, SlotManager, TimeMaster, Socket, IP, Port, erlang:send_after(1, self(), {dummy_timer}), 0, StationType).

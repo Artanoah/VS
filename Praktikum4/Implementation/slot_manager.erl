@@ -1,6 +1,8 @@
 -module(slot_manager).
 -export([start/1]).
 
+-define(FullSlotList, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]).
+
 
 start(TimeMaster) ->
 	receive
@@ -51,7 +53,7 @@ loop(TimeMaster, Sender, Receiver, ReservedSlotList, ReservedSlot, LastReservedS
 					end,
 					Time = util:get_time_master_time(TimeMaster),
 					FrameBeginTime = Time - (Time rem 1000),
-					Sender ! {new_timer, SlotToUse * 40 + 20 - (Time rem 1000), {FrameBeginTime + SlotToUse * 40 + 5, FrameBeginTime + SlotToUse * 40 + 35}},
+					Sender ! {new_timer, SlotToUse * 40 + 10 - (Time rem 1000), {FrameBeginTime + SlotToUse * 40 + 5, FrameBeginTime + SlotToUse * 40 + 35}},
 					set_slot_timer(Time),
 					
 					%io:format("slot_manager: Current Slot-Reservations = ~p~n", [NewReservedSlotList]),
@@ -101,7 +103,7 @@ set_slot_timer(Time) ->
 
 
 get_random_free_slot(SlotList) ->
-	FreeSlots = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24] -- SlotList,
+	FreeSlots = ?FullSlotList -- SlotList,
 	Index = util:random(length(FreeSlots)),
 	lists:nth(Index, FreeSlots).
 

@@ -4,7 +4,6 @@
 
 start(LogFileName) ->
 	receive
-		{data, Data} ->
-			util:logging(LogFileName, "Message Received: " ++ Data),
+		{data, _} ->
 			start(LogFileName)
 	end.

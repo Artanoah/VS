@@ -4,6 +4,7 @@
 
 start(DataSink, SlotManager, TimeMaster, Interface, IP, Port) ->
 	spawn(udp_receiver, start, [self(), TimeMaster, Interface, IP, Port]),
+	%erlang:process_flag(priority, max),
 	loop(DataSink, SlotManager, TimeMaster, []).
 
 loop(DataSink, SlotManager, TimeMaster, Messages) ->
